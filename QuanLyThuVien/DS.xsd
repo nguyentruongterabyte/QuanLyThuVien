@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="THUVIENConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="THUVIENConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QuanLyThuVien.Properties.Settings.GlobalReference.Default.THUVIENConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="THUVIENConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="THUVIENConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QuanLyThuVien.Properties.Settings.GlobalReference.Default.THUVIENConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CT_MUONBAOTableAdapter" GeneratorDataComponentClassName="CT_MUONBAOTableAdapter" Name="CT_MUONBAO" UserDataComponentName="CT_MUONBAOTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.CT_MUONBAO" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.CT_MUONBAO" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[CT_MUONBAO] WHERE (([MADOCGIA] = @Original_MADOCGIA) AND ([IDKI] = @Original_IDKI) AND ((@IsNull_NGAYMUON = 1 AND [NGAYMUON] IS NULL) OR ([NGAYMUON] = @Original_NGAYMUON)) AND ((@IsNull_NGAYTRA = 1 AND [NGAYTRA] IS NULL) OR ([NGAYTRA] = @Original_NGAYTRA)))</CommandText>
@@ -71,7 +71,7 @@ SELECT MADOCGIA, IDKI, NGAYMUON, NGAYTRA FROM CT_MUONBAO WHERE (IDKI = @IDKI) AN
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CT_MUONSACHTableAdapter" GeneratorDataComponentClassName="CT_MUONSACHTableAdapter" Name="CT_MUONSACH" UserDataComponentName="CT_MUONSACHTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.CT_MUONSACH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.CT_MUONSACH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[CT_MUONSACH] WHERE (([MADOCGIA] = @Original_MADOCGIA) AND ([IDSACH] = @Original_IDSACH) AND ((@IsNull_NGAYMUON = 1 AND [NGAYMUON] IS NULL) OR ([NGAYMUON] = @Original_NGAYMUON)) AND ((@IsNull_NGAYTRA = 1 AND [NGAYTRA] IS NULL) OR ([NGAYTRA] = @Original_NGAYTRA)))</CommandText>
@@ -133,7 +133,7 @@ SELECT MADOCGIA, IDSACH, NGAYMUON, NGAYTRA FROM CT_MUONSACH WHERE (IDSACH = @IDS
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CT_SACHTableAdapter" GeneratorDataComponentClassName="CT_SACHTableAdapter" Name="CT_SACH" UserDataComponentName="CT_SACHTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.CT_SACH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.CT_SACH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[CT_SACH] WHERE (([MASACH] = @Original_MASACH) AND ([MATG] = @Original_MATG))</CommandText>
@@ -181,16 +181,14 @@ SELECT MASACH, MATG FROM CT_SACH WHERE (MASACH = @MASACH) AND (MATG = @MATG)</Co
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CUONSACHTableAdapter" GeneratorDataComponentClassName="CUONSACHTableAdapter" Name="CUONSACH" UserDataComponentName="CUONSACHTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.CUONSACH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.CUONSACH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[CUONSACH] WHERE (([IDSACH] = @Original_IDSACH) AND ((@IsNull_TINHTRANG = 1 AND [TINHTRANG] IS NULL) OR ([TINHTRANG] = @Original_TINHTRANG)) AND ((@IsNull_TRANGTHAI = 1 AND [TRANGTHAI] IS NULL) OR ([TRANGTHAI] = @Original_TRANGTHAI)) AND ((@IsNull_IDXB = 1 AND [IDXB] IS NULL) OR ([IDXB] = @Original_IDXB)))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[CUONSACH] WHERE (([IDSACH] = @Original_IDSACH) AND ((@IsNull_TINHTRANG = 1 AND [TINHTRANG] IS NULL) OR ([TINHTRANG] = @Original_TINHTRANG)) AND ((@IsNull_IDXB = 1 AND [IDXB] IS NULL) OR ([IDXB] = @Original_IDXB)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDSACH" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDSACH" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TINHTRANG" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TINHTRANG" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_TINHTRANG" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TINHTRANG" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TRANGTHAI" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TRANGTHAI" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_TRANGTHAI" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="TRANGTHAI" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IDXB" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDXB" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDXB" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDXB" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -198,34 +196,30 @@ SELECT MASACH, MATG FROM CT_SACH WHERE (MASACH = @MASACH) AND (MATG = @MATG)</Co
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[CUONSACH] ([TINHTRANG], [TRANGTHAI], [IDXB]) VALUES (@TINHTRANG, @TRANGTHAI, @IDXB);
-SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[CUONSACH] ([TINHTRANG], [IDXB]) VALUES (@TINHTRANG, @IDXB);
+SELECT IDSACH, TINHTRANG, IDXB FROM CUONSACH WHERE (IDSACH = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@TINHTRANG" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TINHTRANG" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@TRANGTHAI" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="TRANGTHAI" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDXB" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDXB" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM dbo.CUONSACH</CommandText>
+                    <CommandText>SELECT IDSACH, TINHTRANG, IDXB FROM dbo.CUONSACH</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[CUONSACH] SET [TINHTRANG] = @TINHTRANG, [TRANGTHAI] = @TRANGTHAI, [IDXB] = @IDXB WHERE (([IDSACH] = @Original_IDSACH) AND ((@IsNull_TINHTRANG = 1 AND [TINHTRANG] IS NULL) OR ([TINHTRANG] = @Original_TINHTRANG)) AND ((@IsNull_TRANGTHAI = 1 AND [TRANGTHAI] IS NULL) OR ([TRANGTHAI] = @Original_TRANGTHAI)) AND ((@IsNull_IDXB = 1 AND [IDXB] IS NULL) OR ([IDXB] = @Original_IDXB)));
-SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)</CommandText>
+                    <CommandText>UPDATE [dbo].[CUONSACH] SET [TINHTRANG] = @TINHTRANG, [IDXB] = @IDXB WHERE (([IDSACH] = @Original_IDSACH) AND ((@IsNull_TINHTRANG = 1 AND [TINHTRANG] IS NULL) OR ([TINHTRANG] = @Original_TINHTRANG)) AND ((@IsNull_IDXB = 1 AND [IDXB] IS NULL) OR ([IDXB] = @Original_IDXB)));
+SELECT IDSACH, TINHTRANG, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@TINHTRANG" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TINHTRANG" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@TRANGTHAI" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="TRANGTHAI" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IDXB" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDXB" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDSACH" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDSACH" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TINHTRANG" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TINHTRANG" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_TINHTRANG" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TINHTRANG" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TRANGTHAI" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TRANGTHAI" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_TRANGTHAI" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="TRANGTHAI" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IDXB" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDXB" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_IDXB" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IDXB" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="IDSACH" ColumnName="IDSACH" DataSourceName="THUVIEN.dbo.CUONSACH" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IDSACH" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="IDSACH" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -237,14 +231,13 @@ SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)
             <Mappings>
               <Mapping SourceColumn="IDSACH" DataSetColumn="IDSACH" />
               <Mapping SourceColumn="TINHTRANG" DataSetColumn="TINHTRANG" />
-              <Mapping SourceColumn="TRANGTHAI" DataSetColumn="TRANGTHAI" />
               <Mapping SourceColumn="IDXB" DataSetColumn="IDXB" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DOCGIATableAdapter" GeneratorDataComponentClassName="DOCGIATableAdapter" Name="DOCGIA" UserDataComponentName="DOCGIATableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.DOCGIA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.DOCGIA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[DOCGIA] WHERE (([MADOCGIA] = @Original_MADOCGIA) AND ((@IsNull_TEN = 1 AND [TEN] IS NULL) OR ([TEN] = @Original_TEN)) AND ((@IsNull_NGAYCAP = 1 AND [NGAYCAP] IS NULL) OR ([NGAYCAP] = @Original_NGAYCAP)) AND ((@IsNull_NGHENGHIEP = 1 AND [NGHENGHIEP] IS NULL) OR ([NGHENGHIEP] = @Original_NGHENGHIEP)) AND ((@IsNull_PHAI = 1 AND [PHAI] IS NULL) OR ([PHAI] = @Original_PHAI)))</CommandText>
@@ -315,7 +308,7 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KYXBTableAdapter" GeneratorDataComponentClassName="KYXBTableAdapter" Name="KYXB" UserDataComponentName="KYXBTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.KYXB" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.KYXB" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[KYXB] WHERE (([IDKI] = @Original_IDKI) AND ((@IsNull_LUONGNHAP = 1 AND [LUONGNHAP] IS NULL) OR ([LUONGNHAP] = @Original_LUONGNHAP)) AND ((@IsNull_LUONGTON = 1 AND [LUONGTON] IS NULL) OR ([LUONGTON] = @Original_LUONGTON)) AND ([MATAPCHI] = @Original_MATAPCHI))</CommandText>
@@ -376,7 +369,7 @@ SELECT IDKI, LUONGNHAP, LUONGTON, MATAPCHI FROM KYXB WHERE (IDKI = @IDKI)</Comma
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SACHTableAdapter" GeneratorDataComponentClassName="SACHTableAdapter" Name="SACH" UserDataComponentName="SACHTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.SACH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.SACH" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[SACH] WHERE (([MASACH] = @Original_MASACH) AND ((@IsNull_NAMPHATHANH = 1 AND [NAMPHATHANH] IS NULL) OR ([NAMPHATHANH] = @Original_NAMPHATHANH)) AND ((@IsNull_TENSACH = 1 AND [TENSACH] IS NULL) OR ([TENSACH] = @Original_TENSACH)) AND ((@IsNull_MATL = 1 AND [MATL] IS NULL) OR ([MATL] = @Original_MATL)))</CommandText>
@@ -440,7 +433,7 @@ SELECT MASACH, NAMPHATHANH, TENSACH, MATL FROM SACH WHERE (MASACH = @MASACH)</Co
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TACGIATableAdapter" GeneratorDataComponentClassName="TACGIATableAdapter" Name="TACGIA" UserDataComponentName="TACGIATableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.TACGIA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.TACGIA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[TACGIA] WHERE (([MATG] = @Original_MATG) AND ((@IsNull_TENTG = 1 AND [TENTG] IS NULL) OR ([TENTG] = @Original_TENTG)) AND ((@IsNull_NAMSINH = 1 AND [NAMSINH] IS NULL) OR ([NAMSINH] = @Original_NAMSINH)))</CommandText>
@@ -497,7 +490,7 @@ SELECT MATG, TENTG, NAMSINH FROM TACGIA WHERE (MATG = @MATG)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TAILIEUTableAdapter" GeneratorDataComponentClassName="TAILIEUTableAdapter" Name="TAILIEU" UserDataComponentName="TAILIEUTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.TAILIEU" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.TAILIEU" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[TAILIEU] WHERE (([MaTL] = @Original_MaTL) AND ((@IsNull_TenTL = 1 AND [TenTL] IS NULL) OR ([TenTL] = @Original_TenTL)))</CommandText>
@@ -547,7 +540,7 @@ SELECT MaTL, TenTL FROM TAILIEU WHERE (MaTL = @MaTL)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TAPCHITableAdapter" GeneratorDataComponentClassName="TAPCHITableAdapter" Name="TAPCHI" UserDataComponentName="TAPCHITableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.TAPCHI" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.TAPCHI" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[TAPCHI] WHERE (([MATAPCHI] = @Original_MATAPCHI) AND ((@IsNull_TENTAPCHI = 1 AND [TENTAPCHI] IS NULL) OR ([TENTAPCHI] = @Original_TENTAPCHI)) AND ((@IsNull_NAMPHATHANH = 1 AND [NAMPHATHANH] IS NULL) OR ([NAMPHATHANH] = @Original_NAMPHATHANH)) AND ([DINHKI] = @Original_DINHKI) AND ((@IsNull_NXB = 1 AND [NXB] IS NULL) OR ([NXB] = @Original_NXB)) AND ((@IsNull_MATL = 1 AND [MATL] IS NULL) OR ([MATL] = @Original_MATL)))</CommandText>
@@ -623,7 +616,7 @@ SELECT MATAPCHI, TENTAPCHI, NAMPHATHANH, DINHKI, NXB, MATL FROM TAPCHI WHERE (MA
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="XUATBANTableAdapter" GeneratorDataComponentClassName="XUATBANTableAdapter" Name="XUATBAN" UserDataComponentName="XUATBANTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="THUVIENConnectionString (Settings)" DbObjectName="THUVIEN.dbo.XUATBAN" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="THUVIENConnectionString1 (Settings)" DbObjectName="THUVIEN.dbo.XUATBAN" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[XUATBAN] WHERE (([IDXB] = @Original_IDXB) AND ((@IsNull_LANXB = 1 AND [LANXB] IS NULL) OR ([LANXB] = @Original_LANXB)) AND ((@IsNull_NAMXB = 1 AND [NAMXB] IS NULL) OR ([NAMXB] = @Original_NAMXB)) AND ((@IsNull_KHOGIAY = 1 AND [KHOGIAY] IS NULL) OR ([KHOGIAY] = @Original_KHOGIAY)) AND ((@IsNull_SOTRANG = 1 AND [SOTRANG] IS NULL) OR ([SOTRANG] = @Original_SOTRANG)) AND ((@IsNull_NHAXB = 1 AND [NHAXB] IS NULL) OR ([NHAXB] = @Original_NHAXB)) AND ((@IsNull_GIA = 1 AND [GIA] IS NULL) OR ([GIA] = @Original_GIA)) AND ((@IsNull_DIACD = 1 AND [DIACD] IS NULL) OR ([DIACD] = @Original_DIACD)) AND ((@IsNull_MASACH = 1 AND [MASACH] IS NULL) OR ([MASACH] = @Original_MASACH)))</CommandText>
@@ -784,7 +777,6 @@ SELECT IDXB, LANXB, NAMXB, KHOGIAY, SOTRANG, NHAXB, GIA, DIACD, MASACH FROM XUAT
             <xs:sequence>
               <xs:element name="IDSACH" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="IDSACH" msprop:Generator_ColumnPropNameInTable="IDSACHColumn" msprop:Generator_ColumnVarNameInTable="columnIDSACH" msprop:Generator_UserColumnName="IDSACH" type="xs:int" />
               <xs:element name="TINHTRANG" msprop:Generator_ColumnPropNameInRow="TINHTRANG" msprop:Generator_ColumnPropNameInTable="TINHTRANGColumn" msprop:Generator_ColumnVarNameInTable="columnTINHTRANG" msprop:Generator_UserColumnName="TINHTRANG" type="xs:int" minOccurs="0" />
-              <xs:element name="TRANGTHAI" msprop:Generator_ColumnPropNameInRow="TRANGTHAI" msprop:Generator_ColumnPropNameInTable="TRANGTHAIColumn" msprop:Generator_ColumnVarNameInTable="columnTRANGTHAI" msprop:Generator_UserColumnName="TRANGTHAI" type="xs:boolean" minOccurs="0" />
               <xs:element name="IDXB" msprop:Generator_ColumnPropNameInRow="IDXB" msprop:Generator_ColumnPropNameInTable="IDXBColumn" msprop:Generator_ColumnVarNameInTable="columnIDXB" msprop:Generator_UserColumnName="IDXB" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>

@@ -32,3 +32,16 @@ C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLy
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CopyComplete
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDocGia.resources
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.XtraGrid.v22.2.dll
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.XtraLayout.v22.2.dll
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.XtraPrinting.v22.2.dll
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.RichEdit.v22.2.Core.dll
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.XtraTreeList.v22.2.dll
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.Office.v22.2.Core.dll
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.XtraGrid.v22.2.xml
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.XtraLayout.v22.2.xml
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.XtraPrinting.v22.2.xml
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.RichEdit.v22.2.Core.xml
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.XtraTreeList.v22.2.xml
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExpress.Office.v22.2.Core.xml

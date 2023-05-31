@@ -35,7 +35,7 @@ namespace QuanLyThuVien
 
         private void btnDangNhap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = this.CheckExist(typeof(frmDangNhap));
+            Form frm = CheckExist(typeof(frmDangNhap));
             if (frm != null)
             {
                 frm.Activate();
@@ -78,13 +78,26 @@ namespace QuanLyThuVien
         {
             lbMa.Text = $"Mã: {Program.username}";
             lbHoTen.Text = $"Họ tên: {Program.mHoTen}";
-            lbNhom.Text = $"Nhóm: {Program.mGroup}"
+            lbNhom.Text = $"Nhóm: {Program.mGroup}";
             btnDoiMK.Enabled = btnDangXuat.Enabled = true;
             // Set các ribbon về trạng thái Visible = false
             ribDanhMuc.Visible = ribTimKiem.Visible = Visible = ribMuonTraSach.Visible = true;
 
 
 
+        }
+
+        private void btnDocGia_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmDocGia));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else {
+                frmDocGia f = new frmDocGia();
+                f.MdiParent = this;
+                f.Show();
+            }
         }
     }
 }

@@ -1610,8 +1610,6 @@ namespace QuanLyThuVien {
             
             private global::System.Data.DataColumn columnTINHTRANG;
             
-            private global::System.Data.DataColumn columnTRANGTHAI;
-            
             private global::System.Data.DataColumn columnIDXB;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1665,14 +1663,6 @@ namespace QuanLyThuVien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TRANGTHAIColumn {
-                get {
-                    return this.columnTRANGTHAI;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn IDXBColumn {
                 get {
                     return this.columnIDXB;
@@ -1716,15 +1706,14 @@ namespace QuanLyThuVien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CUONSACHRow AddCUONSACHRow(int TINHTRANG, bool TRANGTHAI, XUATBANRow parentXUATBANRowByFK_CUONSACH_XUATBAN) {
+            public CUONSACHRow AddCUONSACHRow(int TINHTRANG, XUATBANRow parentXUATBANRowByFK_CUONSACH_XUATBAN) {
                 CUONSACHRow rowCUONSACHRow = ((CUONSACHRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         TINHTRANG,
-                        TRANGTHAI,
                         null};
                 if ((parentXUATBANRowByFK_CUONSACH_XUATBAN != null)) {
-                    columnValuesArray[3] = parentXUATBANRowByFK_CUONSACH_XUATBAN[0];
+                    columnValuesArray[2] = parentXUATBANRowByFK_CUONSACH_XUATBAN[0];
                 }
                 rowCUONSACHRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCUONSACHRow);
@@ -1757,7 +1746,6 @@ namespace QuanLyThuVien {
             internal void InitVars() {
                 this.columnIDSACH = base.Columns["IDSACH"];
                 this.columnTINHTRANG = base.Columns["TINHTRANG"];
-                this.columnTRANGTHAI = base.Columns["TRANGTHAI"];
                 this.columnIDXB = base.Columns["IDXB"];
             }
             
@@ -1768,8 +1756,6 @@ namespace QuanLyThuVien {
                 base.Columns.Add(this.columnIDSACH);
                 this.columnTINHTRANG = new global::System.Data.DataColumn("TINHTRANG", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTINHTRANG);
-                this.columnTRANGTHAI = new global::System.Data.DataColumn("TRANGTHAI", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTRANGTHAI);
                 this.columnIDXB = new global::System.Data.DataColumn("IDXB", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIDXB);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -4448,22 +4434,6 @@ namespace QuanLyThuVien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool TRANGTHAI {
-                get {
-                    try {
-                        return ((bool)(this[this.tableCUONSACH.TRANGTHAIColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TRANGTHAI\' in table \'CUONSACH\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCUONSACH.TRANGTHAIColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int IDXB {
                 get {
                     try {
@@ -4499,18 +4469,6 @@ namespace QuanLyThuVien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTINHTRANGNull() {
                 this[this.tableCUONSACH.TINHTRANGColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTRANGTHAINull() {
-                return this.IsNull(this.tableCUONSACH.TRANGTHAIColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTRANGTHAINull() {
-                this[this.tableCUONSACH.TRANGTHAIColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6112,7 +6070,7 @@ SELECT MADOCGIA, IDKI, NGAYMUON, NGAYTRA FROM CT_MUONBAO WHERE (IDKI = @IDKI) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6501,7 +6459,7 @@ SELECT MADOCGIA, IDSACH, NGAYMUON, NGAYTRA FROM CT_MUONSACH WHERE (IDSACH = @IDS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6877,7 +6835,7 @@ SELECT MADOCGIA, IDSACH, NGAYMUON, NGAYTRA FROM CT_MUONSACH WHERE (IDSACH = @IDS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7186,42 +7144,36 @@ SELECT MADOCGIA, IDSACH, NGAYMUON, NGAYTRA FROM CT_MUONSACH WHERE (IDSACH = @IDS
             tableMapping.DataSetTable = "CUONSACH";
             tableMapping.ColumnMappings.Add("IDSACH", "IDSACH");
             tableMapping.ColumnMappings.Add("TINHTRANG", "TINHTRANG");
-            tableMapping.ColumnMappings.Add("TRANGTHAI", "TRANGTHAI");
             tableMapping.ColumnMappings.Add("IDXB", "IDXB");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[CUONSACH] WHERE (([IDSACH] = @Original_IDSACH) AND ((@IsNull_TINHTRANG = 1 AND [TINHTRANG] IS NULL) OR ([TINHTRANG] = @Original_TINHTRANG)) AND ((@IsNull_TRANGTHAI = 1 AND [TRANGTHAI] IS NULL) OR ([TRANGTHAI] = @Original_TRANGTHAI)) AND ((@IsNull_IDXB = 1 AND [IDXB] IS NULL) OR ([IDXB] = @Original_IDXB)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[CUONSACH] WHERE (([IDSACH] = @Original_IDSACH) AND ((@IsNull_T" +
+                "INHTRANG = 1 AND [TINHTRANG] IS NULL) OR ([TINHTRANG] = @Original_TINHTRANG)) AN" +
+                "D ((@IsNull_IDXB = 1 AND [IDXB] IS NULL) OR ([IDXB] = @Original_IDXB)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDSACH", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDSACH", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TINHTRANG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TINHTRANG", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TINHTRANG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TINHTRANG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TRANGTHAI", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TRANGTHAI", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TRANGTHAI", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TRANGTHAI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDXB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDXB", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDXB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDXB", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CUONSACH] ([TINHTRANG], [TRANGTHAI], [IDXB]) VALUES (@TINHTRAN" +
-                "G, @TRANGTHAI, @IDXB);\r\nSELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH " +
-                "WHERE (IDSACH = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[CUONSACH] ([TINHTRANG], [IDXB]) VALUES (@TINHTRANG, @IDXB);\r\nS" +
+                "ELECT IDSACH, TINHTRANG, IDXB FROM CUONSACH WHERE (IDSACH = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TINHTRANG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TINHTRANG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TRANGTHAI", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TRANGTHAI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDXB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDXB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[CUONSACH] SET [TINHTRANG] = @TINHTRANG, [TRANGTHAI] = @TRANGTHAI, [IDXB] = @IDXB WHERE (([IDSACH] = @Original_IDSACH) AND ((@IsNull_TINHTRANG = 1 AND [TINHTRANG] IS NULL) OR ([TINHTRANG] = @Original_TINHTRANG)) AND ((@IsNull_TRANGTHAI = 1 AND [TRANGTHAI] IS NULL) OR ([TRANGTHAI] = @Original_TRANGTHAI)) AND ((@IsNull_IDXB = 1 AND [IDXB] IS NULL) OR ([IDXB] = @Original_IDXB)));
-SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[CUONSACH] SET [TINHTRANG] = @TINHTRANG, [IDXB] = @IDXB WHERE (([IDSACH] = @Original_IDSACH) AND ((@IsNull_TINHTRANG = 1 AND [TINHTRANG] IS NULL) OR ([TINHTRANG] = @Original_TINHTRANG)) AND ((@IsNull_IDXB = 1 AND [IDXB] IS NULL) OR ([IDXB] = @Original_IDXB)));
+SELECT IDSACH, TINHTRANG, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TINHTRANG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TINHTRANG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TRANGTHAI", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TRANGTHAI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDXB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDXB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDSACH", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDSACH", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TINHTRANG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TINHTRANG", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TINHTRANG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TINHTRANG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TRANGTHAI", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TRANGTHAI", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TRANGTHAI", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TRANGTHAI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDXB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDXB", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDXB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDXB", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDSACH", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDSACH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7231,7 +7183,7 @@ SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7240,7 +7192,7 @@ SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM dbo.CUONSACH";
+            this._commandCollection[0].CommandText = "SELECT IDSACH, TINHTRANG, IDXB FROM dbo.CUONSACH";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7301,7 +7253,7 @@ SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IDSACH, global::System.Nullable<int> Original_TINHTRANG, global::System.Nullable<bool> Original_TRANGTHAI, global::System.Nullable<int> Original_IDXB) {
+        public virtual int Delete(int Original_IDSACH, global::System.Nullable<int> Original_TINHTRANG, global::System.Nullable<int> Original_IDXB) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IDSACH));
             if ((Original_TINHTRANG.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -7311,21 +7263,13 @@ SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_TRANGTHAI.HasValue == true)) {
+            if ((Original_IDXB.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((bool)(Original_TRANGTHAI.Value));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_IDXB.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_IDXB.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_IDXB.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7347,24 +7291,18 @@ SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> TINHTRANG, global::System.Nullable<bool> TRANGTHAI, global::System.Nullable<int> IDXB) {
+        public virtual int Insert(global::System.Nullable<int> TINHTRANG, global::System.Nullable<int> IDXB) {
             if ((TINHTRANG.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(TINHTRANG.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((TRANGTHAI.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((bool)(TRANGTHAI.Value));
+            if ((IDXB.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(IDXB.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((IDXB.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(IDXB.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7386,51 +7324,37 @@ SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> TINHTRANG, global::System.Nullable<bool> TRANGTHAI, global::System.Nullable<int> IDXB, int Original_IDSACH, global::System.Nullable<int> Original_TINHTRANG, global::System.Nullable<bool> Original_TRANGTHAI, global::System.Nullable<int> Original_IDXB, int IDSACH) {
+        public virtual int Update(global::System.Nullable<int> TINHTRANG, global::System.Nullable<int> IDXB, int Original_IDSACH, global::System.Nullable<int> Original_TINHTRANG, global::System.Nullable<int> Original_IDXB, int IDSACH) {
             if ((TINHTRANG.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(TINHTRANG.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((TRANGTHAI.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((bool)(TRANGTHAI.Value));
+            if ((IDXB.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(IDXB.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((IDXB.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(IDXB.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_IDSACH));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_IDSACH));
             if ((Original_TINHTRANG.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_TINHTRANG.Value));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_TINHTRANG.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            if ((Original_TRANGTHAI.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(Original_TRANGTHAI.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             if ((Original_IDXB.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_IDXB.Value));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_IDXB.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(IDSACH));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(IDSACH));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7451,8 +7375,8 @@ SELECT IDSACH, TINHTRANG, TRANGTHAI, IDXB FROM CUONSACH WHERE (IDSACH = @IDSACH)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> TINHTRANG, global::System.Nullable<bool> TRANGTHAI, global::System.Nullable<int> IDXB, int Original_IDSACH, global::System.Nullable<int> Original_TINHTRANG, global::System.Nullable<bool> Original_TRANGTHAI, global::System.Nullable<int> Original_IDXB) {
-            return this.Update(TINHTRANG, TRANGTHAI, IDXB, Original_IDSACH, Original_TINHTRANG, Original_TRANGTHAI, Original_IDXB, Original_IDSACH);
+        public virtual int Update(global::System.Nullable<int> TINHTRANG, global::System.Nullable<int> IDXB, int Original_IDSACH, global::System.Nullable<int> Original_TINHTRANG, global::System.Nullable<int> Original_IDXB) {
+            return this.Update(TINHTRANG, IDXB, Original_IDSACH, Original_TINHTRANG, Original_IDXB, Original_IDSACH);
         }
     }
     
@@ -7632,7 +7556,7 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8072,7 +7996,7 @@ SELECT IDKI, LUONGNHAP, LUONGTON, MATAPCHI FROM KYXB WHERE (IDKI = @IDKI)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8462,7 +8386,7 @@ SELECT MASACH, NAMPHATHANH, TENSACH, MATL FROM SACH WHERE (MASACH = @MASACH)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8871,7 +8795,7 @@ SELECT MATG, TENTG, NAMSINH FROM TACGIA WHERE (MATG = @MATG)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9245,7 +9169,7 @@ SELECT MATG, TENTG, NAMSINH FROM TACGIA WHERE (MATG = @MATG)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9615,7 +9539,7 @@ SELECT MATAPCHI, TENTAPCHI, NAMPHATHANH, DINHKI, NXB, MATL FROM TAPCHI WHERE (MA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10095,7 +10019,7 @@ SELECT IDXB, LANXB, NAMXB, KHOGIAY, SOTRANG, NHAXB, GIA, DIACD, MASACH FROM XUAT
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

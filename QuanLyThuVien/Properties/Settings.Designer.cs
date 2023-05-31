@@ -33,5 +33,16 @@ namespace QuanLyThuVien.Properties {
                 return ((string)(this["THUVIENConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DELLLATITUDEE65;Initial Catalog=THUVIEN;Persist Security Info=True;Us" +
+            "er ID=Truong;Password=123456")]
+        public string THUVIENConnectionString1 {
+            get {
+                return ((string)(this["THUVIENConnectionString1"]));
+            }
+        }
     }
 }

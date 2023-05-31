@@ -16,5 +16,26 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
+
+        private void dOCGIABindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.bdsDocGia.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dS);
+
+        }
+
+        private void frmDocGia_Load(object sender, EventArgs e)
+        {
+           
+            // TODO: This line of code loads data into the 'dS.DOCGIA' table. You can move, or remove it, as needed.
+            this.dOCGIATableAdapter.Fill(this.dS.DOCGIA);
+
+        }
+
+        private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            bdsDocGia.AddNew();
+        }
     }
 }

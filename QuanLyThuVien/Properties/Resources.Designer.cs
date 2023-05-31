@@ -93,9 +93,39 @@ namespace QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_magazine_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-magazine-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_password_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-password-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_publish_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-publish-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_publish_48__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-publish-48 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
