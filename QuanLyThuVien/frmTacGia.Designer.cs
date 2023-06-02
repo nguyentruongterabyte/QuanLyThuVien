@@ -88,7 +88,7 @@ namespace QuanLyThuVien
             mATGLabel.AutoSize = true;
             mATGLabel.Location = new System.Drawing.Point(189, 91);
             mATGLabel.Name = "mATGLabel";
-            mATGLabel.Size = new System.Drawing.Size(74, 17);
+            mATGLabel.Size = new System.Drawing.Size(60, 13);
             mATGLabel.TabIndex = 0;
             mATGLabel.Text = "Mã tác giả:";
             mATGLabel.UseWaitCursor = true;
@@ -98,7 +98,7 @@ namespace QuanLyThuVien
             tENTGLabel.AutoSize = true;
             tENTGLabel.Location = new System.Drawing.Point(189, 166);
             tENTGLabel.Name = "tENTGLabel";
-            tENTGLabel.Size = new System.Drawing.Size(80, 17);
+            tENTGLabel.Size = new System.Drawing.Size(64, 13);
             tENTGLabel.TabIndex = 2;
             tENTGLabel.Text = "Tên tác giả:";
             tENTGLabel.UseWaitCursor = true;
@@ -108,7 +108,7 @@ namespace QuanLyThuVien
             nAMSINHLabel.AutoSize = true;
             nAMSINHLabel.Location = new System.Drawing.Point(189, 247);
             nAMSINHLabel.Name = "nAMSINHLabel";
-            nAMSINHLabel.Size = new System.Drawing.Size(69, 17);
+            nAMSINHLabel.Size = new System.Drawing.Size(54, 13);
             nAMSINHLabel.TabIndex = 4;
             nAMSINHLabel.Text = "Năm sinh:";
             nAMSINHLabel.UseWaitCursor = true;
@@ -151,11 +151,11 @@ namespace QuanLyThuVien
             // 
             this.gcTacGia.DataSource = this.bdsTacGia;
             this.gcTacGia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gcTacGia.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.gcTacGia.Location = new System.Drawing.Point(0, 47);
+            this.gcTacGia.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.gcTacGia.Location = new System.Drawing.Point(0, 39);
             this.gcTacGia.MainView = this.gridView1;
             this.gcTacGia.Name = "gcTacGia";
-            this.gcTacGia.Size = new System.Drawing.Size(1313, 970);
+            this.gcTacGia.Size = new System.Drawing.Size(1313, 715);
             this.gcTacGia.TabIndex = 10;
             this.gcTacGia.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -169,6 +169,7 @@ namespace QuanLyThuVien
             this.colNAMSINH});
             this.gridView1.GridControl = this.gcTacGia;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             // 
             // colMATG
             // 
@@ -209,7 +210,7 @@ namespace QuanLyThuVien
             // 
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 1017);
+            this.panelControl1.Location = new System.Drawing.Point(0, 754);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1313, 0);
             this.panelControl1.TabIndex = 11;
@@ -242,7 +243,7 @@ namespace QuanLyThuVien
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtNamSinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtNamSinh.Size = new System.Drawing.Size(164, 34);
+            this.txtNamSinh.Size = new System.Drawing.Size(164, 28);
             this.txtNamSinh.TabIndex = 5;
             this.txtNamSinh.UseWaitCursor = true;
             // 
@@ -340,6 +341,7 @@ namespace QuanLyThuVien
             this.btnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.Image")));
             this.btnLamMoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.LargeImage")));
             this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLamMoi_ItemClick);
             // 
             // btnThoat
             // 
@@ -357,13 +359,13 @@ namespace QuanLyThuVien
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1313, 47);
+            this.barDockControlTop.Size = new System.Drawing.Size(1313, 39);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 462);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 754);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barDockControlBottom.Size = new System.Drawing.Size(1313, 0);
@@ -372,19 +374,19 @@ namespace QuanLyThuVien
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 47);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 39);
             this.barDockControlLeft.Manager = this.barManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 415);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 715);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1313, 47);
+            this.barDockControlRight.Location = new System.Drawing.Point(1313, 39);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 415);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 715);
             // 
             // btnPhucHoi
             // 
@@ -400,7 +402,7 @@ namespace QuanLyThuVien
             this.txtTenTacGia.Location = new System.Drawing.Point(359, 157);
             this.txtTenTacGia.MenuManager = this.barManager1;
             this.txtTenTacGia.Name = "txtTenTacGia";
-            this.txtTenTacGia.Size = new System.Drawing.Size(125, 34);
+            this.txtTenTacGia.Size = new System.Drawing.Size(125, 28);
             this.txtTenTacGia.TabIndex = 3;
             this.txtTenTacGia.UseWaitCursor = true;
             // 
@@ -410,16 +412,16 @@ namespace QuanLyThuVien
             this.txtMaTacGia.Location = new System.Drawing.Point(359, 82);
             this.txtMaTacGia.MenuManager = this.barManager1;
             this.txtMaTacGia.Name = "txtMaTacGia";
-            this.txtMaTacGia.Size = new System.Drawing.Size(125, 34);
+            this.txtMaTacGia.Size = new System.Drawing.Size(125, 28);
             this.txtMaTacGia.TabIndex = 1;
             this.txtMaTacGia.UseWaitCursor = true;
             // 
             // frmTacGia
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 462);
+            this.ClientSize = new System.Drawing.Size(1313, 754);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.gcTacGia);
             this.Controls.Add(this.barDockControlLeft);

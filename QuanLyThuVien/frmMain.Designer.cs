@@ -40,6 +40,7 @@
             this.btnTapChi = new DevExpress.XtraBars.BarButtonItem();
             this.btnXuatBan = new DevExpress.XtraBars.BarButtonItem();
             this.btnKyXuatBan = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -79,9 +80,10 @@
             this.btnDoiMK,
             this.btnTapChi,
             this.btnXuatBan,
-            this.btnKyXuatBan});
+            this.btnKyXuatBan,
+            this.barButtonItem2});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 12;
+            this.ribbonControl1.MaxItemId = 13;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -117,6 +119,7 @@
             this.btnTacGia.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_user_typing_using_typewriter_48;
             this.btnTacGia.Name = "btnTacGia";
             this.btnTacGia.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnTacGia.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTacGia_ItemClick);
             // 
             // barButtonItem1
             // 
@@ -159,6 +162,7 @@
             this.btnTapChi.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_magazine_48;
             this.btnTapChi.Name = "btnTapChi";
             this.btnTapChi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnTapChi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTapChi_ItemClick);
             // 
             // btnXuatBan
             // 
@@ -175,6 +179,12 @@
             this.btnKyXuatBan.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_publish_48__1_;
             this.btnKyXuatBan.Name = "btnKyXuatBan";
             this.btnKyXuatBan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "barButtonItem2";
+            this.barButtonItem2.Id = 12;
+            this.barButtonItem2.Name = "barButtonItem2";
             // 
             // ribbonPage1
             // 
@@ -230,6 +240,7 @@
             // 
             // ribbonPageGroup3
             // 
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
@@ -359,6 +370,7 @@
         private DevExpress.XtraBars.BarButtonItem btnXuatBan;
         private DevExpress.XtraBars.BarButtonItem btnKyXuatBan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }
 

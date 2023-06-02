@@ -113,5 +113,34 @@ namespace QuanLyThuVien
                 f.Show();
             }
         }
+
+        private void btnTacGia_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmTacGia));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else
+            {
+                frmTacGia f = new frmTacGia();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnTapChi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+            Form frm = CheckExist(typeof(frmTapChi));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else
+            {
+                frmTapChi f = new frmTapChi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

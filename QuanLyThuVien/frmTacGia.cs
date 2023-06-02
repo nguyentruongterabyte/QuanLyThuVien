@@ -152,7 +152,7 @@ namespace QuanLyThuVien
             }
             if (bdsTacGia.Count == 0)
             {
-                btnXoa.Enabled = false;
+                btnXoa.Enabled = btnSua.Enabled = false;
             }
         }
 
@@ -172,6 +172,19 @@ namespace QuanLyThuVien
               == System.Windows.Forms.DialogResult.Yes)
             {
                 this.Close();
+            }
+        }
+
+        private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                this.tACGIATableAdapter.Connection.ConnectionString = Program.connstr;
+                this.tACGIATableAdapter.Fill(this.dS.TACGIA);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi reload\n" + ex.Message);
             }
         }
     }
