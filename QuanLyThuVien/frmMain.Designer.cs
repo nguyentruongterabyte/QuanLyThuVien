@@ -108,6 +108,7 @@
             this.btnSach.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_books_48;
             this.btnSach.Name = "btnSach";
             this.btnSach.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSach_ItemClick);
             // 
             // btnTacGia
             // 

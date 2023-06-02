@@ -99,5 +99,19 @@ namespace QuanLyThuVien
                 f.Show();
             }
         }
+
+        private void btnSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmSach));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else
+            {
+                frmSach f = new frmSach();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

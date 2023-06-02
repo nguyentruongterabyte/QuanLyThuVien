@@ -46,6 +46,10 @@ namespace QuanLyThuVien {
         
         private XUATBANDataTable tableXUATBAN;
         
+        private V_Tac_GiaDataTable tableV_Tac_Gia;
+        
+        private global::System.Data.DataRelation relationFK_CT_SACH_SACH;
+        
         private global::System.Data.DataRelation relationFK_CT_MUONBAO_DOCGIA;
         
         private global::System.Data.DataRelation relationFK_CT_MUONBAO_KYXB;
@@ -53,8 +57,6 @@ namespace QuanLyThuVien {
         private global::System.Data.DataRelation relationFK_CT_MUONSACH_CUONSACH;
         
         private global::System.Data.DataRelation relationFK_CT_MUONSACH_DOCGIA;
-        
-        private global::System.Data.DataRelation relationFK_CT_SACH_SACH;
         
         private global::System.Data.DataRelation relationFK_CT_SACH_TACGIA;
         
@@ -128,6 +130,9 @@ namespace QuanLyThuVien {
                 }
                 if ((ds.Tables["XUATBAN"] != null)) {
                     base.Tables.Add(new XUATBANDataTable(ds.Tables["XUATBAN"]));
+                }
+                if ((ds.Tables["V_Tac_Gia"] != null)) {
+                    base.Tables.Add(new V_Tac_GiaDataTable(ds.Tables["V_Tac_Gia"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -259,6 +264,16 @@ namespace QuanLyThuVien {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public V_Tac_GiaDataTable V_Tac_Gia {
+            get {
+                return this.tableV_Tac_Gia;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -356,6 +371,9 @@ namespace QuanLyThuVien {
                 }
                 if ((ds.Tables["XUATBAN"] != null)) {
                     base.Tables.Add(new XUATBANDataTable(ds.Tables["XUATBAN"]));
+                }
+                if ((ds.Tables["V_Tac_Gia"] != null)) {
+                    base.Tables.Add(new V_Tac_GiaDataTable(ds.Tables["V_Tac_Gia"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -456,11 +474,17 @@ namespace QuanLyThuVien {
                     this.tableXUATBAN.InitVars();
                 }
             }
+            this.tableV_Tac_Gia = ((V_Tac_GiaDataTable)(base.Tables["V_Tac_Gia"]));
+            if ((initTable == true)) {
+                if ((this.tableV_Tac_Gia != null)) {
+                    this.tableV_Tac_Gia.InitVars();
+                }
+            }
+            this.relationFK_CT_SACH_SACH = this.Relations["FK_CT_SACH_SACH"];
             this.relationFK_CT_MUONBAO_DOCGIA = this.Relations["FK_CT_MUONBAO_DOCGIA"];
             this.relationFK_CT_MUONBAO_KYXB = this.Relations["FK_CT_MUONBAO_KYXB"];
             this.relationFK_CT_MUONSACH_CUONSACH = this.Relations["FK_CT_MUONSACH_CUONSACH"];
             this.relationFK_CT_MUONSACH_DOCGIA = this.Relations["FK_CT_MUONSACH_DOCGIA"];
-            this.relationFK_CT_SACH_SACH = this.Relations["FK_CT_SACH_SACH"];
             this.relationFK_CT_SACH_TACGIA = this.Relations["FK_CT_SACH_TACGIA"];
             this.relationFK_CUONSACH_XUATBAN = this.Relations["FK_CUONSACH_XUATBAN"];
             this.relationFK_KYXB_TAPCHI = this.Relations["FK_KYXB_TAPCHI"];
@@ -499,6 +523,20 @@ namespace QuanLyThuVien {
             base.Tables.Add(this.tableTAPCHI);
             this.tableXUATBAN = new XUATBANDataTable();
             base.Tables.Add(this.tableXUATBAN);
+            this.tableV_Tac_Gia = new V_Tac_GiaDataTable();
+            base.Tables.Add(this.tableV_Tac_Gia);
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_CT_SACH_SACH", new global::System.Data.DataColumn[] {
+                        this.tableSACH.MASACHColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCT_SACH.MASACHColumn});
+            this.tableCT_SACH.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.None;
+            fkc.UpdateRule = global::System.Data.Rule.Cascade;
+            this.relationFK_CT_SACH_SACH = new global::System.Data.DataRelation("FK_CT_SACH_SACH", new global::System.Data.DataColumn[] {
+                        this.tableSACH.MASACHColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCT_SACH.MASACHColumn}, false);
+            this.Relations.Add(this.relationFK_CT_SACH_SACH);
             this.relationFK_CT_MUONBAO_DOCGIA = new global::System.Data.DataRelation("FK_CT_MUONBAO_DOCGIA", new global::System.Data.DataColumn[] {
                         this.tableDOCGIA.MADOCGIAColumn}, new global::System.Data.DataColumn[] {
                         this.tableCT_MUONBAO.MADOCGIAColumn}, false);
@@ -515,10 +553,6 @@ namespace QuanLyThuVien {
                         this.tableDOCGIA.MADOCGIAColumn}, new global::System.Data.DataColumn[] {
                         this.tableCT_MUONSACH.MADOCGIAColumn}, false);
             this.Relations.Add(this.relationFK_CT_MUONSACH_DOCGIA);
-            this.relationFK_CT_SACH_SACH = new global::System.Data.DataRelation("FK_CT_SACH_SACH", new global::System.Data.DataColumn[] {
-                        this.tableSACH.MASACHColumn}, new global::System.Data.DataColumn[] {
-                        this.tableCT_SACH.MASACHColumn}, false);
-            this.Relations.Add(this.relationFK_CT_SACH_SACH);
             this.relationFK_CT_SACH_TACGIA = new global::System.Data.DataRelation("FK_CT_SACH_TACGIA", new global::System.Data.DataColumn[] {
                         this.tableTACGIA.MATGColumn}, new global::System.Data.DataColumn[] {
                         this.tableCT_SACH.MATGColumn}, false);
@@ -613,6 +647,12 @@ namespace QuanLyThuVien {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeV_Tac_Gia() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -698,6 +738,9 @@ namespace QuanLyThuVien {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void XUATBANRowChangeEventHandler(object sender, XUATBANRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void V_Tac_GiaRowChangeEventHandler(object sender, V_Tac_GiaRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -4103,6 +4146,280 @@ namespace QuanLyThuVien {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class V_Tac_GiaDataTable : global::System.Data.TypedTableBase<V_Tac_GiaRow> {
+            
+            private global::System.Data.DataColumn columnMATG;
+            
+            private global::System.Data.DataColumn columnTENTG;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_Tac_GiaDataTable() {
+                this.TableName = "V_Tac_Gia";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal V_Tac_GiaDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected V_Tac_GiaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MATGColumn {
+                get {
+                    return this.columnMATG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TENTGColumn {
+                get {
+                    return this.columnTENTG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_Tac_GiaRow this[int index] {
+                get {
+                    return ((V_Tac_GiaRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_Tac_GiaRowChangeEventHandler V_Tac_GiaRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_Tac_GiaRowChangeEventHandler V_Tac_GiaRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_Tac_GiaRowChangeEventHandler V_Tac_GiaRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event V_Tac_GiaRowChangeEventHandler V_Tac_GiaRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddV_Tac_GiaRow(V_Tac_GiaRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_Tac_GiaRow AddV_Tac_GiaRow(string MATG, string TENTG) {
+                V_Tac_GiaRow rowV_Tac_GiaRow = ((V_Tac_GiaRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        MATG,
+                        TENTG};
+                rowV_Tac_GiaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowV_Tac_GiaRow);
+                return rowV_Tac_GiaRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_Tac_GiaRow FindByMATG(string MATG) {
+                return ((V_Tac_GiaRow)(this.Rows.Find(new object[] {
+                            MATG})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                V_Tac_GiaDataTable cln = ((V_Tac_GiaDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new V_Tac_GiaDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnMATG = base.Columns["MATG"];
+                this.columnTENTG = base.Columns["TENTG"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnMATG = new global::System.Data.DataColumn("MATG", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMATG);
+                this.columnTENTG = new global::System.Data.DataColumn("TENTG", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTENTG);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnMATG}, true));
+                this.columnMATG.AllowDBNull = false;
+                this.columnMATG.Unique = true;
+                this.columnMATG.MaxLength = 10;
+                this.columnTENTG.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_Tac_GiaRow NewV_Tac_GiaRow() {
+                return ((V_Tac_GiaRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new V_Tac_GiaRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(V_Tac_GiaRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.V_Tac_GiaRowChanged != null)) {
+                    this.V_Tac_GiaRowChanged(this, new V_Tac_GiaRowChangeEvent(((V_Tac_GiaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.V_Tac_GiaRowChanging != null)) {
+                    this.V_Tac_GiaRowChanging(this, new V_Tac_GiaRowChangeEvent(((V_Tac_GiaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.V_Tac_GiaRowDeleted != null)) {
+                    this.V_Tac_GiaRowDeleted(this, new V_Tac_GiaRowChangeEvent(((V_Tac_GiaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.V_Tac_GiaRowDeleting != null)) {
+                    this.V_Tac_GiaRowDeleting(this, new V_Tac_GiaRowChangeEvent(((V_Tac_GiaRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveV_Tac_GiaRow(V_Tac_GiaRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DS ds = new DS();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "V_Tac_GiaDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class CT_MUONBAORow : global::System.Data.DataRow {
@@ -5526,6 +5843,60 @@ namespace QuanLyThuVien {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class V_Tac_GiaRow : global::System.Data.DataRow {
+            
+            private V_Tac_GiaDataTable tableV_Tac_Gia;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal V_Tac_GiaRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableV_Tac_Gia = ((V_Tac_GiaDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MATG {
+                get {
+                    return ((string)(this[this.tableV_Tac_Gia.MATGColumn]));
+                }
+                set {
+                    this[this.tableV_Tac_Gia.MATGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TENTG {
+                get {
+                    try {
+                        return ((string)(this[this.tableV_Tac_Gia.TENTGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TENTG\' in table \'V_Tac_Gia\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableV_Tac_Gia.TENTGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTENTGNull() {
+                return this.IsNull(this.tableV_Tac_Gia.TENTGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTENTGNull() {
+                this[this.tableV_Tac_Gia.TENTGColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -5885,6 +6256,40 @@ namespace QuanLyThuVien {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public XUATBANRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class V_Tac_GiaRowChangeEvent : global::System.EventArgs {
+            
+            private V_Tac_GiaRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_Tac_GiaRowChangeEvent(V_Tac_GiaRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public V_Tac_GiaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -10417,6 +10822,174 @@ SELECT IDXB, LANXB, NAMXB, KHOGIAY, SOTRANG, NHAXB, GIA, DIACD, MASACH FROM XUAT
                     global::System.Nullable<bool> Original_DIACD, 
                     string Original_MASACH) {
             return this.Update(LANXB, NAMXB, KHOGIAY, SOTRANG, NHAXB, GIA, DIACD, MASACH, Original_IDXB, Original_LANXB, Original_NAMXB, Original_KHOGIAY, Original_SOTRANG, Original_NHAXB, Original_GIA, Original_DIACD, Original_MASACH, Original_IDXB);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class V_Tac_GiaTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public V_Tac_GiaTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "V_Tac_Gia";
+            tableMapping.ColumnMappings.Add("MATG", "MATG");
+            tableMapping.ColumnMappings.Add("TENTG", "TENTG");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT MATG, TENTG FROM dbo.V_Tac_Gia";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DS.V_Tac_GiaDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DS.V_Tac_GiaDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DS.V_Tac_GiaDataTable dataTable = new DS.V_Tac_GiaDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
