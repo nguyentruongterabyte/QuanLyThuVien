@@ -41,17 +41,34 @@ namespace QuanLyThuVien
             {
                 btnSua.Enabled = btnXoa.Enabled = false;
             }
+            cmbDinhKy.DataSource = new Dictionary<int, string>
+            {
+                {1, "Hàng ngày"},
+                {2, "Hàng tháng"},
+                {3, "Hàng năm"}
+            }.ToList();
+
+            cmbDinhKy.ValueMember = "Key";
+            cmbDinhKy.DisplayMember = "Value";
+            cmbDinhKy.SelectedIndex = 1;
+            cmbDinhKy.SelectedIndex = 0;
+
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
             vitri = bdsTapChi.Position;
+            cmbDinhKy.SelectedIndex = 1;
+            cmbDinhKy.SelectedIndex = 0;
 
             bdsTapChi.AddNew();
             gcTapChi.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
 
             groupControl1.Enabled = btnHuy.Enabled = btnGhi.Enabled = true;
             txtMaTL.Text = "TAPCHI";
+            txtDinhKy.Text = "1";
+            
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -161,6 +178,16 @@ namespace QuanLyThuVien
             {
                 this.Close();
             }
+        }
+
+        private void cmbDinhKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtDinhKy.Text = cmbDinhKy.SelectedValue.ToString() ;
+        }
+
+        private void txtDinhKy_TextChanged(object sender, EventArgs e)
+        {
+            cmbDinhKy.SelectedIndex = int.Parse(txtDinhKy.Text) - 1;
         }
     }
 }

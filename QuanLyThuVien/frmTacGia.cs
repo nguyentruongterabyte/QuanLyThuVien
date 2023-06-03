@@ -87,16 +87,16 @@ namespace QuanLyThuVien
                 return;
             }
 
-            gcTacGia.Visible = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
-            panelControl1.Visible = btnHuy.Enabled = btnGhi.Enabled = false;
+            gcTacGia.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
+            panelControl1.Enabled = btnHuy.Enabled = btnGhi.Enabled = false;
         }
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             bdsTacGia.CancelEdit();
             bdsTacGia.Position = vitri;
-            gcTacGia.Visible = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
-            panelControl1.Visible = btnHuy.Enabled = btnGhi.Enabled = false;
+            gcTacGia.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
+            panelControl1.Enabled = btnHuy.Enabled = btnGhi.Enabled = false;
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -105,9 +105,9 @@ namespace QuanLyThuVien
 
             bdsTacGia.AddNew();
 
-            gcTacGia.Visible = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
+            gcTacGia.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
 
-            panelControl1.Visible = btnHuy.Enabled = btnGhi.Enabled = true;
+            panelControl1.Enabled = btnHuy.Enabled = btnGhi.Enabled = true;
 
         }
 
@@ -115,8 +115,8 @@ namespace QuanLyThuVien
         {
             vitri = bdsTacGia.Position;
 
-            gcTacGia.Visible = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
-            panelControl1.Visible = btnGhi.Enabled = btnHuy.Enabled = true;
+            gcTacGia.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
+            panelControl1.Enabled = btnGhi.Enabled = btnHuy.Enabled = true;
 
         }
 

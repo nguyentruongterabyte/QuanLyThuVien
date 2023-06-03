@@ -40,7 +40,8 @@
             this.btnTapChi = new DevExpress.XtraBars.BarButtonItem();
             this.btnXuatBan = new DevExpress.XtraBars.BarButtonItem();
             this.btnKyXuatBan = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnMuonSach = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribDanhMuc = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -49,8 +50,6 @@
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribMuonTraSach = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribTimKiem = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribBaoCaoTK = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -81,15 +80,15 @@
             this.btnTapChi,
             this.btnXuatBan,
             this.btnKyXuatBan,
-            this.barButtonItem2});
+            this.btnMuonSach,
+            this.barButtonItem3});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 13;
+            this.ribbonControl1.MaxItemId = 14;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribDanhMuc,
             this.ribMuonTraSach,
-            this.ribTimKiem,
             this.ribBaoCaoTK,
             this.ribbonPage6});
             this.ribbonControl1.Size = new System.Drawing.Size(975, 201);
@@ -171,6 +170,7 @@
             this.btnXuatBan.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_publish_48;
             this.btnXuatBan.Name = "btnXuatBan";
             this.btnXuatBan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnXuatBan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXuatBan_ItemClick);
             // 
             // btnKyXuatBan
             // 
@@ -180,11 +180,22 @@
             this.btnKyXuatBan.Name = "btnKyXuatBan";
             this.btnKyXuatBan.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
-            // barButtonItem2
+            // btnMuonSach
             // 
-            this.barButtonItem2.Caption = "barButtonItem2";
-            this.barButtonItem2.Id = 12;
-            this.barButtonItem2.Name = "barButtonItem2";
+            this.btnMuonSach.Caption = "Mượn sách";
+            this.btnMuonSach.Id = 12;
+            this.btnMuonSach.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_borrow_book_48;
+            this.btnMuonSach.Name = "btnMuonSach";
+            this.btnMuonSach.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnMuonSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMuonSach_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Mượn tạp chí";
+            this.barButtonItem3.Id = 13;
+            this.barButtonItem3.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_magazine_48__1_;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // ribbonPage1
             // 
@@ -240,22 +251,9 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem2);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnMuonSach);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
-            // 
-            // ribTimKiem
-            // 
-            this.ribTimKiem.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
-            this.ribTimKiem.Name = "ribTimKiem";
-            this.ribTimKiem.Text = "Tìm kiếm";
-            this.ribTimKiem.Visible = false;
-            // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
             // 
             // ribBaoCaoTK
             // 
@@ -347,7 +345,6 @@
         private DevExpress.XtraBars.BarButtonItem btnSach;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
@@ -359,7 +356,6 @@
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
         public DevExpress.XtraBars.Ribbon.RibbonPage ribDanhMuc;
         public DevExpress.XtraBars.Ribbon.RibbonPage ribMuonTraSach;
-        public DevExpress.XtraBars.Ribbon.RibbonPage ribTimKiem;
         public DevExpress.XtraBars.Ribbon.RibbonPage ribBaoCaoTK;
         private System.Windows.Forms.StatusStrip statusStrip1;
         public System.Windows.Forms.ToolStripStatusLabel lbMa;
@@ -370,7 +366,8 @@
         private DevExpress.XtraBars.BarButtonItem btnXuatBan;
         private DevExpress.XtraBars.BarButtonItem btnKyXuatBan;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem btnMuonSach;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }
 

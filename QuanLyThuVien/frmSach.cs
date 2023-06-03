@@ -99,6 +99,12 @@ namespace QuanLyThuVien
                 return;
             }
 
+            if (bdsCTSach.Count == 0)
+            {
+                MessageBox.Show("Bạn phải chọn tác giả cho sách này!");
+                return;
+            }
+
             string maSach = txtMaSach.Text.Trim();
             for (int i = 0; i < bdsCTSach.Count; i++)
             {

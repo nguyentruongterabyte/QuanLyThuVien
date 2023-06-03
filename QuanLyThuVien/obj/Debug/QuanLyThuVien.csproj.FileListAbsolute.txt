@@ -48,3 +48,4 @@ C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\bin\Debug\DevExp
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmSach.resources
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmTacGia.resources
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmTapChi.resources
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMuonSach.resources

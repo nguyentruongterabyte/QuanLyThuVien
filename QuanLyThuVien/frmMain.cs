@@ -80,10 +80,18 @@ namespace QuanLyThuVien
             lbHoTen.Text = $"Họ tên: {Program.mHoTen}";
             lbNhom.Text = $"Nhóm: {Program.mGroup}";
             btnDoiMK.Enabled = btnDangXuat.Enabled = true;
-            // Set các ribbon về trạng thái Visible = false
-            ribDanhMuc.Visible = ribTimKiem.Visible = Visible = ribMuonTraSach.Visible = true;
 
 
+            // Phân quyền
+            switch (Program.mGroup)
+            {
+                case "THUTHU":
+                    ribBaoCaoTK.Visible = ribDanhMuc.Visible = true;
+                    break;
+                case "DOCGIA":
+                    ribMuonTraSach.Visible = true;
+                    break;
+            }
 
         }
 
@@ -138,6 +146,35 @@ namespace QuanLyThuVien
             } else
             {
                 frmTapChi f = new frmTapChi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnXuatBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmXuatBan));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else
+            {
+                frmXuatBan f = new frmXuatBan();
+                f.MdiParent = this;
+                f.Show();
+            }
+
+        }
+
+        private void btnMuonSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmMuonSach));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else
+            {
+                frmMuonSach f = new frmMuonSach();
                 f.MdiParent = this;
                 f.Show();
             }

@@ -56,7 +56,7 @@ namespace QuanLyThuVien
         public static void DangXuat()
         {
             // Set các ribbon về trạng thái Visible = false
-            frmChinh.ribDanhMuc.Visible = frmChinh.ribTimKiem.Visible = frmChinh.ribBaoCaoTK.Visible = frmChinh.ribMuonTraSach.Visible = false;
+            frmChinh.ribDanhMuc.Visible = frmChinh.ribBaoCaoTK.Visible = frmChinh.ribMuonTraSach.Visible = false;
 
             // Xóa các login, password, ... của người dùng trước và trả về giá trị ban đầu 
             //Program.servername = Program.username = Program.mlogin = Program.password 

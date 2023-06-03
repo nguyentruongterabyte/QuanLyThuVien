@@ -70,6 +70,7 @@
             this.txtTenTC = new DevExpress.XtraEditors.TextEdit();
             this.txtMaTC = new DevExpress.XtraEditors.TextEdit();
             this.cmbDinhKy = new System.Windows.Forms.ComboBox();
+            this.txtDinhKy = new System.Windows.Forms.TextBox();
             mATAPCHILabel = new System.Windows.Forms.Label();
             tENTAPCHILabel = new System.Windows.Forms.Label();
             nAMPHATHANHLabel = new System.Windows.Forms.Label();
@@ -422,15 +423,17 @@
             this.groupControl1.Controls.Add(this.txtTenTC);
             this.groupControl1.Controls.Add(mATAPCHILabel);
             this.groupControl1.Controls.Add(this.txtMaTC);
+            this.groupControl1.Controls.Add(this.txtDinhKy);
             this.groupControl1.Location = new System.Drawing.Point(54, 35);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(433, 378);
+            this.groupControl1.Size = new System.Drawing.Size(489, 378);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin tạp chí";
             // 
             // txtMaTL
             // 
             this.txtMaTL.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsTapChi, "MATL", true));
+            this.txtMaTL.Enabled = false;
             this.txtMaTL.Location = new System.Drawing.Point(139, 330);
             this.txtMaTL.MenuManager = this.barManager1;
             this.txtMaTL.Name = "txtMaTL";
@@ -480,16 +483,21 @@
             // 
             // cmbDinhKy
             // 
-            this.cmbDinhKy.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTapChi, "DINHKI", true));
             this.cmbDinhKy.FormattingEnabled = true;
-            this.cmbDinhKy.Items.AddRange(new object[] {
-            "1 Hàng ngày",
-            "2 Hàng tháng",
-            "3 Hàng năm"});
-            this.cmbDinhKy.Location = new System.Drawing.Point(139, 248);
+            this.cmbDinhKy.Location = new System.Drawing.Point(139, 243);
             this.cmbDinhKy.Name = "cmbDinhKy";
             this.cmbDinhKy.Size = new System.Drawing.Size(121, 21);
             this.cmbDinhKy.TabIndex = 12;
+            this.cmbDinhKy.SelectedIndexChanged += new System.EventHandler(this.cmbDinhKy_SelectedIndexChanged);
+            // 
+            // txtDinhKy
+            // 
+            this.txtDinhKy.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsTapChi, "DINHKI", true));
+            this.txtDinhKy.Location = new System.Drawing.Point(149, 243);
+            this.txtDinhKy.Name = "txtDinhKy";
+            this.txtDinhKy.Size = new System.Drawing.Size(100, 21);
+            this.txtDinhKy.TabIndex = 13;
+            this.txtDinhKy.TextChanged += new System.EventHandler(this.txtDinhKy_TextChanged);
             // 
             // frmTapChi
             // 
@@ -563,5 +571,6 @@
         private DevExpress.XtraEditors.TextEdit txtTenTC;
         private DevExpress.XtraEditors.TextEdit txtMaTC;
         private System.Windows.Forms.ComboBox cmbDinhKy;
+        private System.Windows.Forms.TextBox txtDinhKy;
     }
 }
