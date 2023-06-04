@@ -49,3 +49,5 @@ C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLy
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmTacGia.resources
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmTapChi.resources
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMuonSach.resources
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmXuatBan.resources
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmTraSach.resources

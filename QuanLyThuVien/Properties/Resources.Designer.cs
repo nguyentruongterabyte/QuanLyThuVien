@@ -183,6 +183,16 @@ namespace QuanLyThuVien.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_return_purchase_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-return-purchase-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_user_typing_using_typewriter_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-user-typing-using-typewriter-48", resourceCulture);

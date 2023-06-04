@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label sONGAYLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMuonSach));
             this.dS = new QuanLyThuVien.DS();
             this.bdsSachCoTheMuon = new System.Windows.Forms.BindingSource(this.components);
             this.v_SACH_CO_THE_MUONTableAdapter = new QuanLyThuVien.DSTableAdapters.V_SACH_CO_THE_MUONTableAdapter();
             this.tableAdapterManager = new QuanLyThuVien.DSTableAdapters.TableAdapterManager();
-            this.v_SACH_CO_THE_MUONGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gvSachCoTheMuon = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colIDSACH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMASACH = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,35 +47,43 @@
             this.btnLoaiBo = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.txtSoNgay = new DevExpress.XtraEditors.TextEdit();
+            this.bdsCTMuonSach = new System.Windows.Forms.BindingSource(this.components);
             this.btnHoanTat = new DevExpress.XtraEditors.SimpleButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dvGioSach = new System.Windows.Forms.DataGridView();
-            this.iDSACHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TinhTrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mADOCGIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nGAYTRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nGAYMUONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bdsCTMuonSach = new System.Windows.Forms.BindingSource(this.components);
+            this.IDSACH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MASACH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENSACH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LANXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TINHTRANG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cT_MUONSACHTableAdapter = new QuanLyThuVien.DSTableAdapters.CT_MUONSACHTableAdapter();
+            this.btnTaiLai = new DevExpress.XtraEditors.SimpleButton();
+            sONGAYLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSachCoTheMuon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_SACH_CO_THE_MUONGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSachCoTheMuon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoNgay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCTMuonSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvGioSach)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCTMuonSach)).BeginInit();
             this.SuspendLayout();
+            // 
+            // sONGAYLabel
+            // 
+            sONGAYLabel.AutoSize = true;
+            sONGAYLabel.Location = new System.Drawing.Point(75, 320);
+            sONGAYLabel.Name = "sONGAYLabel";
+            sONGAYLabel.Size = new System.Drawing.Size(76, 13);
+            sONGAYLabel.TabIndex = 4;
+            sONGAYLabel.Text = "Số ngày mượn";
             // 
             // dS
             // 
@@ -106,16 +116,16 @@
             this.tableAdapterManager.UpdateOrder = QuanLyThuVien.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.XUATBANTableAdapter = null;
             // 
-            // v_SACH_CO_THE_MUONGridControl
+            // gvSachCoTheMuon
             // 
-            this.v_SACH_CO_THE_MUONGridControl.DataSource = this.bdsSachCoTheMuon;
-            this.v_SACH_CO_THE_MUONGridControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.v_SACH_CO_THE_MUONGridControl.Location = new System.Drawing.Point(0, 0);
-            this.v_SACH_CO_THE_MUONGridControl.MainView = this.gridView1;
-            this.v_SACH_CO_THE_MUONGridControl.Name = "v_SACH_CO_THE_MUONGridControl";
-            this.v_SACH_CO_THE_MUONGridControl.Size = new System.Drawing.Size(645, 754);
-            this.v_SACH_CO_THE_MUONGridControl.TabIndex = 1;
-            this.v_SACH_CO_THE_MUONGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gvSachCoTheMuon.DataSource = this.bdsSachCoTheMuon;
+            this.gvSachCoTheMuon.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gvSachCoTheMuon.Location = new System.Drawing.Point(0, 0);
+            this.gvSachCoTheMuon.MainView = this.gridView1;
+            this.gvSachCoTheMuon.Name = "gvSachCoTheMuon";
+            this.gvSachCoTheMuon.Size = new System.Drawing.Size(645, 754);
+            this.gvSachCoTheMuon.TabIndex = 1;
+            this.gvSachCoTheMuon.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -127,7 +137,7 @@
             this.colLANXB,
             this.colSTT,
             this.colTINHTRANG});
-            this.gridView1.GridControl = this.v_SACH_CO_THE_MUONGridControl;
+            this.gridView1.GridControl = this.gvSachCoTheMuon;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             // 
@@ -180,6 +190,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.btnTaiLai);
             this.panelControl1.Controls.Add(this.btnLoaiBo);
             this.panelControl1.Controls.Add(this.btnThem);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -196,11 +207,12 @@
             this.btnLoaiBo.Appearance.Options.UseFont = true;
             this.btnLoaiBo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLoaiBo.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_double_left_48;
-            this.btnLoaiBo.Location = new System.Drawing.Point(5, 302);
+            this.btnLoaiBo.Location = new System.Drawing.Point(5, 155);
             this.btnLoaiBo.Name = "btnLoaiBo";
             this.btnLoaiBo.Size = new System.Drawing.Size(142, 52);
             this.btnLoaiBo.TabIndex = 1;
             this.btnLoaiBo.Text = "Loại khỏi\r\ngiỏ sách";
+            this.btnLoaiBo.Click += new System.EventHandler(this.btnLoaiBo_Click);
             // 
             // btnThem
             // 
@@ -210,7 +222,7 @@
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_double_right_48;
-            this.btnThem.Location = new System.Drawing.Point(6, 234);
+            this.btnThem.Location = new System.Drawing.Point(5, 88);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(142, 52);
             this.btnThem.TabIndex = 0;
@@ -219,15 +231,29 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.txtSoNgay);
+            this.panelControl2.Controls.Add(sONGAYLabel);
             this.panelControl2.Controls.Add(this.btnHoanTat);
-            this.panelControl2.Controls.Add(this.label1);
-            this.panelControl2.Controls.Add(this.dateEdit1);
             this.panelControl2.Controls.Add(this.groupControl1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(799, 0);
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(585, 754);
             this.panelControl2.TabIndex = 3;
+            // 
+            // txtSoNgay
+            // 
+            this.txtSoNgay.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsCTMuonSach, "SONGAY", true));
+            this.txtSoNgay.Location = new System.Drawing.Point(157, 313);
+            this.txtSoNgay.Name = "txtSoNgay";
+            this.txtSoNgay.Size = new System.Drawing.Size(100, 28);
+            this.txtSoNgay.TabIndex = 5;
+            this.txtSoNgay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoNgay_KeyPress);
+            // 
+            // bdsCTMuonSach
+            // 
+            this.bdsCTMuonSach.DataMember = "CT_MUONSACH";
+            this.bdsCTMuonSach.DataSource = this.dS;
             // 
             // btnHoanTat
             // 
@@ -236,145 +262,125 @@
             this.btnHoanTat.Appearance.Options.UseBackColor = true;
             this.btnHoanTat.Appearance.Options.UseFont = true;
             this.btnHoanTat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHoanTat.Location = new System.Drawing.Point(80, 643);
+            this.btnHoanTat.Location = new System.Drawing.Point(78, 388);
             this.btnHoanTat.Name = "btnHoanTat";
             this.btnHoanTat.Size = new System.Drawing.Size(447, 51);
             this.btnHoanTat.TabIndex = 3;
             this.btnHoanTat.Text = "HOÀN TẤT";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(79, 575);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ngày mượn";
-            // 
-            // dateEdit1
-            // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(147, 568);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(153, 28);
-            this.dateEdit1.TabIndex = 1;
+            this.btnHoanTat.Click += new System.EventHandler(this.btnHoanTat_Click);
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.dvGioSach);
-            this.groupControl1.Location = new System.Drawing.Point(80, 64);
+            this.groupControl1.Location = new System.Drawing.Point(78, 12);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(449, 463);
+            this.groupControl1.Size = new System.Drawing.Size(449, 260);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Giỏ sách";
             // 
             // dvGioSach
             // 
             this.dvGioSach.AllowUserToAddRows = false;
-            this.dvGioSach.AutoGenerateColumns = false;
             this.dvGioSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvGioSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDSACHDataGridViewTextBoxColumn,
-            this.MaSach,
-            this.TenSach,
-            this.TinhTrang,
-            this.mADOCGIADataGridViewTextBoxColumn,
-            this.nGAYTRADataGridViewTextBoxColumn,
-            this.nGAYMUONDataGridViewTextBoxColumn});
-            this.dvGioSach.DataSource = this.bdsCTMuonSach;
+            this.IDSACH,
+            this.MASACH,
+            this.TENSACH,
+            this.LANXB,
+            this.STT,
+            this.TINHTRANG});
             this.dvGioSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvGioSach.Location = new System.Drawing.Point(2, 29);
             this.dvGioSach.Name = "dvGioSach";
             this.dvGioSach.ReadOnly = true;
-            this.dvGioSach.Size = new System.Drawing.Size(445, 432);
+            this.dvGioSach.Size = new System.Drawing.Size(445, 229);
             this.dvGioSach.TabIndex = 0;
+            this.dvGioSach.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dvGioSach_UserDeletingRow);
             // 
-            // iDSACHDataGridViewTextBoxColumn
+            // IDSACH
             // 
-            this.iDSACHDataGridViewTextBoxColumn.DataPropertyName = "IDSACH";
-            this.iDSACHDataGridViewTextBoxColumn.HeaderText = "ID Cuốn";
-            this.iDSACHDataGridViewTextBoxColumn.Name = "iDSACHDataGridViewTextBoxColumn";
-            this.iDSACHDataGridViewTextBoxColumn.ReadOnly = true;
+            this.IDSACH.HeaderText = "ID Cuốn";
+            this.IDSACH.Name = "IDSACH";
+            this.IDSACH.ReadOnly = true;
             // 
-            // MaSach
+            // MASACH
             // 
-            this.MaSach.HeaderText = "Mã sách";
-            this.MaSach.Name = "MaSach";
-            this.MaSach.ReadOnly = true;
+            this.MASACH.HeaderText = "Mã Sách (Hidden)";
+            this.MASACH.Name = "MASACH";
+            this.MASACH.ReadOnly = true;
+            this.MASACH.Visible = false;
             // 
-            // TenSach
+            // TENSACH
             // 
-            this.TenSach.HeaderText = "Tên sách";
-            this.TenSach.Name = "TenSach";
-            this.TenSach.ReadOnly = true;
+            this.TENSACH.HeaderText = "Tên Sách";
+            this.TENSACH.Name = "TENSACH";
+            this.TENSACH.ReadOnly = true;
             // 
-            // TinhTrang
+            // LANXB
             // 
-            this.TinhTrang.HeaderText = "Tình Trạng";
-            this.TinhTrang.Name = "TinhTrang";
-            this.TinhTrang.ReadOnly = true;
+            this.LANXB.HeaderText = "Lần XB";
+            this.LANXB.Name = "LANXB";
+            this.LANXB.ReadOnly = true;
             // 
-            // mADOCGIADataGridViewTextBoxColumn
+            // STT
             // 
-            this.mADOCGIADataGridViewTextBoxColumn.DataPropertyName = "MADOCGIA";
-            this.mADOCGIADataGridViewTextBoxColumn.HeaderText = "MADOCGIA";
-            this.mADOCGIADataGridViewTextBoxColumn.Name = "mADOCGIADataGridViewTextBoxColumn";
-            this.mADOCGIADataGridViewTextBoxColumn.ReadOnly = true;
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
             // 
-            // nGAYTRADataGridViewTextBoxColumn
+            // TINHTRANG
             // 
-            this.nGAYTRADataGridViewTextBoxColumn.DataPropertyName = "NGAYTRA";
-            this.nGAYTRADataGridViewTextBoxColumn.HeaderText = "NGAYTRA";
-            this.nGAYTRADataGridViewTextBoxColumn.Name = "nGAYTRADataGridViewTextBoxColumn";
-            this.nGAYTRADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nGAYMUONDataGridViewTextBoxColumn
-            // 
-            this.nGAYMUONDataGridViewTextBoxColumn.DataPropertyName = "NGAYMUON";
-            this.nGAYMUONDataGridViewTextBoxColumn.HeaderText = "NGAYMUON";
-            this.nGAYMUONDataGridViewTextBoxColumn.Name = "nGAYMUONDataGridViewTextBoxColumn";
-            this.nGAYMUONDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bdsCTMuonSach
-            // 
-            this.bdsCTMuonSach.DataMember = "CT_MUONSACH";
-            this.bdsCTMuonSach.DataSource = this.dS;
+            this.TINHTRANG.HeaderText = "Tình trạng (Hidden)";
+            this.TINHTRANG.Name = "TINHTRANG";
+            this.TINHTRANG.ReadOnly = true;
+            this.TINHTRANG.Visible = false;
             // 
             // cT_MUONSACHTableAdapter
             // 
             this.cT_MUONSACHTableAdapter.ClearBeforeFill = true;
             // 
+            // btnTaiLai
+            // 
+            this.btnTaiLai.Appearance.BackColor = System.Drawing.Color.Aqua;
+            this.btnTaiLai.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiLai.Appearance.Options.UseBackColor = true;
+            this.btnTaiLai.Appearance.Options.UseFont = true;
+            this.btnTaiLai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTaiLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnTaiLai.Location = new System.Drawing.Point(5, 21);
+            this.btnTaiLai.Name = "btnTaiLai";
+            this.btnTaiLai.Size = new System.Drawing.Size(142, 52);
+            this.btnTaiLai.TabIndex = 2;
+            this.btnTaiLai.Text = "Tải lại";
+            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
+            // 
             // frmMuonSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1384, 754);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.v_SACH_CO_THE_MUONGridControl);
+            this.Controls.Add(this.gvSachCoTheMuon);
             this.Name = "frmMuonSach";
             this.Text = "Mượn sách";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMuonSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSachCoTheMuon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_SACH_CO_THE_MUONGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSachCoTheMuon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoNgay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCTMuonSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvGioSach)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCTMuonSach)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -385,7 +391,7 @@
         private System.Windows.Forms.BindingSource bdsSachCoTheMuon;
         private DSTableAdapters.V_SACH_CO_THE_MUONTableAdapter v_SACH_CO_THE_MUONTableAdapter;
         private DSTableAdapters.TableAdapterManager tableAdapterManager;
-        private DevExpress.XtraGrid.GridControl v_SACH_CO_THE_MUONGridControl;
+        private DevExpress.XtraGrid.GridControl gvSachCoTheMuon;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colIDSACH;
         private DevExpress.XtraGrid.Columns.GridColumn colMASACH;
@@ -402,14 +408,13 @@
         private System.Windows.Forms.BindingSource bdsCTMuonSach;
         private DSTableAdapters.CT_MUONSACHTableAdapter cT_MUONSACHTableAdapter;
         private DevExpress.XtraEditors.SimpleButton btnHoanTat;
-        private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDSACHDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TinhTrang;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mADOCGIADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nGAYTRADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nGAYMUONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDSACH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MASACH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENSACH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LANXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TINHTRANG;
+        private DevExpress.XtraEditors.TextEdit txtSoNgay;
+        private DevExpress.XtraEditors.SimpleButton btnTaiLai;
     }
 }

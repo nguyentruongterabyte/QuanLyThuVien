@@ -103,10 +103,16 @@
     <Compile Include="frmTapChi.Designer.cs">
       <DependentUpon>frmTapChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTraSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTraSach.Designer.cs">
+      <DependentUpon>frmTraSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmXuatBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmXuatBan.Designer.cs">
+    <Compile Include="frmXuatBan.designer.cs">
       <DependentUpon>frmXuatBan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -132,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTapChi.resx">
       <DependentUpon>frmTapChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTraSach.resx">
+      <DependentUpon>frmTraSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXuatBan.resx">
+      <DependentUpon>frmXuatBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -204,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-double-left-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-return-purchase-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

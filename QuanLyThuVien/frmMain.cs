@@ -179,5 +179,20 @@ namespace QuanLyThuVien
                 f.Show();
             }
         }
+
+        private void btnTraSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmTraSach));
+            if (frm != null)
+            {
+                frm.Activate();
+
+            } else
+            {
+                frmTraSach f = new frmTraSach();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

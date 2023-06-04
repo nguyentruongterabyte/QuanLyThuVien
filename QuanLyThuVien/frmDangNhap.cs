@@ -45,7 +45,7 @@ namespace QLDSV_TC
             cmbVaiTro.SelectedIndex = 1;
             cmbVaiTro.SelectedIndex = 0;
 
-            txtPass.PasswordChar = '*';
+            txtPass.Properties.PasswordChar = '*';
             btnDangNhap.Enabled = true;
         }
 
@@ -135,11 +135,11 @@ namespace QLDSV_TC
         {
             if (chkHienThi.Checked)
             {
-                txtPass.PasswordChar = default;
+                txtPass.Properties.PasswordChar = default;
             }
             else
             {
-                txtPass.PasswordChar = '*';
+                txtPass.Properties.PasswordChar = '*';
             }
         }
 

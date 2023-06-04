@@ -30,14 +30,16 @@
         {
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtLogin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.chkHienThi = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbVaiTro = new System.Windows.Forms.ComboBox();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.txtLogin = new DevExpress.XtraEditors.TextEdit();
+            this.txtPass = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDangNhap
@@ -57,6 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(44, 92);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -64,38 +67,22 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Tên đăng nhập";
             // 
-            // txtLogin
-            // 
-            this.txtLogin.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtLogin.Location = new System.Drawing.Point(177, 85);
-            this.txtLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(281, 23);
-            this.txtLogin.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 166);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(78, 180);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 4;
             this.label3.Text = "Mật khẩu";
             // 
-            // txtPass
-            // 
-            this.txtPass.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPass.Location = new System.Drawing.Point(177, 166);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(281, 23);
-            this.txtPass.TabIndex = 3;
-            // 
             // chkHienThi
             // 
             this.chkHienThi.AutoSize = true;
-            this.chkHienThi.Location = new System.Drawing.Point(389, 197);
+            this.chkHienThi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.chkHienThi.Location = new System.Drawing.Point(389, 221);
             this.chkHienThi.Margin = new System.Windows.Forms.Padding(4);
             this.chkHienThi.Name = "chkHienThi";
             this.chkHienThi.Size = new System.Drawing.Size(69, 20);
@@ -106,11 +93,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtPass);
+            this.groupBox1.Controls.Add(this.txtLogin);
             this.groupBox1.Controls.Add(this.cmbVaiTro);
             this.groupBox1.Controls.Add(this.chkHienThi);
-            this.groupBox1.Controls.Add(this.txtPass);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtLogin);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(435, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -123,8 +110,9 @@
             // cmbVaiTro
             // 
             this.cmbVaiTro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbVaiTro.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.cmbVaiTro.FormattingEnabled = true;
-            this.cmbVaiTro.Location = new System.Drawing.Point(177, 231);
+            this.cmbVaiTro.Location = new System.Drawing.Point(177, 245);
             this.cmbVaiTro.Name = "cmbVaiTro";
             this.cmbVaiTro.Size = new System.Drawing.Size(106, 24);
             this.cmbVaiTro.TabIndex = 4;
@@ -143,6 +131,22 @@
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // txtLogin
+            // 
+            this.txtLogin.Location = new System.Drawing.Point(177, 92);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(281, 28);
+            this.txtLogin.TabIndex = 10;
+            // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(177, 176);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Properties.Appearance.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPass.Properties.Appearance.Options.UseForeColor = true;
+            this.txtPass.Size = new System.Drawing.Size(281, 28);
+            this.txtPass.TabIndex = 11;
+            // 
             // frmDangNhap
             // 
             this.Appearance.Options.UseFont = true;
@@ -160,6 +164,8 @@
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,12 +173,12 @@
         #endregion
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.CheckBox chkHienThi;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.ComboBox cmbVaiTro;
+        private DevExpress.XtraEditors.TextEdit txtPass;
+        private DevExpress.XtraEditors.TextEdit txtLogin;
     }
 }
