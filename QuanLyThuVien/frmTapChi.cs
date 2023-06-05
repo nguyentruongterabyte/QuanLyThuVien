@@ -44,8 +44,8 @@ namespace QuanLyThuVien
             cmbDinhKy.DataSource = new Dictionary<int, string>
             {
                 {1, "Hàng ngày"},
-                {2, "Hàng tháng"},
-                {3, "Hàng năm"}
+                {2, "Hàng tuần"},
+                {3, "Hàng tháng"}
             }.ToList();
 
             cmbDinhKy.ValueMember = "Key";

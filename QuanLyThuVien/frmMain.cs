@@ -86,7 +86,7 @@ namespace QuanLyThuVien
             switch (Program.mGroup)
             {
                 case "THUTHU":
-                    ribBaoCaoTK.Visible = ribDanhMuc.Visible = true;
+                    ribBaoCaoTK.Visible = ribDanhMuc.Visible = ribSaoLuuPhucHoi.Visible = true;
                     break;
                 case "DOCGIA":
                     ribMuonTraSach.Visible = true;
@@ -190,6 +190,63 @@ namespace QuanLyThuVien
             } else
             {
                 frmTraSach f = new frmTraSach();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnSaoLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmSaoLuu));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else
+            {
+                frmSaoLuu f = new frmSaoLuu();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmPhucHoi));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else
+            {
+                frmPhucHoi f = new frmPhucHoi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnKyXuatBan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmKyXB));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else
+            {
+                frmKyXB f = new frmKyXB();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmMuonTapChi));
+            if (frm != null)
+            {
+                frm.Activate();
+
+            } else
+            {
+                frmMuonTapChi f = new frmMuonTapChi();
                 f.MdiParent = this;
                 f.Show();
             }

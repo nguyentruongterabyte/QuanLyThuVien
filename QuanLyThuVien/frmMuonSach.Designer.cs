@@ -44,6 +44,7 @@
             this.colSTT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTINHTRANG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnTaiLai = new DevExpress.XtraEditors.SimpleButton();
             this.btnLoaiBo = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -59,7 +60,6 @@
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TINHTRANG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cT_MUONSACHTableAdapter = new QuanLyThuVien.DSTableAdapters.CT_MUONSACHTableAdapter();
-            this.btnTaiLai = new DevExpress.XtraEditors.SimpleButton();
             sONGAYLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsSachCoTheMuon)).BeginInit();
@@ -198,6 +198,21 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(154, 754);
             this.panelControl1.TabIndex = 2;
+            // 
+            // btnTaiLai
+            // 
+            this.btnTaiLai.Appearance.BackColor = System.Drawing.Color.Aqua;
+            this.btnTaiLai.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiLai.Appearance.Options.UseBackColor = true;
+            this.btnTaiLai.Appearance.Options.UseFont = true;
+            this.btnTaiLai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTaiLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTaiLai.ImageOptions.Image")));
+            this.btnTaiLai.Location = new System.Drawing.Point(5, 21);
+            this.btnTaiLai.Name = "btnTaiLai";
+            this.btnTaiLai.Size = new System.Drawing.Size(142, 52);
+            this.btnTaiLai.TabIndex = 2;
+            this.btnTaiLai.Text = "Tải lại";
+            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
             // 
             // btnLoaiBo
             // 
@@ -338,21 +353,6 @@
             // cT_MUONSACHTableAdapter
             // 
             this.cT_MUONSACHTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnTaiLai
-            // 
-            this.btnTaiLai.Appearance.BackColor = System.Drawing.Color.Aqua;
-            this.btnTaiLai.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiLai.Appearance.Options.UseBackColor = true;
-            this.btnTaiLai.Appearance.Options.UseFont = true;
-            this.btnTaiLai.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTaiLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnTaiLai.Location = new System.Drawing.Point(5, 21);
-            this.btnTaiLai.Name = "btnTaiLai";
-            this.btnTaiLai.Size = new System.Drawing.Size(142, 52);
-            this.btnTaiLai.TabIndex = 2;
-            this.btnTaiLai.Text = "Tải lại";
-            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
             // 
             // frmMuonSach
             // 

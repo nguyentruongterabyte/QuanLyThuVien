@@ -40,6 +40,7 @@ namespace QuanLyThuVien
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXuatBan));
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            System.Windows.Forms.Label lANXBLabel;
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -85,6 +86,7 @@ namespace QuanLyThuVien
             this.bdsCuonSach = new System.Windows.Forms.BindingSource(this.components);
             this.cUONSACHTableAdapter = new QuanLyThuVien.DSTableAdapters.CUONSACHTableAdapter();
             this.v_SachTableAdapter = new QuanLyThuVien.DSTableAdapters.V_SachTableAdapter();
+            this.lANXBTextEdit = new DevExpress.XtraEditors.TextEdit();
             nAMXBLabel = new System.Windows.Forms.Label();
             kHOGIAYLabel = new System.Windows.Forms.Label();
             nHAXBLabel = new System.Windows.Forms.Label();
@@ -92,6 +94,7 @@ namespace QuanLyThuVien
             txt = new System.Windows.Forms.Label();
             gIALabel = new System.Windows.Forms.Label();
             mASACHLabel = new System.Windows.Forms.Label();
+            lANXBLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsXuatBan)).BeginInit();
@@ -111,6 +114,7 @@ namespace QuanLyThuVien
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXB.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCuonSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lANXBTextEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // nAMXBLabel
@@ -145,9 +149,8 @@ namespace QuanLyThuVien
             dIACDLabel.AutoSize = true;
             dIACDLabel.Location = new System.Drawing.Point(63, 195);
             dIACDLabel.Name = "dIACDLabel";
-            dIACDLabel.Size = new System.Drawing.Size(44, 13);
+            dIACDLabel.Size = new System.Drawing.Size(0, 13);
             dIACDLabel.TabIndex = 10;
-            dIACDLabel.Text = "Đĩa CD:";
             // 
             // txt
             // 
@@ -370,7 +373,7 @@ namespace QuanLyThuVien
             this.gcXuatBan.MainView = this.gridView1;
             this.gcXuatBan.MenuManager = this.barManager1;
             this.gcXuatBan.Name = "gcXuatBan";
-            this.gcXuatBan.Size = new System.Drawing.Size(1384, 272);
+            this.gcXuatBan.Size = new System.Drawing.Size(1384, 247);
             this.gcXuatBan.TabIndex = 5;
             this.gcXuatBan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -486,13 +489,15 @@ namespace QuanLyThuVien
             // 
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 311);
+            this.panelControl1.Location = new System.Drawing.Point(0, 286);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1384, 443);
+            this.panelControl1.Size = new System.Drawing.Size(1384, 468);
             this.panelControl1.TabIndex = 6;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(lANXBLabel);
+            this.groupControl1.Controls.Add(this.lANXBTextEdit);
             this.groupControl1.Controls.Add(this.txtSoLuong);
             this.groupControl1.Controls.Add(this.txtMaSach);
             this.groupControl1.Controls.Add(gIALabel);
@@ -545,10 +550,10 @@ namespace QuanLyThuVien
             // txtGia
             // 
             this.txtGia.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsXuatBan, "GIA", true));
-            this.txtGia.Location = new System.Drawing.Point(183, 141);
+            this.txtGia.Location = new System.Drawing.Point(173, 141);
             this.txtGia.MenuManager = this.barManager1;
             this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(125, 28);
+            this.txtGia.Size = new System.Drawing.Size(135, 28);
             this.txtGia.TabIndex = 17;
             // 
             // txtSoTrang
@@ -571,10 +576,10 @@ namespace QuanLyThuVien
             // chkDiaCD
             // 
             this.chkDiaCD.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsXuatBan, "DIACD", true));
-            this.chkDiaCD.Location = new System.Drawing.Point(183, 190);
+            this.chkDiaCD.Location = new System.Drawing.Point(233, 188);
             this.chkDiaCD.MenuManager = this.barManager1;
             this.chkDiaCD.Name = "chkDiaCD";
-            this.chkDiaCD.Properties.Caption = " Có";
+            this.chkDiaCD.Properties.Caption = " Có đĩa CD";
             this.chkDiaCD.Size = new System.Drawing.Size(94, 22);
             this.chkDiaCD.TabIndex = 11;
             // 
@@ -590,32 +595,34 @@ namespace QuanLyThuVien
             // txtKhoGiay
             // 
             this.txtKhoGiay.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsXuatBan, "KHOGIAY", true));
-            this.txtKhoGiay.Location = new System.Drawing.Point(183, 91);
+            this.txtKhoGiay.Location = new System.Drawing.Point(173, 91);
             this.txtKhoGiay.MenuManager = this.barManager1;
             this.txtKhoGiay.Name = "txtKhoGiay";
-            this.txtKhoGiay.Size = new System.Drawing.Size(125, 28);
+            this.txtKhoGiay.Size = new System.Drawing.Size(135, 28);
             this.txtKhoGiay.TabIndex = 3;
             // 
             // txtNamXB
             // 
             this.txtNamXB.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsXuatBan, "NAMXB", true));
             this.txtNamXB.EditValue = null;
-            this.txtNamXB.Location = new System.Drawing.Point(183, 45);
+            this.txtNamXB.Location = new System.Drawing.Point(173, 45);
             this.txtNamXB.MenuManager = this.barManager1;
             this.txtNamXB.Name = "txtNamXB";
             this.txtNamXB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtNamXB.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtNamXB.Size = new System.Drawing.Size(125, 28);
+            this.txtNamXB.Size = new System.Drawing.Size(135, 28);
             this.txtNamXB.TabIndex = 1;
             // 
             // txtMaSach2
             // 
+            this.txtMaSach2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsXuatBan, "MASACH", true));
             this.txtMaSach2.Location = new System.Drawing.Point(533, 147);
             this.txtMaSach2.Name = "txtMaSach2";
             this.txtMaSach2.Size = new System.Drawing.Size(100, 21);
-            this.txtMaSach2.TabIndex = 20;
+            this.txtMaSach2.TabIndex = 23;
+            this.txtMaSach2.TextChanged += new System.EventHandler(this.txtMaSach2_TextChanged);
             // 
             // bdsCuonSach
             // 
@@ -629,6 +636,25 @@ namespace QuanLyThuVien
             // v_SachTableAdapter
             // 
             this.v_SachTableAdapter.ClearBeforeFill = true;
+            // 
+            // lANXBLabel
+            // 
+            lANXBLabel.AutoSize = true;
+            lANXBLabel.Location = new System.Drawing.Point(63, 192);
+            lANXBLabel.Name = "lANXBLabel";
+            lANXBLabel.Size = new System.Drawing.Size(70, 13);
+            lANXBLabel.TabIndex = 23;
+            lANXBLabel.Text = "Lần xuất bản";
+            // 
+            // lANXBTextEdit
+            // 
+            this.lANXBTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsXuatBan, "LANXB", true));
+            this.lANXBTextEdit.Enabled = false;
+            this.lANXBTextEdit.Location = new System.Drawing.Point(173, 185);
+            this.lANXBTextEdit.MenuManager = this.barManager1;
+            this.lANXBTextEdit.Name = "lANXBTextEdit";
+            this.lANXBTextEdit.Size = new System.Drawing.Size(35, 28);
+            this.lANXBTextEdit.TabIndex = 24;
             // 
             // frmXuatBan
             // 
@@ -646,7 +672,7 @@ namespace QuanLyThuVien
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmXuatBan";
-            this.Text = "frmXuatBan";
+            this.Text = "Xuất bản";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmXuatBan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
@@ -669,6 +695,7 @@ namespace QuanLyThuVien
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXB.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNamXB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCuonSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lANXBTextEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,8 +745,9 @@ namespace QuanLyThuVien
         public DevExpress.XtraEditors.LabelControl lblSoLuong;
         private System.Windows.Forms.BindingSource bdsvSach;
         private DSTableAdapters.V_SachTableAdapter v_SachTableAdapter;
-        private System.Windows.Forms.TextBox txtMaSach2;
         private System.Windows.Forms.ComboBox txtMaSach;
         private DevExpress.XtraEditors.TextEdit txtSoLuong;
+        private System.Windows.Forms.TextBox txtMaSach2;
+        private DevExpress.XtraEditors.TextEdit lANXBTextEdit;
     }
 }

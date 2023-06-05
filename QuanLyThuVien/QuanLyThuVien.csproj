@@ -73,6 +73,12 @@
     <Compile Include="frmDocGia.Designer.cs">
       <DependentUpon>frmDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKyXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKyXB.Designer.cs">
+      <DependentUpon>frmKyXB.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,11 +91,29 @@
     <Compile Include="frmMuonSach.Designer.cs">
       <DependentUpon>frmMuonSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMuonTapChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMuonTapChi.Designer.cs">
+      <DependentUpon>frmMuonTapChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhucHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhucHoi.Designer.cs">
+      <DependentUpon>frmPhucHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSach.Designer.cs">
       <DependentUpon>frmSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaoLuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaoLuu.Designer.cs">
+      <DependentUpon>frmSaoLuu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTacGia.cs">
       <SubType>Form</SubType>
@@ -124,14 +148,26 @@
     <EmbeddedResource Include="frmDocGia.resx">
       <DependentUpon>frmDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmKyXB.resx">
+      <DependentUpon>frmKyXB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMuonSach.resx">
       <DependentUpon>frmMuonSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMuonTapChi.resx">
+      <DependentUpon>frmMuonTapChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhucHoi.resx">
+      <DependentUpon>frmPhucHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSach.resx">
       <DependentUpon>frmSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaoLuu.resx">
+      <DependentUpon>frmSaoLuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTacGia.resx">
       <DependentUpon>frmTacGia.cs</DependentUpon>
@@ -219,6 +255,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-return-purchase-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-backup-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-database-restore-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-return-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

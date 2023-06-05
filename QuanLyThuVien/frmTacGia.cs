@@ -136,7 +136,7 @@ namespace QuanLyThuVien
             {
                 try
                 {
-                    maTacGia = ((DataRowView)bdsTacGia[bdsTacGia.Position])["MATACGIA"].ToString();
+                    maTacGia = ((DataRowView)bdsTacGia[bdsTacGia.Position])["MATG"].ToString();
                     bdsTacGia.RemoveCurrent();
                     this.tACGIATableAdapter.Connection.ConnectionString = Program.connstr;
                     this.tACGIATableAdapter.Update(this.dS.TACGIA);
@@ -146,7 +146,7 @@ namespace QuanLyThuVien
                 {
                     MessageBox.Show("Lỗi xoá tác giả!\n" + ex.Message);
                     this.tACGIATableAdapter.Fill(this.dS.TACGIA);
-                    bdsTacGia.Position = bdsTacGia.Find("MATACGIA", maTacGia);
+                    bdsTacGia.Position = bdsTacGia.Find("MATG", maTacGia);
                     return;
                 }
             }

@@ -34,12 +34,12 @@ namespace QuanLyThuVien
             this.cUONSACHTableAdapter.Fill(this.dS.CUONSACH);
             txtGia.ReadOnly = txtKhoGiay.ReadOnly = txtMaSach.Enabled = txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = btnGhi.Enabled = btnHuy.Enabled = true;
             lblSoLuong.Visible = txtSoLuong.Visible =chkDiaCD.Enabled=  false;
-
+            gcXuatBan.Enabled = true;
             if (bdsXuatBan.Count == 0)
             {
                 btnXoa.Enabled = btnSua.Enabled = false;
             }
-           
+            panelControl1.Enabled = false;
         }
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -52,7 +52,7 @@ namespace QuanLyThuVien
             chkDiaCD.Checked = false;
             gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = txtGia.ReadOnly = txtKhoGiay.ReadOnly  = txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = false;
             lblSoLuong.Visible = txtSoLuong.Visible = txtMaSach.Enabled = btnGhi.Enabled = btnHuy.Enabled = chkDiaCD.Enabled= true ;
-            txtMaSach2.Text = txtMaSach.SelectedValue.ToString();
+            panelControl1.Enabled = true;
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -97,6 +97,7 @@ namespace QuanLyThuVien
 
             gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = lblSoLuong.Visible = txtSoLuong.Visible = txtGia.ReadOnly = txtKhoGiay.ReadOnly = txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = false;
             btnGhi.Enabled = btnHuy.Enabled = txtMaSach.Enabled =chkDiaCD.Enabled =  true;
+            panelControl1.Enabled = true;
         }
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -189,6 +190,7 @@ namespace QuanLyThuVien
             
             gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = lblSoLuong.Visible = txtSoLuong.Visible = txtGia.ReadOnly = txtKhoGiay.ReadOnly =  txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = true;
             lblSoLuong.Visible = txtSoLuong.Visible =btnGhi.Enabled = btnHuy.Enabled = txtMaSach.Enabled =chkDiaCD.Enabled=  false;
+            panelControl1.Enabled = false;
         }
 
         private void btnHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -197,6 +199,7 @@ namespace QuanLyThuVien
             bdsXuatBan.Position = vitri;
             gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = txtGia.ReadOnly = txtKhoGiay.ReadOnly =  txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = true;
             btnHuy.Enabled = btnGhi.Enabled = txtMaSach.Enabled =chkDiaCD.Enabled= false;
+            panelControl1.Enabled = false;
         }
 
         private void btnLamMoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -238,6 +241,11 @@ namespace QuanLyThuVien
             {
                 txtMaSach2.Text = txtMaSach.SelectedValue.ToString().Trim();
             }
+        }
+
+        private void txtMaSach2_TextChanged(object sender, EventArgs e)
+        {
+            txtMaSach.SelectedValue = txtMaSach2.Text;
         }
     }
 }

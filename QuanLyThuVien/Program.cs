@@ -20,6 +20,9 @@ namespace QuanLyThuVien
 
         public static string mloginDN = "";
         public static string passwordDN = "";
+
+        public static string remotelogin = "sa";
+        public static string remotepassword = "123456";
         public static SqlDataReader myReader;
 
         public static string mGroup = "";
@@ -56,7 +59,7 @@ namespace QuanLyThuVien
         public static void DangXuat()
         {
             // Set các ribbon về trạng thái Visible = false
-            frmChinh.ribDanhMuc.Visible = frmChinh.ribBaoCaoTK.Visible = frmChinh.ribMuonTraSach.Visible = false;
+            frmChinh.ribDanhMuc.Visible = frmChinh.ribBaoCaoTK.Visible = frmChinh.ribMuonTraSach.Visible = frmChinh.ribSaoLuuPhucHoi.Visible = false;
 
             // Xóa các login, password, ... của người dùng trước và trả về giá trị ban đầu 
             //Program.servername = Program.username = Program.mlogin = Program.password 
