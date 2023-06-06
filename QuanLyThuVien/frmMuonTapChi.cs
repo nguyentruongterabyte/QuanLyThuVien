@@ -39,6 +39,10 @@ namespace QuanLyThuVien
             tapChiMuonMoi.Cells["DINHKI"].Value = currentRow["DINHKI"];
 
             bdsTapChi.RemoveAt(vitri);
+            if(dvGioTapChi.Rows.Count != 0)
+            {
+                btnLoaiBo.Enabled = true;
+            }
         }
 
         private void btnLoaiBo_Click(object sender, EventArgs e)
@@ -62,19 +66,29 @@ namespace QuanLyThuVien
                 // Xóa dòng từ dvGioSach
                 dvGioTapChi.Rows.Remove(selectedRow);
             }
+            if(dvGioTapChi.Rows.Count == 0)
+            {
+                btnLoaiBo.Enabled = false;
+            }
         }
 
         private void btnTaiLai_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.sP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter.Fill(this.dS.SP_DS_BAO_TAP_CHI_CO_THE_MUON, Program.username);
+            if(MessageBox.Show("Bạn có chắc chắn muốn tải lại, toàn bộ giỏ sẽ biến mất!!!!!!!", "", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+                dvGioTapChi.CancelEdit();
+                dvGioTapChi.Rows.Clear();
+                bdsTapChi.CancelEdit();
+                try
+                {
+                    this.sP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.sP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter.Fill(this.dS.SP_DS_BAO_TAP_CHI_CO_THE_MUON, Program.username);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi tải lại!\n" + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi tải lại!\n" + ex.Message);
-            }
+
         }
 
         private void frmMuonTapChi_Load(object sender, EventArgs e)

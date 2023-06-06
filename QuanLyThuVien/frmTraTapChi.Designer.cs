@@ -184,6 +184,7 @@
             this.btnLoaiBo.Appearance.Options.UseBackColor = true;
             this.btnLoaiBo.Appearance.Options.UseFont = true;
             this.btnLoaiBo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoaiBo.Enabled = false;
             this.btnLoaiBo.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_double_left_48;
             this.btnLoaiBo.Location = new System.Drawing.Point(6, 147);
             this.btnLoaiBo.Name = "btnLoaiBo";

@@ -117,56 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="sONGAYLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="dS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="bdsTapChi.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>82, 17</value>
-  </metadata>
-  <metadata name="sP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="tableAdapterManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnTaiLai.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAA1dEVYdFRpdGxlAEFycm93O1JlY3VycmVuY2U7UmVm
-        cmVzaDtVcGRhdGU7UmVsb2FkO0V4Y2hhbmdlhrRdSAAAAc5JREFUWEfFlj1Ow1AQhFMEmnRIFCgUFCDl
-        BNAlJ/BVUtImQkIcAW7gA9BwgHTUqSgouAK9mUHeaN9mXuwQ8VJ8Sjxvdnfkv+dB0zRHRYolkWJJpFgS
-        KZZEijmqh7cJmIMarMF3C/9T49pE1eaQYgRNx2AJPkDTAT30jlWviBQ9aHQLXkEc1AVrpqqnR4oGGpAL
-        8AnUkC5WYGcIKRIUkqr9vQIW4h0swAyctfA/Na7FEDwT2cshRYIiDmcDH+IR3Cg/4Rp4ATHEUvnJlnBf
-        Pw9RYMMNC3ES/RF4RiCG4I0pn47kAMPPYYzDjcp7dwEvz0S8HHPlTQ5gyg039gnBe8LX1sq3+QND13Cj
-        Vwj4eGP6urXymbnvcCMJweOw3pfqoOIDQ/zWbxp4sMh3uzfPlC8C396XcasJgYEbiy9YKJ8C3q4QyZlL
-        ig2YuKv5Ij5S2RdQBN5ciIqPuvcmhQaM3HbjzseXy0j5PfCcAhWCw4fRnxx4UMAt1TcgDNH1Kn4C18CH
-        SE67R4oERfwGUNtwn83oC/gQcgaRooHCKeCWGkP0gSEugextSNGDBgzx1w+SO9XTI8UIGh3vk8yDpsf5
-        KP1PpFgSKZZEiiWRYjmawQ//5PL6OeAKogAAAABJRU5ErkJggg==
-</value>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Hệ thống được sử dụng để quản lý việc mượn sách trong một thư viện.
+Các tài liệu cho độc giả mượn có các thuộc tính là mã tài liệu (khóa), tên tài liệu (tựa đề). 
+Tài liệu gồm 2 loại: sách và báo tạp chí.
+Mỗi tựa đề sách cần được biết do tác giả nào viết.
+Thông tin về tác giả gồm mã tác giả (khóa), tên tác giả, năm sinh. Một tác giả viết nhiều sách, một sách có thể đồng tác giả. Mỗi tựa đề sách có nhiều lần xuất bản (tái bản).
+Thông tin về một lần xuất bản gồm có: lần xuất bản, năm xuất bản, khổ giấy, số trang, nhà xuất bản, giá, có hoặc không kèm dĩa CD. Lần xuất bản được đánh 1, 2, 3... cho mỗi tựa đề sách, do đó có sự trùng nhau giữa các tựa đề sách khác nhau.
+Mỗi lần xuất bản một tựa đề sách, thư viện nhập vào nhiều cuốn sách. Mỗi cuốn sách này được quản lý riêng dựa vào STT được đánh số từ 1, 2, 3, ... trong số các cuốn sách cùng tựa đề và cùng một lần xuất bản. Khi cho độc giả mượn, thông tin ghi trong thẻ độc giả phải xác định chính xác cuốn nào. 
+Thông tin về mỗi cuốn sách này còn có thêm tình trạng để lưu tình trạng hiện tại của sách (tốt, rách, mất trang...).
+Khác với việc cho mượn sách, việc cho mượn báo tạp chí không cần chỉ chính xác tờ nào trong số các tờ cùng tựa đề và cùng một lần xuất bản. Tuy nhiên trong số này (cùng tựa đề và cùng một lần xuất bản), độc giả mỗi lần chỉ có thể mượn 1 tờ. Mỗi tựa đề báo tạp chí cần các thông tin: năm bắt đầu phát hành, định kỳ (hàng ngày, hàng tuần, hay hàng tháng), nhà xuất bản; đối với mỗi kỳ xuất bản cần biết số lượng tờ thư viện nhập về, số lượng tờ còn lại trong thư viện hiện tại (thuộc tính này được tính từ số tờ thư viện nhập về trừ đi số tờ đang có độc giả mượn).
+Thông tin về độc giả gồm số thẻ độc giả (khóa), ngày cấp thẻ, tên, nghề nghiệp, phái. Mỗi lần độc giả có thể mượn nhiều sách cũng như báo tạp chí, thông tin cần lưu là ngày mượn và ngày trả cho từng tài liệu mượn.
+1. Xây dựng mô hình ERD
+2. Xây dựng ứng dụng với GUI để:
+	a. Quản lý người dùng / nhóm người dùng: mỗi nhóm người dùng khác nhau sẽ có quyền khác nhau  (việc quản lý thực hiện ở mức server và mức ứng dụng)
+	b. Thêm/xoá/sửa các thực thể đã được mô tả
+3. Sao lưu, phục hồi dữ liệu.
+4. Thống kê dữ liệu
+Lưu ý: trong demo nên sử dụng nonclustered index, view, trigger, stored procedure, user defined function.</value>
   </data>
-  <metadata name="cT_MUONBAOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>188, 95</value>
-  </metadata>
-  <metadata name="IDKI.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="TENTAPCHI.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="NXB.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="DINHKI.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cT_MUONBAOTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
 </root>

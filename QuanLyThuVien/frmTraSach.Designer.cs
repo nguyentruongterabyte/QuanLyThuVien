@@ -44,6 +44,7 @@
             this.sP_SACH_CHUA_TRATableAdapter = new QuanLyThuVien.DSTableAdapters.SP_SACH_CHUA_TRATableAdapter();
             this.tableAdapterManager = new QuanLyThuVien.DSTableAdapters.TableAdapterManager();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.btnTaiLai = new DevExpress.XtraEditors.SimpleButton();
             this.btnLoaiBo = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
@@ -56,7 +57,6 @@
             this.SONGAY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TINHTRANG = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnTaiLai = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sP_SACH_CHUA_TRAGridControl)).BeginInit();
@@ -202,6 +202,21 @@
             this.panelControl1.Size = new System.Drawing.Size(156, 450);
             this.panelControl1.TabIndex = 1;
             // 
+            // btnTaiLai
+            // 
+            this.btnTaiLai.Appearance.BackColor = System.Drawing.Color.Aqua;
+            this.btnTaiLai.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiLai.Appearance.Options.UseBackColor = true;
+            this.btnTaiLai.Appearance.Options.UseFont = true;
+            this.btnTaiLai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTaiLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTaiLai.ImageOptions.Image")));
+            this.btnTaiLai.Location = new System.Drawing.Point(5, 12);
+            this.btnTaiLai.Name = "btnTaiLai";
+            this.btnTaiLai.Size = new System.Drawing.Size(142, 52);
+            this.btnTaiLai.TabIndex = 4;
+            this.btnTaiLai.Text = "Tải lại";
+            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
+            // 
             // btnLoaiBo
             // 
             this.btnLoaiBo.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -209,6 +224,7 @@
             this.btnLoaiBo.Appearance.Options.UseBackColor = true;
             this.btnLoaiBo.Appearance.Options.UseFont = true;
             this.btnLoaiBo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoaiBo.Enabled = false;
             this.btnLoaiBo.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.icons8_double_left_48;
             this.btnLoaiBo.Location = new System.Drawing.Point(6, 147);
             this.btnLoaiBo.Name = "btnLoaiBo";
@@ -326,21 +342,6 @@
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
             this.STT.ReadOnly = true;
-            // 
-            // btnTaiLai
-            // 
-            this.btnTaiLai.Appearance.BackColor = System.Drawing.Color.Aqua;
-            this.btnTaiLai.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTaiLai.Appearance.Options.UseBackColor = true;
-            this.btnTaiLai.Appearance.Options.UseFont = true;
-            this.btnTaiLai.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTaiLai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTaiLai.ImageOptions.Image")));
-            this.btnTaiLai.Location = new System.Drawing.Point(5, 12);
-            this.btnTaiLai.Name = "btnTaiLai";
-            this.btnTaiLai.Size = new System.Drawing.Size(142, 52);
-            this.btnTaiLai.TabIndex = 4;
-            this.btnTaiLai.Text = "Tải lại";
-            this.btnTaiLai.Click += new System.EventHandler(this.btnTaiLai_Click);
             // 
             // frmTraSach
             // 

@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraReports.Design.GroupSort;
+﻿using DevExpress.CodeParser;
+using DevExpress.XtraReports.Design.GroupSort;
 using DevExpress.XtraReports.UI;
 using QLDSV_TC;
 using System;
@@ -324,6 +325,35 @@ namespace QuanLyThuVien
             } else
             {
                 frmTaoLogin f = new frmTaoLogin();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            rpSachChuaTra rp = new rpSachChuaTra();
+            ReportPrintTool print = new ReportPrintTool(rp);
+            print.ShowPreviewDialog();
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            rpTapChiChuaTra rp = new rpTapChiChuaTra();
+            ReportPrintTool print = new ReportPrintTool(rp);
+            print.ShowPreviewDialog();
+        }
+
+        private void btnTroGiup_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmTroGiup));
+            if (frm != null)
+            {
+                frm.Activate();
+                
+            } else
+            {
+                frmTroGiup f = new frmTroGiup();
                 f.MdiParent = this;
                 f.Show();
             }

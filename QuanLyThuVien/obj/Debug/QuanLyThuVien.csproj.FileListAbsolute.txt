@@ -101,3 +101,6 @@ C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLy
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.rpTopTapChi.resources
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QLDSV_TC.frmDoiMK.resources
 C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QLDSV_TC.frmTaoLogin.resources
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.rpSachChuaTra.resources
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.rpTapChiChuaTra.resources
+C:\Users\Administrator\Source\Repos\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmTroGiup.resources

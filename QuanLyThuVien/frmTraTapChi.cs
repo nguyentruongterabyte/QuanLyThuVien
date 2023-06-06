@@ -35,15 +35,23 @@ namespace QuanLyThuVien
 
         private void btnTaiLai_Click(object sender, EventArgs e)
         {
-            try
+            if(MessageBox.Show("Bạn có chắc chắn muốn tải lại, toàn bộ kệ sẽ mất!!!", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                this.sP_TAP_CHI_CHUA_TRATableAdapter.Connection.ConnectionString = Program.connstr;
-                this.sP_TAP_CHI_CHUA_TRATableAdapter.Fill(dS.SP_TAP_CHI_CHUA_TRA, Program.username);
+                dvKeTapChi.CancelEdit();
+                dvKeTapChi.Rows.Clear();
+                bdsTapChiChuaTra.CancelEdit();
+                try
+                {
+                    this.sP_TAP_CHI_CHUA_TRATableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.sP_TAP_CHI_CHUA_TRATableAdapter.Fill(dS.SP_TAP_CHI_CHUA_TRA, Program.username);
 
-            } catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi tải lại trang!\n" + ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi tải lại trang!\n" + ex.Message);
+                }
             }
+            
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -63,6 +71,10 @@ namespace QuanLyThuVien
             sachDatVaoKe.Cells["SONGAY"].Value = currentRow["SONGAY"];
 
             bdsTapChiChuaTra.RemoveAt(vitri);
+            if(dvKeTapChi.Rows.Count > 0)
+            {
+                btnLoaiBo.Enabled = true;
+            }
         }
 
         private void btnLoaiBo_Click(object sender, EventArgs e)
@@ -85,6 +97,10 @@ namespace QuanLyThuVien
 
                 // Xóa dòng từ dvGioSach
                 dvKeTapChi.Rows.Remove(selectedRow);
+            }
+            if(dvKeTapChi.Rows.Count == 0)
+            {
+                btnLoaiBo.Enabled = false;
             }
         }
 

@@ -52,7 +52,10 @@ namespace QuanLyThuVien
             //sachMuonMoi.Cells["TinhTrang"].Value = currentRow["TINHTRANG"];
 
             bdsSachCoTheMuon.RemoveAt(vitri);
-
+            if(dvGioSach.Rows.Count > 0)
+            {
+                btnLoaiBo.Enabled = true;
+            }
         }
 
         private void btnLoaiBo_Click(object sender, EventArgs e)
@@ -75,6 +78,10 @@ namespace QuanLyThuVien
 
                 // Xóa dòng từ dvGioSach
                 dvGioSach.Rows.Remove(selectedRow);
+            }
+            if(dvGioSach.Rows.Count == 0)
+            {
+                btnLoaiBo.Enabled = false;
             }
         }
 
@@ -176,14 +183,22 @@ namespace QuanLyThuVien
 
         private void btnTaiLai_Click(object sender, EventArgs e)
         {
-            try
+            if(MessageBox.Show("Bạn có chắc chắn muốn tải lại, giỏ sẽ biển mất!!!!!", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                this.v_SACH_CO_THE_MUONTableAdapter.Connection.ConnectionString = Program.connstr;
-                this.v_SACH_CO_THE_MUONTableAdapter.Fill(this.dS.V_SACH_CO_THE_MUON);
-            } catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi tải lại!\n" + ex.Message);
+                dvGioSach.CancelEdit();
+                dvGioSach.Rows.Clear();
+                bdsSachCoTheMuon.CancelEdit();
+                try
+                {
+                    this.v_SACH_CO_THE_MUONTableAdapter.Connection.ConnectionString = Program.connstr;
+                    this.v_SACH_CO_THE_MUONTableAdapter.Fill(this.dS.V_SACH_CO_THE_MUON);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi tải lại!\n" + ex.Message);
+                }
             }
+            
         }
     }
 }
