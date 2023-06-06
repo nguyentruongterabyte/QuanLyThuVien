@@ -60,7 +60,7 @@ namespace QuanLyThuVien
         {
             // Set các ribbon về trạng thái Visible = false
             frmChinh.ribDanhMuc.Visible = frmChinh.ribBaoCaoTK.Visible = frmChinh.ribMuonTraSach.Visible = frmChinh.ribSaoLuuPhucHoi.Visible = false;
-
+            frmChinh.btnTaoTaiKhoan.Enabled = false;
             // Xóa các login, password, ... của người dùng trước và trả về giá trị ban đầu 
             //Program.servername = Program.username = Program.mlogin = Program.password 
             //= Program.mloginDN = Program.passwordDN = Program.mGroup = Program.mHoTen = "";

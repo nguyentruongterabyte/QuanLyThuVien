@@ -84,7 +84,7 @@ namespace QuanLyThuVien
 
             if (Validator.isEmptyText(txtSoNgay.Text))
             {
-                MessageBox.Show("Vui lòng chọn số ngày mượn!");
+                MessageBox.Show("Vui lòng nhập số ngày mượn!");
                 return;
             }
 
@@ -135,12 +135,9 @@ namespace QuanLyThuVien
                         result += $"Ghi sách id = [{values[1]}] vào hệ thống thất bại!\n";
                     }
 
-
-
                 }
                 MessageBox.Show(result);
                 dvGioSach.Rows.Clear();
-
             }
         }
 

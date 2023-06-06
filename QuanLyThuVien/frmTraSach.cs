@@ -151,6 +151,7 @@ namespace QuanLyThuVien
                     MessageBox.Show("Đã trả!\n" +
                         "Cảm ơn bạn đã mượn sách của chúng tôi!");
                     dvKeSach.Rows.Clear();
+                    btnTaiLai.PerformClick();
                 }
                 catch (Exception ex)
                 {
@@ -193,6 +194,7 @@ namespace QuanLyThuVien
             } catch (Exception ex) {
                 MessageBox.Show("Lỗi tải lại trang!\n" + ex.Message);
             }
+           
         }
     }
 }

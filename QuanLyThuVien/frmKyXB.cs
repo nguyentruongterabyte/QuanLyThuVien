@@ -15,6 +15,8 @@ namespace QuanLyThuVien
         int vitri = 0;
         string idKi = "";
         bool chucnang = false;
+        int soLuongNhap = 0;
+        int luongMuon;
         public frmKyXB()
         {
             InitializeComponent();
@@ -37,36 +39,39 @@ namespace QuanLyThuVien
             this.cT_MUONBAOTableAdapter.Connection.ConnectionString = Program.connstr;  
             this.cT_MUONBAOTableAdapter.Fill(this.dS.CT_MUONBAO);
 
-            if (txtMaTapChi2.SelectedValue != null)
+            if (txtMaTapChi.SelectedValue != null)
             {
-                txtMaTapChi.Text = txtMaTapChi2.SelectedValue.ToString();
+                txtMaTapChi.Text = txtMaTapChi.SelectedValue.ToString();
             }
 
         }
         
         private void txtLuongNhap2_EditValueChanged(object sender, EventArgs e)
         {
-            txtLuongNhap.Text = txtLuongNhap2.Text;
             if (chucnang)
             {
-                txtLuongTon.Text = txtLuongTon2.Text = txtLuongNhap2.Text;
+                txtLuongTon.Text = txtLuongNhap.Text;
+            }
+            else if(chucnang == false)
+            {
+                if(Convert.ToInt32(txtLuongNhap.Text) - luongMuon >= 0)
+                {
+                    txtLuongTon.Text = (Convert.ToInt32(txtLuongNhap.Text) - luongMuon).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Lượng nhập không hợp lệ, tối thiểu là " + luongMuon, "", MessageBoxButtons.OK);
+                    return;
+                }
             }
         }
 
         private void txtLuongTon2_EditValueChanged(object sender, EventArgs e)
         {
-            txtLuongTon.Text = txtLuongTon2.Text;
+            txtLuongTon.Text = txtLuongTon.Text;
         }
 
-        private void txtMaTapChi2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            if (txtMaTapChi2.SelectedValue != null)
-            {
-                txtMaTapChi.Text = txtMaTapChi2.SelectedValue.ToString();
-            }
-
-        }
+        
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -74,12 +79,14 @@ namespace QuanLyThuVien
             chucnang = true;
             bdsViewKyXB.AddNew();
             bdsKyXB.AddNew();
-           
+
+            txtLuongTon.Enabled = false;
             gcKyXB.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
             btnGhi.Enabled = btnHuy.Enabled = groupControl1.Enabled = true;
-            if (txtMaTapChi2.SelectedValue != null)
+            
+            if (txtMaTapChi.SelectedValue != null)
             {
-                txtMaTapChi.Text = txtMaTapChi2.SelectedValue.ToString();
+                txtMaTapChi.Text = txtMaTapChi.SelectedValue.ToString();
             }
 
         }
@@ -124,12 +131,18 @@ namespace QuanLyThuVien
         {
             chucnang = false;
             idKi = ((DataRowView)bdsViewKyXB[bdsViewKyXB.Position])["IDKI"].ToString();
+            txtLuongTon.Enabled = false;
+            luongMuon = Convert.ToInt32(((DataRowView)bdsViewKyXB[bdsViewKyXB.Position])["LUONGNHAP"].ToString()) - Convert.ToInt32(((DataRowView)bdsViewKyXB[bdsViewKyXB.Position])["LUONGTON"].ToString());
             gcKyXB.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
-            btnGhi.Enabled = btnHuy.Enabled = txtLuongTon2.Enabled = groupControl1.Enabled = true;
+            btnGhi.Enabled = btnHuy.Enabled = txtLuongTon.Enabled = groupControl1.Enabled = true;
+            txtLuongTon.Enabled = false;
+            soLuongNhap = int.Parse(txtLuongNhap.Text);
         }
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
+
             if (Validator.isEmptyText(txtLuongNhap.Text))
             {
                 MessageBox.Show("Không được để trống lượng nhập!");
@@ -142,14 +155,15 @@ namespace QuanLyThuVien
                 MessageBox.Show("Không được để trống lượng tồn!");
                 return;
             }
-            
+          
+
             if (chucnang)
             {
                 //Add
                 bdsViewKyXB.EndEdit();
                 bdsKyXB.EndEdit();
                 Program.KetNoi();
-                int state = Program.ExecSqlNonQuery($"EXEC SP_INSERT_KYXB_TAPCHI {txtLuongNhap.Text}, {txtLuongTon.Text}, '{txtMaTapChi.Text}'");
+                int state = Program.ExecSqlNonQuery($"EXEC SP_INSERT_KYXB_TAPCHI {txtLuongNhap.Text}, {txtLuongTon.Text}, '{txtMaTapChi2.Text}'");
                 if (state == 0)
                 {
                     MessageBox.Show("Thêm mới thành công!");
@@ -166,7 +180,7 @@ namespace QuanLyThuVien
             {
                 //Update
                 Program.KetNoi();
-                int state = Program.ExecSqlNonQuery($"EXEC SP_UPDATE_KYXB_TAPCHI {idKi}, {txtLuongNhap.Text}, {txtLuongTon.Text}, '{txtMaTapChi.Text}'");
+                int state = Program.ExecSqlNonQuery($"EXEC SP_UPDATE_KYXB_TAPCHI {idKi}, {txtLuongNhap.Text}, {txtLuongTon.Text}, '{txtMaTapChi2.Text}'");
                 if (state == 0)
                 {
                     MessageBox.Show("Cập nhật thành công!");
@@ -233,6 +247,19 @@ namespace QuanLyThuVien
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void txtMaSach_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaTapChi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (txtMaTapChi.SelectedValue != null)
+            {
+                txtMaTapChi2.Text = txtMaTapChi.SelectedValue.ToString();
             }
         }
     }

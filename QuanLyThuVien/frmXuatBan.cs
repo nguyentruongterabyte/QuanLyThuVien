@@ -137,6 +137,12 @@ namespace QuanLyThuVien
                 MessageBox.Show("Không được để trống số trang!");
                 return;
             }
+
+            if (Validator.isEmptyText(txtLanXB.Text))
+            {
+                MessageBox.Show("Không được để trống lần xuất bản!");
+                return;
+            }
             try
             {
                 bdsXuatBan.EndEdit();
@@ -175,7 +181,7 @@ namespace QuanLyThuVien
                         for (int i = 0; i < soLuong; i++)
                         {
                             Program.KetNoi();
-                            Program.ExecSqlDataReader($"EXEC SP_THEM_CUON_SACH '1','{id}'");
+                            Program.ExecSqlNonQuery($"EXEC SP_THEM_CUON_SACH '1','{id}'");
                         }
                     }
                     else

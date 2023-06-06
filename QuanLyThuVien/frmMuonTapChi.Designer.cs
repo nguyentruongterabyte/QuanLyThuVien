@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMuonTapChi));
             System.Windows.Forms.Label sONGAYLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMuonTapChi));
             this.dS = new QuanLyThuVien.DS();
             this.bdsTapChi = new System.Windows.Forms.BindingSource(this.components);
             this.sP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter = new QuanLyThuVien.DSTableAdapters.SP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter();
@@ -46,6 +46,8 @@
             this.btnLoaiBo = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.txtSoNgay = new DevExpress.XtraEditors.TextEdit();
+            this.cT_MUONBAOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnHoanTat = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dvGioTapChi = new System.Windows.Forms.DataGridView();
@@ -53,9 +55,7 @@
             this.TENTAPCHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DINHKI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cT_MUONBAOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cT_MUONBAOTableAdapter = new QuanLyThuVien.DSTableAdapters.CT_MUONBAOTableAdapter();
-            this.txtSoNgay = new DevExpress.XtraEditors.TextEdit();
             sONGAYLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTapChi)).BeginInit();
@@ -65,12 +65,21 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoNgay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cT_MUONBAOBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvGioTapChi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cT_MUONBAOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoNgay.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // sONGAYLabel
+            // 
+            sONGAYLabel.AutoSize = true;
+            sONGAYLabel.Location = new System.Drawing.Point(75, 320);
+            sONGAYLabel.Name = "sONGAYLabel";
+            sONGAYLabel.Size = new System.Drawing.Size(76, 13);
+            sONGAYLabel.TabIndex = 4;
+            sONGAYLabel.Text = "Số ngày mượn";
             // 
             // dS
             // 
@@ -114,7 +123,6 @@
             this.sP_DS_BAO_TAP_CHI_CO_THE_MUONGridControl.TabIndex = 2;
             this.sP_DS_BAO_TAP_CHI_CO_THE_MUONGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.sP_DS_BAO_TAP_CHI_CO_THE_MUONGridControl.Click += new System.EventHandler(this.sP_DS_BAO_TAP_CHI_CO_THE_MUONGridControl_Click);
             // 
             // gridView1
             // 
@@ -125,9 +133,11 @@
             this.colDINHKI});
             this.gridView1.GridControl = this.sP_DS_BAO_TAP_CHI_CO_THE_MUONGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             // 
             // colIDKI
             // 
+            this.colIDKI.Caption = "ID Kỳ";
             this.colIDKI.FieldName = "IDKI";
             this.colIDKI.Name = "colIDKI";
             this.colIDKI.Visible = true;
@@ -135,6 +145,7 @@
             // 
             // colTENTAPCHI
             // 
+            this.colTENTAPCHI.Caption = "Tên tạp chí";
             this.colTENTAPCHI.FieldName = "TENTAPCHI";
             this.colTENTAPCHI.Name = "colTENTAPCHI";
             this.colTENTAPCHI.Visible = true;
@@ -142,6 +153,7 @@
             // 
             // colNXB
             // 
+            this.colNXB.Caption = "Nhà XB";
             this.colNXB.FieldName = "NXB";
             this.colNXB.Name = "colNXB";
             this.colNXB.Visible = true;
@@ -149,6 +161,7 @@
             // 
             // colDINHKI
             // 
+            this.colDINHKI.Caption = "Định kỳ";
             this.colDINHKI.FieldName = "DINHKI";
             this.colDINHKI.Name = "colDINHKI";
             this.colDINHKI.Visible = true;
@@ -222,14 +235,19 @@
             this.panelControl2.Size = new System.Drawing.Size(636, 495);
             this.panelControl2.TabIndex = 4;
             // 
-            // sONGAYLabel
+            // txtSoNgay
             // 
-            sONGAYLabel.AutoSize = true;
-            sONGAYLabel.Location = new System.Drawing.Point(75, 320);
-            sONGAYLabel.Name = "sONGAYLabel";
-            sONGAYLabel.Size = new System.Drawing.Size(76, 13);
-            sONGAYLabel.TabIndex = 4;
-            sONGAYLabel.Text = "Số ngày mượn";
+            this.txtSoNgay.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.cT_MUONBAOBindingSource, "SONGAY", true));
+            this.txtSoNgay.Location = new System.Drawing.Point(157, 313);
+            this.txtSoNgay.Name = "txtSoNgay";
+            this.txtSoNgay.Size = new System.Drawing.Size(100, 28);
+            this.txtSoNgay.TabIndex = 5;
+            this.txtSoNgay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoNgay_KeyPress);
+            // 
+            // cT_MUONBAOBindingSource
+            // 
+            this.cT_MUONBAOBindingSource.DataMember = "CT_MUONBAO";
+            this.cT_MUONBAOBindingSource.DataSource = this.dS;
             // 
             // btnHoanTat
             // 
@@ -243,6 +261,7 @@
             this.btnHoanTat.Size = new System.Drawing.Size(447, 51);
             this.btnHoanTat.TabIndex = 3;
             this.btnHoanTat.Text = "HOÀN TẤT";
+            this.btnHoanTat.Click += new System.EventHandler(this.btnHoanTat_Click);
             // 
             // groupControl1
             // 
@@ -268,6 +287,7 @@
             this.dvGioTapChi.ReadOnly = true;
             this.dvGioTapChi.Size = new System.Drawing.Size(445, 229);
             this.dvGioTapChi.TabIndex = 0;
+            this.dvGioTapChi.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dvGioTapChi_UserDeletingRow);
             // 
             // IDKI
             // 
@@ -293,23 +313,9 @@
             this.DINHKI.Name = "DINHKI";
             this.DINHKI.ReadOnly = true;
             // 
-            // cT_MUONBAOBindingSource
-            // 
-            this.cT_MUONBAOBindingSource.DataMember = "CT_MUONBAO";
-            this.cT_MUONBAOBindingSource.DataSource = this.dS;
-            // 
             // cT_MUONBAOTableAdapter
             // 
             this.cT_MUONBAOTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtSoNgay
-            // 
-            this.txtSoNgay.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.cT_MUONBAOBindingSource, "SONGAY", true));
-            this.txtSoNgay.Location = new System.Drawing.Point(157, 313);
-            this.txtSoNgay.Name = "txtSoNgay";
-            this.txtSoNgay.Size = new System.Drawing.Size(100, 28);
-            this.txtSoNgay.TabIndex = 5;
-            this.txtSoNgay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoNgay_KeyPress);
             // 
             // frmMuonTapChi
             // 
@@ -332,11 +338,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoNgay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cT_MUONBAOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvGioTapChi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cT_MUONBAOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoNgay.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

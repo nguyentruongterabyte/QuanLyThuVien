@@ -65,14 +65,12 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.txtIdKi = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaTapChi2 = new System.Windows.Forms.ComboBox();
+            this.txtMaTapChi = new System.Windows.Forms.ComboBox();
             this.bdsTapChi = new System.Windows.Forms.BindingSource(this.components);
-            this.txtLuongTon2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtLuongNhap2 = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaTapChi = new System.Windows.Forms.TextBox();
+            this.txtLuongTon = new DevExpress.XtraEditors.TextEdit();
+            this.txtLuongNhap = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaTapChi2 = new System.Windows.Forms.TextBox();
             this.bdsKyXB = new System.Windows.Forms.BindingSource(this.components);
-            this.txtLuongTon = new System.Windows.Forms.TextBox();
-            this.txtLuongNhap = new System.Windows.Forms.TextBox();
             this.v_TAP_CHITableAdapter = new QuanLyThuVien.DSTableAdapters.V_TAP_CHITableAdapter();
             this.bdsCTMuonBao = new System.Windows.Forms.BindingSource(this.components);
             this.cT_MUONBAOTableAdapter = new QuanLyThuVien.DSTableAdapters.CT_MUONBAOTableAdapter();
@@ -92,8 +90,8 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdKi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTapChi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLuongTon2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLuongNhap2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLuongTon.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLuongNhap.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKyXB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCTMuonBao)).BeginInit();
             this.SuspendLayout();
@@ -413,16 +411,14 @@
             // 
             this.groupControl1.Controls.Add(iDKILabel);
             this.groupControl1.Controls.Add(this.txtIdKi);
-            this.groupControl1.Controls.Add(this.txtMaTapChi2);
-            this.groupControl1.Controls.Add(lUONGTONLabel1);
-            this.groupControl1.Controls.Add(this.txtLuongTon2);
-            this.groupControl1.Controls.Add(this.txtLuongNhap2);
-            this.groupControl1.Controls.Add(mATAPCHILabel);
             this.groupControl1.Controls.Add(this.txtMaTapChi);
-            this.groupControl1.Controls.Add(lUONGTONLabel);
+            this.groupControl1.Controls.Add(lUONGTONLabel1);
             this.groupControl1.Controls.Add(this.txtLuongTon);
-            this.groupControl1.Controls.Add(lUONGNHAPLabel);
             this.groupControl1.Controls.Add(this.txtLuongNhap);
+            this.groupControl1.Controls.Add(mATAPCHILabel);
+            this.groupControl1.Controls.Add(lUONGTONLabel);
+            this.groupControl1.Controls.Add(lUONGNHAPLabel);
+            this.groupControl1.Controls.Add(this.txtMaTapChi2);
             this.groupControl1.Enabled = false;
             this.groupControl1.Location = new System.Drawing.Point(127, 58);
             this.groupControl1.Name = "groupControl1";
@@ -440,76 +436,60 @@
             this.txtIdKi.TabIndex = 11;
             this.txtIdKi.Visible = false;
             // 
-            // txtMaTapChi2
+            // txtMaTapChi
             // 
-            this.txtMaTapChi2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsViewKyXB, "TENTAPCHI", true));
-            this.txtMaTapChi2.DataSource = this.bdsTapChi;
-            this.txtMaTapChi2.DisplayMember = "TENTAPCHI";
-            this.txtMaTapChi2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtMaTapChi2.FormattingEnabled = true;
-            this.txtMaTapChi2.Location = new System.Drawing.Point(174, 254);
-            this.txtMaTapChi2.Name = "txtMaTapChi2";
-            this.txtMaTapChi2.Size = new System.Drawing.Size(216, 21);
-            this.txtMaTapChi2.TabIndex = 10;
-            this.txtMaTapChi2.ValueMember = "MATAPCHI";
-            this.txtMaTapChi2.SelectedIndexChanged += new System.EventHandler(this.txtMaTapChi2_SelectedIndexChanged);
+            this.txtMaTapChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsViewKyXB, "TENTAPCHI", true));
+            this.txtMaTapChi.DataSource = this.bdsTapChi;
+            this.txtMaTapChi.DisplayMember = "TENTAPCHI";
+            this.txtMaTapChi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtMaTapChi.FormattingEnabled = true;
+            this.txtMaTapChi.Location = new System.Drawing.Point(174, 254);
+            this.txtMaTapChi.Name = "txtMaTapChi";
+            this.txtMaTapChi.Size = new System.Drawing.Size(216, 21);
+            this.txtMaTapChi.TabIndex = 10;
+            this.txtMaTapChi.ValueMember = "MATAPCHI";
+            this.txtMaTapChi.SelectedIndexChanged += new System.EventHandler(this.txtMaTapChi_SelectedIndexChanged);
             // 
             // bdsTapChi
             // 
             this.bdsTapChi.DataMember = "V_TAP_CHI";
             this.bdsTapChi.DataSource = this.dS;
             // 
-            // txtLuongTon2
+            // txtLuongTon
             // 
-            this.txtLuongTon2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsViewKyXB, "LUONGTON", true));
-            this.txtLuongTon2.Enabled = false;
-            this.txtLuongTon2.Location = new System.Drawing.Point(174, 191);
-            this.txtLuongTon2.MenuManager = this.barManager1;
-            this.txtLuongTon2.Name = "txtLuongTon2";
-            this.txtLuongTon2.Size = new System.Drawing.Size(216, 28);
-            this.txtLuongTon2.TabIndex = 9;
-            this.txtLuongTon2.EditValueChanged += new System.EventHandler(this.txtLuongTon2_EditValueChanged);
-            this.txtLuongTon2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLuongTon2_KeyPress);
+            this.txtLuongTon.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsViewKyXB, "LUONGTON", true));
+            this.txtLuongTon.Enabled = false;
+            this.txtLuongTon.Location = new System.Drawing.Point(174, 188);
+            this.txtLuongTon.MenuManager = this.barManager1;
+            this.txtLuongTon.Name = "txtLuongTon";
+            this.txtLuongTon.Size = new System.Drawing.Size(216, 28);
+            this.txtLuongTon.TabIndex = 9;
+            this.txtLuongTon.EditValueChanged += new System.EventHandler(this.txtLuongTon2_EditValueChanged);
+            this.txtLuongTon.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLuongTon2_KeyPress);
             // 
-            // txtLuongNhap2
+            // txtLuongNhap
             // 
-            this.txtLuongNhap2.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsViewKyXB, "LUONGNHAP", true));
-            this.txtLuongNhap2.Location = new System.Drawing.Point(174, 130);
-            this.txtLuongNhap2.MenuManager = this.barManager1;
-            this.txtLuongNhap2.Name = "txtLuongNhap2";
-            this.txtLuongNhap2.Size = new System.Drawing.Size(216, 28);
-            this.txtLuongNhap2.TabIndex = 8;
-            this.txtLuongNhap2.EditValueChanged += new System.EventHandler(this.txtLuongNhap2_EditValueChanged);
-            this.txtLuongNhap2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLuongNhap2_KeyPress);
+            this.txtLuongNhap.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsViewKyXB, "LUONGNHAP", true));
+            this.txtLuongNhap.Location = new System.Drawing.Point(174, 128);
+            this.txtLuongNhap.MenuManager = this.barManager1;
+            this.txtLuongNhap.Name = "txtLuongNhap";
+            this.txtLuongNhap.Size = new System.Drawing.Size(216, 28);
+            this.txtLuongNhap.TabIndex = 8;
+            this.txtLuongNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLuongNhap2_KeyPress);
+            this.txtLuongNhap.Leave += new System.EventHandler(this.txtLuongNhap2_EditValueChanged);
             // 
-            // txtMaTapChi
+            // txtMaTapChi2
             // 
-            this.txtMaTapChi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKyXB, "MATAPCHI", true));
-            this.txtMaTapChi.Location = new System.Drawing.Point(290, 254);
-            this.txtMaTapChi.Name = "txtMaTapChi";
-            this.txtMaTapChi.Size = new System.Drawing.Size(100, 21);
-            this.txtMaTapChi.TabIndex = 7;
+            this.txtMaTapChi2.Location = new System.Drawing.Point(214, 254);
+            this.txtMaTapChi2.Name = "txtMaTapChi2";
+            this.txtMaTapChi2.Size = new System.Drawing.Size(100, 21);
+            this.txtMaTapChi2.TabIndex = 12;
+            this.txtMaTapChi2.TextChanged += new System.EventHandler(this.txtMaSach_TextChanged);
             // 
             // bdsKyXB
             // 
             this.bdsKyXB.DataMember = "KYXB";
             this.bdsKyXB.DataSource = this.dS;
-            // 
-            // txtLuongTon
-            // 
-            this.txtLuongTon.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKyXB, "LUONGTON", true));
-            this.txtLuongTon.Location = new System.Drawing.Point(290, 195);
-            this.txtLuongTon.Name = "txtLuongTon";
-            this.txtLuongTon.Size = new System.Drawing.Size(100, 21);
-            this.txtLuongTon.TabIndex = 5;
-            // 
-            // txtLuongNhap
-            // 
-            this.txtLuongNhap.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKyXB, "LUONGNHAP", true));
-            this.txtLuongNhap.Location = new System.Drawing.Point(245, 137);
-            this.txtLuongNhap.Name = "txtLuongNhap";
-            this.txtLuongNhap.Size = new System.Drawing.Size(100, 21);
-            this.txtLuongNhap.TabIndex = 3;
             // 
             // v_TAP_CHITableAdapter
             // 
@@ -552,8 +532,8 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdKi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTapChi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLuongTon2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLuongNhap2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLuongTon.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLuongNhap.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKyXB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCTMuonBao)).EndInit();
             this.ResumeLayout(false);
@@ -593,16 +573,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDINHKI;
         private DSTableAdapters.KYXBTableAdapter kYXBTableAdapter;
         private System.Windows.Forms.BindingSource bdsKyXB;
-        private System.Windows.Forms.TextBox txtMaTapChi;
-        private System.Windows.Forms.TextBox txtLuongTon;
-        private System.Windows.Forms.TextBox txtLuongNhap;
-        private System.Windows.Forms.ComboBox txtMaTapChi2;
-        private DevExpress.XtraEditors.TextEdit txtLuongTon2;
-        private DevExpress.XtraEditors.TextEdit txtLuongNhap2;
+        private System.Windows.Forms.ComboBox txtMaTapChi;
+        private DevExpress.XtraEditors.TextEdit txtLuongTon;
+        private DevExpress.XtraEditors.TextEdit txtLuongNhap;
         private System.Windows.Forms.BindingSource bdsTapChi;
         private DSTableAdapters.V_TAP_CHITableAdapter v_TAP_CHITableAdapter;
         private System.Windows.Forms.BindingSource bdsCTMuonBao;
         private DSTableAdapters.CT_MUONBAOTableAdapter cT_MUONBAOTableAdapter;
         private DevExpress.XtraEditors.TextEdit txtIdKi;
+        private System.Windows.Forms.TextBox txtMaTapChi2;
     }
 }

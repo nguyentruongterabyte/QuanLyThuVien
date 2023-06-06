@@ -1,4 +1,6 @@
-﻿using QLDSV_TC;
+﻿using DevExpress.XtraReports.Design.GroupSort;
+using DevExpress.XtraReports.UI;
+using QLDSV_TC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,6 +89,7 @@ namespace QuanLyThuVien
             {
                 case "THUTHU":
                     ribBaoCaoTK.Visible = ribDanhMuc.Visible = ribSaoLuuPhucHoi.Visible = true;
+                    btnTaoTaiKhoan.Enabled = true;
                     break;
                 case "DOCGIA":
                     ribMuonTraSach.Visible = true;
@@ -247,6 +250,80 @@ namespace QuanLyThuVien
             } else
             {
                 frmMuonTapChi f = new frmMuonTapChi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            rpTopSach rp = new rpTopSach();
+            ReportPrintTool print = new ReportPrintTool(rp);
+            print.ShowPreviewDialog();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            rpTopDocGia_Sach rp = new rpTopDocGia_Sach();
+            ReportPrintTool print = new ReportPrintTool(rp);
+            print.ShowPreviewDialog();
+        }
+
+        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            rpTopTapChi rp = new rpTopTapChi();
+            ReportPrintTool print = new ReportPrintTool(rp);
+            print.ShowPreviewDialog();
+        
+
+        }
+
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            rpTopDocGia_TapChi rp = new rpTopDocGia_TapChi();
+            ReportPrintTool print = new ReportPrintTool(rp);
+            print.ShowPreviewDialog();
+
+        }
+
+        private void btnTraTC_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmTraTapChi));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else
+            {
+                frmTraTapChi f = new frmTraTapChi();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnDoiMK_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmDoiMK));
+            if (frm != null)
+            {
+                frm.Activate();
+            } else
+            {
+                frmDoiMK f = new frmDoiMK();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+
+        private void btnTaoTaiKhoan_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = CheckExist(typeof(frmTaoLogin));
+            if (frm != null)
+            {
+                frm.Activate();
+
+            } else
+            {
+                frmTaoLogin f = new frmTaoLogin();
                 f.MdiParent = this;
                 f.Show();
             }
