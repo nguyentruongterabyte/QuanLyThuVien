@@ -47,8 +47,7 @@ namespace QuanLyThuVien
             {
                 try
                 {
-                    Program.mlogin = Program.remotelogin;
-                    Program.password = Program.remotepassword;
+                    
                     string str1 = string.Format($"ALTER DATABASE [{database}] SET SINGLE_USER WITH ROLLBACK IMMEDIATE");
                     Program.KetNoi();
                     Program.ExecSqlNonQuery(str1);
@@ -62,8 +61,7 @@ namespace QuanLyThuVien
                     Program.KetNoi();
                     Program.ExecSqlNonQuery(str3);
 
-                    Program.password = Program.passwordDN;
-                    Program.mlogin = Program.mloginDN;
+                    
                     MessageBox.Show("Phục hồi dữ liệu thành công!");
                 }
                 catch (Exception ex)

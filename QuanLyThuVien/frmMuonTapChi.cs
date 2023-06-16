@@ -140,21 +140,15 @@ namespace QuanLyThuVien
                     values[3] = null;
                     values[4] = soNgayMuon;
                     int state = 0;
-                    try
-                    {
-                        Program.KetNoi();
-                        state = Program.ExecSqlNonQuery($"EXEC SP_INSERT_CT_MUON_BAO '{values[0]}', {values[1]}, '{values[2]}', NULL, {values[4]}");
 
-                        Program.KetNoi();
-                        state = Program.ExecSqlNonQuery($"EXEC SP_UPDATE_LUONG_TON_KY_XB {values[1]}");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Ghi tạp chí id = [{values[1]}] vào hệ thống thất bại!\n" + ex.Message);
-                    }
+
+                    Program.KetNoi();
+                    state = Program.ExecSqlNonQuery($"EXEC SP_INSERT_CT_MUON_BAO '{values[0]}', {values[1]}, '{values[2]}', NULL, {values[4]}");
 
                     if (state == 0)
                     {
+                        Program.KetNoi();
+                        Program.ExecSqlNonQuery($"EXEC SP_UPDATE_LUONG_TON_KY_XB {values[1]}");
                         result += ($"Ghi tạp chí id = [{values[1]}] vào hệ thống thành công!\n");
 
                     }
@@ -162,6 +156,10 @@ namespace QuanLyThuVien
                     {
                         result += $"Ghi tạp chí id = [{values[1]}] vào hệ thống thất bại!\n";
                     }
+
+                   
+
+
                 }
                 MessageBox.Show(result);
                 dvGioTapChi.Rows.Clear();

@@ -21,8 +21,6 @@ namespace QuanLyThuVien
         public static string mloginDN = "";
         public static string passwordDN = "";
 
-        public static string remotelogin = "sa";
-        public static string remotepassword = "123456";
         public static SqlDataReader myReader;
 
         public static string mGroup = "";

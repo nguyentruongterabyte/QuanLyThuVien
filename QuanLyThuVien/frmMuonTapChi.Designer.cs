@@ -51,11 +51,11 @@
             this.btnHoanTat = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dvGioTapChi = new System.Windows.Forms.DataGridView();
+            this.cT_MUONBAOTableAdapter = new QuanLyThuVien.DSTableAdapters.CT_MUONBAOTableAdapter();
             this.IDKI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TENTAPCHI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DINHKI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cT_MUONBAOTableAdapter = new QuanLyThuVien.DSTableAdapters.CT_MUONBAOTableAdapter();
             sONGAYLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsTapChi)).BeginInit();
@@ -137,7 +137,7 @@
             // 
             // colIDKI
             // 
-            this.colIDKI.Caption = "ID Kỳ";
+            this.colIDKI.Caption = "ID Kỳ xuất bản";
             this.colIDKI.FieldName = "IDKI";
             this.colIDKI.Name = "colIDKI";
             this.colIDKI.Visible = true;
@@ -290,9 +290,13 @@
             this.dvGioTapChi.TabIndex = 0;
             this.dvGioTapChi.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dvGioTapChi_UserDeletingRow);
             // 
+            // cT_MUONBAOTableAdapter
+            // 
+            this.cT_MUONBAOTableAdapter.ClearBeforeFill = true;
+            // 
             // IDKI
             // 
-            this.IDKI.HeaderText = "ID Kỳ";
+            this.IDKI.HeaderText = "ID Kỳ XB";
             this.IDKI.Name = "IDKI";
             this.IDKI.ReadOnly = true;
             // 
@@ -313,10 +317,6 @@
             this.DINHKI.HeaderText = "Định kỳ";
             this.DINHKI.Name = "DINHKI";
             this.DINHKI.ReadOnly = true;
-            // 
-            // cT_MUONBAOTableAdapter
-            // 
-            this.cT_MUONBAOTableAdapter.ClearBeforeFill = true;
             // 
             // frmMuonTapChi
             // 
@@ -368,12 +368,12 @@
         private DevExpress.XtraEditors.SimpleButton btnHoanTat;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.DataGridView dvGioTapChi;
+        private System.Windows.Forms.BindingSource cT_MUONBAOBindingSource;
+        private DSTableAdapters.CT_MUONBAOTableAdapter cT_MUONBAOTableAdapter;
+        private DevExpress.XtraEditors.TextEdit txtSoNgay;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDKI;
         private System.Windows.Forms.DataGridViewTextBoxColumn TENTAPCHI;
         private System.Windows.Forms.DataGridViewTextBoxColumn NXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn DINHKI;
-        private System.Windows.Forms.BindingSource cT_MUONBAOBindingSource;
-        private DSTableAdapters.CT_MUONBAOTableAdapter cT_MUONBAOTableAdapter;
-        private DevExpress.XtraEditors.TextEdit txtSoNgay;
     }
 }

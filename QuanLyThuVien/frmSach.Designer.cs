@@ -61,7 +61,7 @@
             this.colMATL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.bdsTaiLieu = new System.Windows.Forms.BindingSource(this.components);
+            this.txtMaTL = new DevExpress.XtraEditors.TextEdit();
             this.dgvCT_Sach = new System.Windows.Forms.DataGridView();
             this.mASACHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mATGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -70,9 +70,11 @@
             this.dateNamPH = new DevExpress.XtraEditors.DateEdit();
             this.txtTenSach = new DevExpress.XtraEditors.TextEdit();
             this.txtMaSach = new DevExpress.XtraEditors.TextEdit();
+            this.bdsTaiLieu = new System.Windows.Forms.BindingSource(this.components);
             this.v_Tac_GiaTableAdapter = new QuanLyThuVien.DSTableAdapters.V_Tac_GiaTableAdapter();
             this.cT_SACHTableAdapter = new QuanLyThuVien.DSTableAdapters.CT_SACHTableAdapter();
-            this.txtMaTL = new DevExpress.XtraEditors.TextEdit();
+            this.bdsXuatBan = new System.Windows.Forms.BindingSource(this.components);
+            this.xUATBANTableAdapter = new QuanLyThuVien.DSTableAdapters.XUATBANTableAdapter();
             mASACHLabel = new System.Windows.Forms.Label();
             mATLLabel = new System.Windows.Forms.Label();
             tENSACHLabel = new System.Windows.Forms.Label();
@@ -86,7 +88,7 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTaiLieu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaTL.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCT_Sach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsViewTacGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCTSach)).BeginInit();
@@ -94,7 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateNamPH.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSach.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSach.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaTL.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTaiLieu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsXuatBan)).BeginInit();
             this.SuspendLayout();
             // 
             // mASACHLabel
@@ -395,10 +398,16 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin sách";
             // 
-            // bdsTaiLieu
+            // txtMaTL
             // 
-            this.bdsTaiLieu.DataMember = "TAILIEU";
-            this.bdsTaiLieu.DataSource = this.dS;
+            this.txtMaTL.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSach, "MATL", true));
+            this.txtMaTL.EditValue = "SACH";
+            this.txtMaTL.Enabled = false;
+            this.txtMaTL.Location = new System.Drawing.Point(114, 117);
+            this.txtMaTL.MenuManager = this.barManager1;
+            this.txtMaTL.Name = "txtMaTL";
+            this.txtMaTL.Size = new System.Drawing.Size(140, 28);
+            this.txtMaTL.TabIndex = 12;
             // 
             // dgvCT_Sach
             // 
@@ -476,6 +485,11 @@
             this.txtMaSach.Size = new System.Drawing.Size(140, 28);
             this.txtMaSach.TabIndex = 1;
             // 
+            // bdsTaiLieu
+            // 
+            this.bdsTaiLieu.DataMember = "TAILIEU";
+            this.bdsTaiLieu.DataSource = this.dS;
+            // 
             // v_Tac_GiaTableAdapter
             // 
             this.v_Tac_GiaTableAdapter.ClearBeforeFill = true;
@@ -484,16 +498,14 @@
             // 
             this.cT_SACHTableAdapter.ClearBeforeFill = true;
             // 
-            // txtMaTL
+            // bdsXuatBan
             // 
-            this.txtMaTL.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsSach, "MATL", true));
-            this.txtMaTL.EditValue = "SACH";
-            this.txtMaTL.Enabled = false;
-            this.txtMaTL.Location = new System.Drawing.Point(114, 117);
-            this.txtMaTL.MenuManager = this.barManager1;
-            this.txtMaTL.Name = "txtMaTL";
-            this.txtMaTL.Size = new System.Drawing.Size(140, 28);
-            this.txtMaTL.TabIndex = 12;
+            this.bdsXuatBan.DataMember = "FK_XUATBAN_SACH";
+            this.bdsXuatBan.DataSource = this.bdsSach;
+            // 
+            // xUATBANTableAdapter
+            // 
+            this.xUATBANTableAdapter.ClearBeforeFill = true;
             // 
             // frmSach
             // 
@@ -520,7 +532,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsTaiLieu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaTL.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCT_Sach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsViewTacGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCTSach)).EndInit();
@@ -528,7 +540,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateNamPH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenSach.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaSach.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaTL.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsTaiLieu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsXuatBan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,5 +588,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mASACHDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn mATGDataGridViewTextBoxColumn;
         private DevExpress.XtraEditors.TextEdit txtMaTL;
+        private System.Windows.Forms.BindingSource bdsXuatBan;
+        private DSTableAdapters.XUATBANTableAdapter xUATBANTableAdapter;
     }
 }

@@ -108,11 +108,11 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colIDSACH,
+            this.colTENSACH,
             this.colNGAYMUON,
             this.colSONGAY,
             this.colTINHTRANG,
-            this.colSTT,
-            this.colTENSACH});
+            this.colSTT});
             this.gridView1.GridControl = this.sP_SACH_CHUA_TRAGridControl;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;

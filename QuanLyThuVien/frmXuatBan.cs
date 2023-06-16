@@ -32,12 +32,12 @@ namespace QuanLyThuVien
             // TODO: This line of code loads data into the 'dS.CUONSACH' table. You can move, or remove it, as needed.
             this.cUONSACHTableAdapter.Connection.ConnectionString = Program.connstr;
             this.cUONSACHTableAdapter.Fill(this.dS.CUONSACH);
-            txtGia.ReadOnly = txtKhoGiay.ReadOnly = txtMaSach.Enabled = txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = btnGhi.Enabled = btnHuy.Enabled = true;
+            txtGia.ReadOnly = txtKhoGiay.ReadOnly = txtMaSach.Enabled = txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = true;
             lblSoLuong.Visible = txtSoLuong.Visible =chkDiaCD.Enabled=  false;
             gcXuatBan.Enabled = true;
             if (bdsXuatBan.Count == 0)
             {
-                btnXoa.Enabled = btnSua.Enabled = false;
+                btnSua.Enabled = false;
             }
             panelControl1.Enabled = false;
         }
@@ -50,58 +50,27 @@ namespace QuanLyThuVien
 
             bdsXuatBan.AddNew();
             chkDiaCD.Checked = false;
-            gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = txtGia.ReadOnly = txtKhoGiay.ReadOnly  = txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = false;
+            gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnLamMoi.Enabled = txtGia.ReadOnly = txtKhoGiay.ReadOnly  = txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = false;
             lblSoLuong.Visible = txtSoLuong.Visible = txtMaSach.Enabled = btnGhi.Enabled = btnHuy.Enabled = chkDiaCD.Enabled= true ;
             panelControl1.Enabled = true;
         }
 
-        private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if (bdsCuonSach.Count > 0)
-            {
-                MessageBox.Show("Không thể xoá lần xuất bản này!");
-                return;
-            }
-
-            if (MessageBox.Show("Bạn có chắc muốn xoá nhà xuất bản này?", "Xác nhận",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
-            {
-                try
-                {
-                    maXuatBan = ((DataRowView)bdsXuatBan[bdsXuatBan.Position])["MAXUATBAN"].ToString();
-                    bdsXuatBan.RemoveCurrent();
-                    this.xUATBANTableAdapter.Connection.ConnectionString = Program.connstr;
-                    this.xUATBANTableAdapter.Update(this.dS.XUATBAN);
-                    btnLamMoi.PerformClick();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi xoá lần xuất bản!\n" + ex.Message);
-                    this.xUATBANTableAdapter.Fill(this.dS.XUATBAN);
-                    bdsXuatBan.Position = bdsXuatBan.Find("MATACGIA", maXuatBan);
-                    return;
-                }
-            }
-            if (bdsXuatBan.Count == 0)
-            {
-                btnXoa.Enabled = false;
-            }
-        }
+        
+       
 
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             chucnang = false;
             vitri = bdsXuatBan.Position;
 
-            gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = lblSoLuong.Visible = txtSoLuong.Visible = txtGia.ReadOnly = txtKhoGiay.ReadOnly = txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = false;
+            gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnLamMoi.Enabled = lblSoLuong.Visible = txtSoLuong.Visible = txtGia.ReadOnly = txtKhoGiay.ReadOnly = txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = false;
             btnGhi.Enabled = btnHuy.Enabled = txtMaSach.Enabled =chkDiaCD.Enabled =  true;
             panelControl1.Enabled = true;
         }
 
         private void btnGhi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            int soLuong;
             if (Validator.isEmptyText(txtGia.Text))
             {
                 MessageBox.Show("Không được để trống giá!");
@@ -131,7 +100,18 @@ namespace QuanLyThuVien
             {
                 MessageBox.Show("Không được để trống số lượng!");
                 return;
+              
+               
             }
+
+            soLuong = int.Parse(txtSoLuong.Text);
+
+            if (soLuong == 0 || soLuong < 0)
+            {
+                MessageBox.Show("Số lượng không được nhỏ hơn 1!");
+                return;
+            }
+
             if (Validator.isEmptyText(txtSoTrang.Text))
             {
                 MessageBox.Show("Không được để trống số trang!");
@@ -175,26 +155,19 @@ namespace QuanLyThuVien
                         id = (int)Program.myReader["IDXB"];
 
                     }
-                    int soLuong;
-                    if (int.TryParse(txtSoLuong.Text.Trim(), out soLuong))
+
+                    for (int i = 0; i < soLuong; i++)
                     {
-                        for (int i = 0; i < soLuong; i++)
-                        {
-                            Program.KetNoi();
-                            Program.ExecSqlNonQuery($"EXEC SP_THEM_CUON_SACH '1','{id}'");
-                        }
-                    }
-                    else
-                    {
-                        // Xử lý lỗi khi không thể chuyển đổi thành công
-                        MessageBox.Show("Giá trị số lượng không hợp lệ!");
-                        return;
+                        Program.KetNoi();
+                        Program.ExecSqlNonQuery($"EXEC SP_THEM_CUON_SACH '1','{id}'");
                     }
 
+
                 }
+                else return;
             }
             
-            gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = lblSoLuong.Visible = txtSoLuong.Visible = txtGia.ReadOnly = txtKhoGiay.ReadOnly =  txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = true;
+            gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnLamMoi.Enabled = lblSoLuong.Visible = txtSoLuong.Visible = txtGia.ReadOnly = txtKhoGiay.ReadOnly =  txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = true;
             lblSoLuong.Visible = txtSoLuong.Visible =btnGhi.Enabled = btnHuy.Enabled = txtMaSach.Enabled =chkDiaCD.Enabled=  false;
             panelControl1.Enabled = false;
         }
@@ -203,7 +176,7 @@ namespace QuanLyThuVien
         {
             bdsXuatBan.CancelEdit();
             bdsXuatBan.Position = vitri;
-            gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = txtGia.ReadOnly = txtKhoGiay.ReadOnly =  txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = true;
+            gcXuatBan.Enabled = btnSua.Enabled = btnThem.Enabled  = btnLamMoi.Enabled = txtGia.ReadOnly = txtKhoGiay.ReadOnly =  txtNamXB.ReadOnly = txtNhaXB.ReadOnly = txtSoTrang.ReadOnly = true;
             btnHuy.Enabled = btnGhi.Enabled = txtMaSach.Enabled =chkDiaCD.Enabled= false;
             panelControl1.Enabled = false;
         }
@@ -215,6 +188,8 @@ namespace QuanLyThuVien
             {
                 this.xUATBANTableAdapter.Connection.ConnectionString = Program.connstr;
                 this.xUATBANTableAdapter.Fill(this.dS.XUATBAN);
+                this.cUONSACHTableAdapter.Connection.ConnectionString = Program.connstr;
+                this.cUONSACHTableAdapter.Fill(this.dS.CUONSACH);
             }
             catch (Exception ex)
             {

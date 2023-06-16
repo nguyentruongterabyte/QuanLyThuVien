@@ -117,7 +117,7 @@
             // 
             this.cmbUsername.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsername.FormattingEnabled = true;
-            this.cmbUsername.Location = new System.Drawing.Point(229, 88);
+            this.cmbUsername.Location = new System.Drawing.Point(229, 91);
             this.cmbUsername.Name = "cmbUsername";
             this.cmbUsername.Size = new System.Drawing.Size(225, 21);
             this.cmbUsername.TabIndex = 4;

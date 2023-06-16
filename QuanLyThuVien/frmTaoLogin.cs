@@ -62,8 +62,6 @@ namespace QLDSV_TC
         {
             if (Program.KetNoi() == 0)
             { return; }
-            // Lấy dữ liệu về đổ vào combo box username là MAGV
-            // và display member là HOTEN của giảng viên
             LayUsernameLogin("SELECT * FROM V_DOC_GIA");
             cmbUsername.SelectedIndex = 1;
             cmbUsername.SelectedIndex = 0;

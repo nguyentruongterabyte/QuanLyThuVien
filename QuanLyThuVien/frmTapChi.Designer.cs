@@ -71,6 +71,8 @@
             this.txtTenTC = new DevExpress.XtraEditors.TextEdit();
             this.txtMaTC = new DevExpress.XtraEditors.TextEdit();
             this.txtDinhKy = new System.Windows.Forms.TextBox();
+            this.bdsKyXB = new System.Windows.Forms.BindingSource(this.components);
+            this.kYXBTableAdapter = new QuanLyThuVien.DSTableAdapters.KYXBTableAdapter();
             mATAPCHILabel = new System.Windows.Forms.Label();
             tENTAPCHILabel = new System.Windows.Forms.Label();
             nAMPHATHANHLabel = new System.Windows.Forms.Label();
@@ -92,6 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateNamPH.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenTC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaTC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKyXB)).BeginInit();
             this.SuspendLayout();
             // 
             // mATAPCHILabel
@@ -360,6 +363,7 @@
             this.colMATAPCHI.Name = "colMATAPCHI";
             this.colMATAPCHI.Visible = true;
             this.colMATAPCHI.VisibleIndex = 0;
+            this.colMATAPCHI.Width = 97;
             // 
             // colTENTAPCHI
             // 
@@ -368,6 +372,7 @@
             this.colTENTAPCHI.Name = "colTENTAPCHI";
             this.colTENTAPCHI.Visible = true;
             this.colTENTAPCHI.VisibleIndex = 1;
+            this.colTENTAPCHI.Width = 186;
             // 
             // colNAMPHATHANH
             // 
@@ -376,6 +381,7 @@
             this.colNAMPHATHANH.Name = "colNAMPHATHANH";
             this.colNAMPHATHANH.Visible = true;
             this.colNAMPHATHANH.VisibleIndex = 2;
+            this.colNAMPHATHANH.Width = 103;
             // 
             // colDINHKI
             // 
@@ -392,6 +398,7 @@
             this.colNXB.Name = "colNXB";
             this.colNXB.Visible = true;
             this.colNXB.VisibleIndex = 4;
+            this.colNXB.Width = 179;
             // 
             // colMATL
             // 
@@ -433,6 +440,7 @@
             // 
             // cmbDinhKy
             // 
+            this.cmbDinhKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDinhKy.FormattingEnabled = true;
             this.cmbDinhKy.Location = new System.Drawing.Point(139, 243);
             this.cmbDinhKy.Name = "cmbDinhKy";
@@ -500,10 +508,20 @@
             this.txtDinhKy.TabIndex = 13;
             this.txtDinhKy.TextChanged += new System.EventHandler(this.txtDinhKy_TextChanged);
             // 
+            // bdsKyXB
+            // 
+            this.bdsKyXB.DataMember = "FK_KYXB_TAPCHI";
+            this.bdsKyXB.DataSource = this.bdsTapChi;
+            // 
+            // kYXBTableAdapter
+            // 
+            this.kYXBTableAdapter.ClearBeforeFill = true;
+            // 
             // frmTapChi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1384, 754);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.gcTapChi);
@@ -531,6 +549,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateNamPH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenTC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaTC.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsKyXB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -573,5 +592,7 @@
         private DevExpress.XtraEditors.TextEdit txtMaTC;
         private System.Windows.Forms.ComboBox cmbDinhKy;
         private System.Windows.Forms.TextBox txtDinhKy;
+        private System.Windows.Forms.BindingSource bdsKyXB;
+        private DSTableAdapters.KYXBTableAdapter kYXBTableAdapter;
     }
 }

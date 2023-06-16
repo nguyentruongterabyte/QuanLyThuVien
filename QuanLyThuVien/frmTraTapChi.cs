@@ -137,7 +137,7 @@ namespace QuanLyThuVien
                 MessageBox.Show("Đã trả!\n" +
                     "Cảm ơn bạn đã mượn tạp chí của chúng tôi!");
                 dvKeTapChi.Rows.Clear();
-                btnTaiLai.PerformClick();
+                //btnTaiLai.PerformClick();
             }
         }
     }

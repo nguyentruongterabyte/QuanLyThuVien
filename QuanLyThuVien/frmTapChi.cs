@@ -31,6 +31,8 @@ namespace QuanLyThuVien
 
         private void frmTapChi_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dS.KYXB' table. You can move, or remove it, as needed.
+            this.kYXBTableAdapter.Fill(this.dS.KYXB);
             dS.EnforceConstraints = false;
 
             
@@ -73,6 +75,12 @@ namespace QuanLyThuVien
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (bdsKyXB.Count > 0)
+            {
+                MessageBox.Show("Không thể xóa tạp chí này do đã xuất bản!");
+                return;
+            }
+
             if (MessageBox.Show("Bạn có chắc muốn xoá tạp chí này?", "Xác nhận",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question,

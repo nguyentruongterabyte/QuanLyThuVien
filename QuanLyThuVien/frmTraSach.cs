@@ -159,7 +159,7 @@ namespace QuanLyThuVien
                     MessageBox.Show("Đã trả!\n" +
                         "Cảm ơn bạn đã mượn sách của chúng tôi!");
                     dvKeSach.Rows.Clear();
-                    btnTaiLai.PerformClick();
+                    //btnTaiLai.PerformClick();
                 }
                 catch (Exception ex)
                 {

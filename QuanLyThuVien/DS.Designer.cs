@@ -52,15 +52,15 @@ namespace QuanLyThuVien {
         
         private V_SachDataTable tableV_Sach;
         
-        private SP_SACH_CHUA_TRADataTable tableSP_SACH_CHUA_TRA;
-        
         private V_DANH_SACH_KY_XB_TAP_CHIDataTable tableV_DANH_SACH_KY_XB_TAP_CHI;
         
         private V_TAP_CHIDataTable tableV_TAP_CHI;
         
-        private SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable tableSP_DS_BAO_TAP_CHI_CO_THE_MUON;
-        
         private SP_TAP_CHI_CHUA_TRADataTable tableSP_TAP_CHI_CHUA_TRA;
+        
+        private SP_SACH_CHUA_TRADataTable tableSP_SACH_CHUA_TRA;
+        
+        private SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable tableSP_DS_BAO_TAP_CHI_CO_THE_MUON;
         
         private global::System.Data.DataRelation relationFK_CT_SACH_SACH;
         
@@ -154,20 +154,20 @@ namespace QuanLyThuVien {
                 if ((ds.Tables["V_Sach"] != null)) {
                     base.Tables.Add(new V_SachDataTable(ds.Tables["V_Sach"]));
                 }
-                if ((ds.Tables["SP_SACH_CHUA_TRA"] != null)) {
-                    base.Tables.Add(new SP_SACH_CHUA_TRADataTable(ds.Tables["SP_SACH_CHUA_TRA"]));
-                }
                 if ((ds.Tables["V_DANH_SACH_KY_XB_TAP_CHI"] != null)) {
                     base.Tables.Add(new V_DANH_SACH_KY_XB_TAP_CHIDataTable(ds.Tables["V_DANH_SACH_KY_XB_TAP_CHI"]));
                 }
                 if ((ds.Tables["V_TAP_CHI"] != null)) {
                     base.Tables.Add(new V_TAP_CHIDataTable(ds.Tables["V_TAP_CHI"]));
                 }
-                if ((ds.Tables["SP_DS_BAO_TAP_CHI_CO_THE_MUON"] != null)) {
-                    base.Tables.Add(new SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable(ds.Tables["SP_DS_BAO_TAP_CHI_CO_THE_MUON"]));
-                }
                 if ((ds.Tables["SP_TAP_CHI_CHUA_TRA"] != null)) {
                     base.Tables.Add(new SP_TAP_CHI_CHUA_TRADataTable(ds.Tables["SP_TAP_CHI_CHUA_TRA"]));
+                }
+                if ((ds.Tables["SP_SACH_CHUA_TRA"] != null)) {
+                    base.Tables.Add(new SP_SACH_CHUA_TRADataTable(ds.Tables["SP_SACH_CHUA_TRA"]));
+                }
+                if ((ds.Tables["SP_DS_BAO_TAP_CHI_CO_THE_MUON"] != null)) {
+                    base.Tables.Add(new SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable(ds.Tables["SP_DS_BAO_TAP_CHI_CO_THE_MUON"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -331,16 +331,6 @@ namespace QuanLyThuVien {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_SACH_CHUA_TRADataTable SP_SACH_CHUA_TRA {
-            get {
-                return this.tableSP_SACH_CHUA_TRA;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public V_DANH_SACH_KY_XB_TAP_CHIDataTable V_DANH_SACH_KY_XB_TAP_CHI {
             get {
                 return this.tableV_DANH_SACH_KY_XB_TAP_CHI;
@@ -361,9 +351,9 @@ namespace QuanLyThuVien {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable SP_DS_BAO_TAP_CHI_CO_THE_MUON {
+        public SP_TAP_CHI_CHUA_TRADataTable SP_TAP_CHI_CHUA_TRA {
             get {
-                return this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON;
+                return this.tableSP_TAP_CHI_CHUA_TRA;
             }
         }
         
@@ -371,9 +361,19 @@ namespace QuanLyThuVien {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SP_TAP_CHI_CHUA_TRADataTable SP_TAP_CHI_CHUA_TRA {
+        public SP_SACH_CHUA_TRADataTable SP_SACH_CHUA_TRA {
             get {
-                return this.tableSP_TAP_CHI_CHUA_TRA;
+                return this.tableSP_SACH_CHUA_TRA;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable SP_DS_BAO_TAP_CHI_CO_THE_MUON {
+            get {
+                return this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON;
             }
         }
         
@@ -486,20 +486,20 @@ namespace QuanLyThuVien {
                 if ((ds.Tables["V_Sach"] != null)) {
                     base.Tables.Add(new V_SachDataTable(ds.Tables["V_Sach"]));
                 }
-                if ((ds.Tables["SP_SACH_CHUA_TRA"] != null)) {
-                    base.Tables.Add(new SP_SACH_CHUA_TRADataTable(ds.Tables["SP_SACH_CHUA_TRA"]));
-                }
                 if ((ds.Tables["V_DANH_SACH_KY_XB_TAP_CHI"] != null)) {
                     base.Tables.Add(new V_DANH_SACH_KY_XB_TAP_CHIDataTable(ds.Tables["V_DANH_SACH_KY_XB_TAP_CHI"]));
                 }
                 if ((ds.Tables["V_TAP_CHI"] != null)) {
                     base.Tables.Add(new V_TAP_CHIDataTable(ds.Tables["V_TAP_CHI"]));
                 }
-                if ((ds.Tables["SP_DS_BAO_TAP_CHI_CO_THE_MUON"] != null)) {
-                    base.Tables.Add(new SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable(ds.Tables["SP_DS_BAO_TAP_CHI_CO_THE_MUON"]));
-                }
                 if ((ds.Tables["SP_TAP_CHI_CHUA_TRA"] != null)) {
                     base.Tables.Add(new SP_TAP_CHI_CHUA_TRADataTable(ds.Tables["SP_TAP_CHI_CHUA_TRA"]));
+                }
+                if ((ds.Tables["SP_SACH_CHUA_TRA"] != null)) {
+                    base.Tables.Add(new SP_SACH_CHUA_TRADataTable(ds.Tables["SP_SACH_CHUA_TRA"]));
+                }
+                if ((ds.Tables["SP_DS_BAO_TAP_CHI_CO_THE_MUON"] != null)) {
+                    base.Tables.Add(new SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable(ds.Tables["SP_DS_BAO_TAP_CHI_CO_THE_MUON"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -618,12 +618,6 @@ namespace QuanLyThuVien {
                     this.tableV_Sach.InitVars();
                 }
             }
-            this.tableSP_SACH_CHUA_TRA = ((SP_SACH_CHUA_TRADataTable)(base.Tables["SP_SACH_CHUA_TRA"]));
-            if ((initTable == true)) {
-                if ((this.tableSP_SACH_CHUA_TRA != null)) {
-                    this.tableSP_SACH_CHUA_TRA.InitVars();
-                }
-            }
             this.tableV_DANH_SACH_KY_XB_TAP_CHI = ((V_DANH_SACH_KY_XB_TAP_CHIDataTable)(base.Tables["V_DANH_SACH_KY_XB_TAP_CHI"]));
             if ((initTable == true)) {
                 if ((this.tableV_DANH_SACH_KY_XB_TAP_CHI != null)) {
@@ -636,16 +630,22 @@ namespace QuanLyThuVien {
                     this.tableV_TAP_CHI.InitVars();
                 }
             }
-            this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON = ((SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable)(base.Tables["SP_DS_BAO_TAP_CHI_CO_THE_MUON"]));
-            if ((initTable == true)) {
-                if ((this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON != null)) {
-                    this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON.InitVars();
-                }
-            }
             this.tableSP_TAP_CHI_CHUA_TRA = ((SP_TAP_CHI_CHUA_TRADataTable)(base.Tables["SP_TAP_CHI_CHUA_TRA"]));
             if ((initTable == true)) {
                 if ((this.tableSP_TAP_CHI_CHUA_TRA != null)) {
                     this.tableSP_TAP_CHI_CHUA_TRA.InitVars();
+                }
+            }
+            this.tableSP_SACH_CHUA_TRA = ((SP_SACH_CHUA_TRADataTable)(base.Tables["SP_SACH_CHUA_TRA"]));
+            if ((initTable == true)) {
+                if ((this.tableSP_SACH_CHUA_TRA != null)) {
+                    this.tableSP_SACH_CHUA_TRA.InitVars();
+                }
+            }
+            this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON = ((SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable)(base.Tables["SP_DS_BAO_TAP_CHI_CO_THE_MUON"]));
+            if ((initTable == true)) {
+                if ((this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON != null)) {
+                    this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON.InitVars();
                 }
             }
             this.relationFK_CT_SACH_SACH = this.Relations["FK_CT_SACH_SACH"];
@@ -697,16 +697,16 @@ namespace QuanLyThuVien {
             base.Tables.Add(this.tableV_SACH_CO_THE_MUON);
             this.tableV_Sach = new V_SachDataTable();
             base.Tables.Add(this.tableV_Sach);
-            this.tableSP_SACH_CHUA_TRA = new SP_SACH_CHUA_TRADataTable();
-            base.Tables.Add(this.tableSP_SACH_CHUA_TRA);
             this.tableV_DANH_SACH_KY_XB_TAP_CHI = new V_DANH_SACH_KY_XB_TAP_CHIDataTable();
             base.Tables.Add(this.tableV_DANH_SACH_KY_XB_TAP_CHI);
             this.tableV_TAP_CHI = new V_TAP_CHIDataTable();
             base.Tables.Add(this.tableV_TAP_CHI);
-            this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON = new SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable();
-            base.Tables.Add(this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON);
             this.tableSP_TAP_CHI_CHUA_TRA = new SP_TAP_CHI_CHUA_TRADataTable();
             base.Tables.Add(this.tableSP_TAP_CHI_CHUA_TRA);
+            this.tableSP_SACH_CHUA_TRA = new SP_SACH_CHUA_TRADataTable();
+            base.Tables.Add(this.tableSP_SACH_CHUA_TRA);
+            this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON = new SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable();
+            base.Tables.Add(this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON);
             global::System.Data.ForeignKeyConstraint fkc;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_CT_SACH_SACH", new global::System.Data.DataColumn[] {
                         this.tableSACH.MASACHColumn}, new global::System.Data.DataColumn[] {
@@ -847,12 +847,6 @@ namespace QuanLyThuVien {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSP_SACH_CHUA_TRA() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeV_DANH_SACH_KY_XB_TAP_CHI() {
             return false;
         }
@@ -865,13 +859,19 @@ namespace QuanLyThuVien {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSP_DS_BAO_TAP_CHI_CO_THE_MUON() {
+        private bool ShouldSerializeSP_TAP_CHI_CHUA_TRA() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeSP_TAP_CHI_CHUA_TRA() {
+        private bool ShouldSerializeSP_SACH_CHUA_TRA() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeSP_DS_BAO_TAP_CHI_CO_THE_MUON() {
             return false;
         }
         
@@ -973,19 +973,19 @@ namespace QuanLyThuVien {
         public delegate void V_SachRowChangeEventHandler(object sender, V_SachRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void SP_SACH_CHUA_TRARowChangeEventHandler(object sender, SP_SACH_CHUA_TRARowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void V_DANH_SACH_KY_XB_TAP_CHIRowChangeEventHandler(object sender, V_DANH_SACH_KY_XB_TAP_CHIRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void V_TAP_CHIRowChangeEventHandler(object sender, V_TAP_CHIRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void SP_DS_BAO_TAP_CHI_CO_THE_MUONRowChangeEventHandler(object sender, SP_DS_BAO_TAP_CHI_CO_THE_MUONRowChangeEvent e);
+        public delegate void SP_TAP_CHI_CHUA_TRARowChangeEventHandler(object sender, SP_TAP_CHI_CHUA_TRARowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void SP_TAP_CHI_CHUA_TRARowChangeEventHandler(object sender, SP_TAP_CHI_CHUA_TRARowChangeEvent e);
+        public delegate void SP_SACH_CHUA_TRARowChangeEventHandler(object sender, SP_SACH_CHUA_TRARowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void SP_DS_BAO_TAP_CHI_CO_THE_MUONRowChangeEventHandler(object sender, SP_DS_BAO_TAP_CHI_CO_THE_MUONRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5309,328 +5309,6 @@ namespace QuanLyThuVien {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SP_SACH_CHUA_TRADataTable : global::System.Data.TypedTableBase<SP_SACH_CHUA_TRARow> {
-            
-            private global::System.Data.DataColumn columnIDSACH;
-            
-            private global::System.Data.DataColumn columnTENSACH;
-            
-            private global::System.Data.DataColumn columnNGAYMUON;
-            
-            private global::System.Data.DataColumn columnSONGAY;
-            
-            private global::System.Data.DataColumn columnTINHTRANG;
-            
-            private global::System.Data.DataColumn columnSTT;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_SACH_CHUA_TRADataTable() {
-                this.TableName = "SP_SACH_CHUA_TRA";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_SACH_CHUA_TRADataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected SP_SACH_CHUA_TRADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IDSACHColumn {
-                get {
-                    return this.columnIDSACH;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TENSACHColumn {
-                get {
-                    return this.columnTENSACH;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NGAYMUONColumn {
-                get {
-                    return this.columnNGAYMUON;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SONGAYColumn {
-                get {
-                    return this.columnSONGAY;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TINHTRANGColumn {
-                get {
-                    return this.columnTINHTRANG;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn STTColumn {
-                get {
-                    return this.columnSTT;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_SACH_CHUA_TRARow this[int index] {
-                get {
-                    return ((SP_SACH_CHUA_TRARow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_SACH_CHUA_TRARowChangeEventHandler SP_SACH_CHUA_TRARowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_SACH_CHUA_TRARowChangeEventHandler SP_SACH_CHUA_TRARowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_SACH_CHUA_TRARowChangeEventHandler SP_SACH_CHUA_TRARowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_SACH_CHUA_TRARowChangeEventHandler SP_SACH_CHUA_TRARowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddSP_SACH_CHUA_TRARow(SP_SACH_CHUA_TRARow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_SACH_CHUA_TRARow AddSP_SACH_CHUA_TRARow(int IDSACH, string TENSACH, System.DateTime NGAYMUON, int SONGAY, string TINHTRANG, int STT) {
-                SP_SACH_CHUA_TRARow rowSP_SACH_CHUA_TRARow = ((SP_SACH_CHUA_TRARow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        IDSACH,
-                        TENSACH,
-                        NGAYMUON,
-                        SONGAY,
-                        TINHTRANG,
-                        STT};
-                rowSP_SACH_CHUA_TRARow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSP_SACH_CHUA_TRARow);
-                return rowSP_SACH_CHUA_TRARow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                SP_SACH_CHUA_TRADataTable cln = ((SP_SACH_CHUA_TRADataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new SP_SACH_CHUA_TRADataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnIDSACH = base.Columns["IDSACH"];
-                this.columnTENSACH = base.Columns["TENSACH"];
-                this.columnNGAYMUON = base.Columns["NGAYMUON"];
-                this.columnSONGAY = base.Columns["SONGAY"];
-                this.columnTINHTRANG = base.Columns["TINHTRANG"];
-                this.columnSTT = base.Columns["STT"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnIDSACH = new global::System.Data.DataColumn("IDSACH", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIDSACH);
-                this.columnTENSACH = new global::System.Data.DataColumn("TENSACH", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTENSACH);
-                this.columnNGAYMUON = new global::System.Data.DataColumn("NGAYMUON", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNGAYMUON);
-                this.columnSONGAY = new global::System.Data.DataColumn("SONGAY", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSONGAY);
-                this.columnTINHTRANG = new global::System.Data.DataColumn("TINHTRANG", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTINHTRANG);
-                this.columnSTT = new global::System.Data.DataColumn("STT", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSTT);
-                this.columnIDSACH.AllowDBNull = false;
-                this.columnTENSACH.MaxLength = 50;
-                this.columnNGAYMUON.AllowDBNull = false;
-                this.columnTINHTRANG.ReadOnly = true;
-                this.columnTINHTRANG.MaxLength = 9;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_SACH_CHUA_TRARow NewSP_SACH_CHUA_TRARow() {
-                return ((SP_SACH_CHUA_TRARow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SP_SACH_CHUA_TRARow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(SP_SACH_CHUA_TRARow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.SP_SACH_CHUA_TRARowChanged != null)) {
-                    this.SP_SACH_CHUA_TRARowChanged(this, new SP_SACH_CHUA_TRARowChangeEvent(((SP_SACH_CHUA_TRARow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.SP_SACH_CHUA_TRARowChanging != null)) {
-                    this.SP_SACH_CHUA_TRARowChanging(this, new SP_SACH_CHUA_TRARowChangeEvent(((SP_SACH_CHUA_TRARow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.SP_SACH_CHUA_TRARowDeleted != null)) {
-                    this.SP_SACH_CHUA_TRARowDeleted(this, new SP_SACH_CHUA_TRARowChangeEvent(((SP_SACH_CHUA_TRARow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.SP_SACH_CHUA_TRARowDeleting != null)) {
-                    this.SP_SACH_CHUA_TRARowDeleting(this, new SP_SACH_CHUA_TRARowChangeEvent(((SP_SACH_CHUA_TRARow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveSP_SACH_CHUA_TRARow(SP_SACH_CHUA_TRARow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DS ds = new DS();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SP_SACH_CHUA_TRADataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class V_DANH_SACH_KY_XB_TAP_CHIDataTable : global::System.Data.TypedTableBase<V_DANH_SACH_KY_XB_TAP_CHIRow> {
             
             private global::System.Data.DataColumn columnIDKI;
@@ -6237,6 +5915,620 @@ namespace QuanLyThuVien {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SP_TAP_CHI_CHUA_TRADataTable : global::System.Data.TypedTableBase<SP_TAP_CHI_CHUA_TRARow> {
+            
+            private global::System.Data.DataColumn columnTENTAPCHI;
+            
+            private global::System.Data.DataColumn columnIDKI;
+            
+            private global::System.Data.DataColumn columnNGAYMUON;
+            
+            private global::System.Data.DataColumn columnSONGAY;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_TAP_CHI_CHUA_TRADataTable() {
+                this.TableName = "SP_TAP_CHI_CHUA_TRA";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SP_TAP_CHI_CHUA_TRADataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected SP_TAP_CHI_CHUA_TRADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TENTAPCHIColumn {
+                get {
+                    return this.columnTENTAPCHI;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IDKIColumn {
+                get {
+                    return this.columnIDKI;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NGAYMUONColumn {
+                get {
+                    return this.columnNGAYMUON;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SONGAYColumn {
+                get {
+                    return this.columnSONGAY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_TAP_CHI_CHUA_TRARow this[int index] {
+                get {
+                    return ((SP_TAP_CHI_CHUA_TRARow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_TAP_CHI_CHUA_TRARowChangeEventHandler SP_TAP_CHI_CHUA_TRARowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_TAP_CHI_CHUA_TRARowChangeEventHandler SP_TAP_CHI_CHUA_TRARowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_TAP_CHI_CHUA_TRARowChangeEventHandler SP_TAP_CHI_CHUA_TRARowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_TAP_CHI_CHUA_TRARowChangeEventHandler SP_TAP_CHI_CHUA_TRARowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddSP_TAP_CHI_CHUA_TRARow(SP_TAP_CHI_CHUA_TRARow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_TAP_CHI_CHUA_TRARow AddSP_TAP_CHI_CHUA_TRARow(string TENTAPCHI, int IDKI, System.DateTime NGAYMUON, int SONGAY) {
+                SP_TAP_CHI_CHUA_TRARow rowSP_TAP_CHI_CHUA_TRARow = ((SP_TAP_CHI_CHUA_TRARow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TENTAPCHI,
+                        IDKI,
+                        NGAYMUON,
+                        SONGAY};
+                rowSP_TAP_CHI_CHUA_TRARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSP_TAP_CHI_CHUA_TRARow);
+                return rowSP_TAP_CHI_CHUA_TRARow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SP_TAP_CHI_CHUA_TRADataTable cln = ((SP_TAP_CHI_CHUA_TRADataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SP_TAP_CHI_CHUA_TRADataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnTENTAPCHI = base.Columns["TENTAPCHI"];
+                this.columnIDKI = base.Columns["IDKI"];
+                this.columnNGAYMUON = base.Columns["NGAYMUON"];
+                this.columnSONGAY = base.Columns["SONGAY"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnTENTAPCHI = new global::System.Data.DataColumn("TENTAPCHI", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTENTAPCHI);
+                this.columnIDKI = new global::System.Data.DataColumn("IDKI", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDKI);
+                this.columnNGAYMUON = new global::System.Data.DataColumn("NGAYMUON", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNGAYMUON);
+                this.columnSONGAY = new global::System.Data.DataColumn("SONGAY", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSONGAY);
+                this.columnTENTAPCHI.MaxLength = 50;
+                this.columnIDKI.AllowDBNull = false;
+                this.columnNGAYMUON.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_TAP_CHI_CHUA_TRARow NewSP_TAP_CHI_CHUA_TRARow() {
+                return ((SP_TAP_CHI_CHUA_TRARow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SP_TAP_CHI_CHUA_TRARow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SP_TAP_CHI_CHUA_TRARow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SP_TAP_CHI_CHUA_TRARowChanged != null)) {
+                    this.SP_TAP_CHI_CHUA_TRARowChanged(this, new SP_TAP_CHI_CHUA_TRARowChangeEvent(((SP_TAP_CHI_CHUA_TRARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SP_TAP_CHI_CHUA_TRARowChanging != null)) {
+                    this.SP_TAP_CHI_CHUA_TRARowChanging(this, new SP_TAP_CHI_CHUA_TRARowChangeEvent(((SP_TAP_CHI_CHUA_TRARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SP_TAP_CHI_CHUA_TRARowDeleted != null)) {
+                    this.SP_TAP_CHI_CHUA_TRARowDeleted(this, new SP_TAP_CHI_CHUA_TRARowChangeEvent(((SP_TAP_CHI_CHUA_TRARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SP_TAP_CHI_CHUA_TRARowDeleting != null)) {
+                    this.SP_TAP_CHI_CHUA_TRARowDeleting(this, new SP_TAP_CHI_CHUA_TRARowChangeEvent(((SP_TAP_CHI_CHUA_TRARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveSP_TAP_CHI_CHUA_TRARow(SP_TAP_CHI_CHUA_TRARow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DS ds = new DS();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SP_TAP_CHI_CHUA_TRADataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SP_SACH_CHUA_TRADataTable : global::System.Data.TypedTableBase<SP_SACH_CHUA_TRARow> {
+            
+            private global::System.Data.DataColumn columnIDSACH;
+            
+            private global::System.Data.DataColumn columnTENSACH;
+            
+            private global::System.Data.DataColumn columnNGAYMUON;
+            
+            private global::System.Data.DataColumn columnSONGAY;
+            
+            private global::System.Data.DataColumn columnTINHTRANG;
+            
+            private global::System.Data.DataColumn columnSTT;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_SACH_CHUA_TRADataTable() {
+                this.TableName = "SP_SACH_CHUA_TRA";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SP_SACH_CHUA_TRADataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected SP_SACH_CHUA_TRADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn IDSACHColumn {
+                get {
+                    return this.columnIDSACH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TENSACHColumn {
+                get {
+                    return this.columnTENSACH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn NGAYMUONColumn {
+                get {
+                    return this.columnNGAYMUON;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SONGAYColumn {
+                get {
+                    return this.columnSONGAY;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TINHTRANGColumn {
+                get {
+                    return this.columnTINHTRANG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn STTColumn {
+                get {
+                    return this.columnSTT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_SACH_CHUA_TRARow this[int index] {
+                get {
+                    return ((SP_SACH_CHUA_TRARow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_SACH_CHUA_TRARowChangeEventHandler SP_SACH_CHUA_TRARowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_SACH_CHUA_TRARowChangeEventHandler SP_SACH_CHUA_TRARowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_SACH_CHUA_TRARowChangeEventHandler SP_SACH_CHUA_TRARowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event SP_SACH_CHUA_TRARowChangeEventHandler SP_SACH_CHUA_TRARowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddSP_SACH_CHUA_TRARow(SP_SACH_CHUA_TRARow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_SACH_CHUA_TRARow AddSP_SACH_CHUA_TRARow(int IDSACH, string TENSACH, System.DateTime NGAYMUON, int SONGAY, string TINHTRANG, int STT) {
+                SP_SACH_CHUA_TRARow rowSP_SACH_CHUA_TRARow = ((SP_SACH_CHUA_TRARow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        IDSACH,
+                        TENSACH,
+                        NGAYMUON,
+                        SONGAY,
+                        TINHTRANG,
+                        STT};
+                rowSP_SACH_CHUA_TRARow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSP_SACH_CHUA_TRARow);
+                return rowSP_SACH_CHUA_TRARow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                SP_SACH_CHUA_TRADataTable cln = ((SP_SACH_CHUA_TRADataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new SP_SACH_CHUA_TRADataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnIDSACH = base.Columns["IDSACH"];
+                this.columnTENSACH = base.Columns["TENSACH"];
+                this.columnNGAYMUON = base.Columns["NGAYMUON"];
+                this.columnSONGAY = base.Columns["SONGAY"];
+                this.columnTINHTRANG = base.Columns["TINHTRANG"];
+                this.columnSTT = base.Columns["STT"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnIDSACH = new global::System.Data.DataColumn("IDSACH", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIDSACH);
+                this.columnTENSACH = new global::System.Data.DataColumn("TENSACH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTENSACH);
+                this.columnNGAYMUON = new global::System.Data.DataColumn("NGAYMUON", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNGAYMUON);
+                this.columnSONGAY = new global::System.Data.DataColumn("SONGAY", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSONGAY);
+                this.columnTINHTRANG = new global::System.Data.DataColumn("TINHTRANG", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTINHTRANG);
+                this.columnSTT = new global::System.Data.DataColumn("STT", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSTT);
+                this.columnIDSACH.AllowDBNull = false;
+                this.columnTENSACH.ReadOnly = true;
+                this.columnNGAYMUON.AllowDBNull = false;
+                this.columnTINHTRANG.ReadOnly = true;
+                this.columnTINHTRANG.MaxLength = 9;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_SACH_CHUA_TRARow NewSP_SACH_CHUA_TRARow() {
+                return ((SP_SACH_CHUA_TRARow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new SP_SACH_CHUA_TRARow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(SP_SACH_CHUA_TRARow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.SP_SACH_CHUA_TRARowChanged != null)) {
+                    this.SP_SACH_CHUA_TRARowChanged(this, new SP_SACH_CHUA_TRARowChangeEvent(((SP_SACH_CHUA_TRARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.SP_SACH_CHUA_TRARowChanging != null)) {
+                    this.SP_SACH_CHUA_TRARowChanging(this, new SP_SACH_CHUA_TRARowChangeEvent(((SP_SACH_CHUA_TRARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.SP_SACH_CHUA_TRARowDeleted != null)) {
+                    this.SP_SACH_CHUA_TRARowDeleted(this, new SP_SACH_CHUA_TRARowChangeEvent(((SP_SACH_CHUA_TRARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.SP_SACH_CHUA_TRARowDeleting != null)) {
+                    this.SP_SACH_CHUA_TRARowDeleting(this, new SP_SACH_CHUA_TRARowChangeEvent(((SP_SACH_CHUA_TRARow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveSP_SACH_CHUA_TRARow(SP_SACH_CHUA_TRARow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DS ds = new DS();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "SP_SACH_CHUA_TRADataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable : global::System.Data.TypedTableBase<SP_DS_BAO_TAP_CHI_CO_THE_MUONRow> {
             
             private global::System.Data.DataColumn columnIDKI;
@@ -6496,298 +6788,6 @@ namespace QuanLyThuVien {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SP_TAP_CHI_CHUA_TRADataTable : global::System.Data.TypedTableBase<SP_TAP_CHI_CHUA_TRARow> {
-            
-            private global::System.Data.DataColumn columnTENTAPCHI;
-            
-            private global::System.Data.DataColumn columnIDKI;
-            
-            private global::System.Data.DataColumn columnNGAYMUON;
-            
-            private global::System.Data.DataColumn columnSONGAY;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_TAP_CHI_CHUA_TRADataTable() {
-                this.TableName = "SP_TAP_CHI_CHUA_TRA";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_TAP_CHI_CHUA_TRADataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected SP_TAP_CHI_CHUA_TRADataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TENTAPCHIColumn {
-                get {
-                    return this.columnTENTAPCHI;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IDKIColumn {
-                get {
-                    return this.columnIDKI;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NGAYMUONColumn {
-                get {
-                    return this.columnNGAYMUON;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SONGAYColumn {
-                get {
-                    return this.columnSONGAY;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_TAP_CHI_CHUA_TRARow this[int index] {
-                get {
-                    return ((SP_TAP_CHI_CHUA_TRARow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_TAP_CHI_CHUA_TRARowChangeEventHandler SP_TAP_CHI_CHUA_TRARowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_TAP_CHI_CHUA_TRARowChangeEventHandler SP_TAP_CHI_CHUA_TRARowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_TAP_CHI_CHUA_TRARowChangeEventHandler SP_TAP_CHI_CHUA_TRARowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event SP_TAP_CHI_CHUA_TRARowChangeEventHandler SP_TAP_CHI_CHUA_TRARowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddSP_TAP_CHI_CHUA_TRARow(SP_TAP_CHI_CHUA_TRARow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_TAP_CHI_CHUA_TRARow AddSP_TAP_CHI_CHUA_TRARow(string TENTAPCHI, int IDKI, System.DateTime NGAYMUON, int SONGAY) {
-                SP_TAP_CHI_CHUA_TRARow rowSP_TAP_CHI_CHUA_TRARow = ((SP_TAP_CHI_CHUA_TRARow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        TENTAPCHI,
-                        IDKI,
-                        NGAYMUON,
-                        SONGAY};
-                rowSP_TAP_CHI_CHUA_TRARow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSP_TAP_CHI_CHUA_TRARow);
-                return rowSP_TAP_CHI_CHUA_TRARow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                SP_TAP_CHI_CHUA_TRADataTable cln = ((SP_TAP_CHI_CHUA_TRADataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new SP_TAP_CHI_CHUA_TRADataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnTENTAPCHI = base.Columns["TENTAPCHI"];
-                this.columnIDKI = base.Columns["IDKI"];
-                this.columnNGAYMUON = base.Columns["NGAYMUON"];
-                this.columnSONGAY = base.Columns["SONGAY"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnTENTAPCHI = new global::System.Data.DataColumn("TENTAPCHI", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTENTAPCHI);
-                this.columnIDKI = new global::System.Data.DataColumn("IDKI", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIDKI);
-                this.columnNGAYMUON = new global::System.Data.DataColumn("NGAYMUON", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNGAYMUON);
-                this.columnSONGAY = new global::System.Data.DataColumn("SONGAY", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSONGAY);
-                this.columnTENTAPCHI.MaxLength = 50;
-                this.columnIDKI.AllowDBNull = false;
-                this.columnNGAYMUON.AllowDBNull = false;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_TAP_CHI_CHUA_TRARow NewSP_TAP_CHI_CHUA_TRARow() {
-                return ((SP_TAP_CHI_CHUA_TRARow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SP_TAP_CHI_CHUA_TRARow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(SP_TAP_CHI_CHUA_TRARow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.SP_TAP_CHI_CHUA_TRARowChanged != null)) {
-                    this.SP_TAP_CHI_CHUA_TRARowChanged(this, new SP_TAP_CHI_CHUA_TRARowChangeEvent(((SP_TAP_CHI_CHUA_TRARow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.SP_TAP_CHI_CHUA_TRARowChanging != null)) {
-                    this.SP_TAP_CHI_CHUA_TRARowChanging(this, new SP_TAP_CHI_CHUA_TRARowChangeEvent(((SP_TAP_CHI_CHUA_TRARow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.SP_TAP_CHI_CHUA_TRARowDeleted != null)) {
-                    this.SP_TAP_CHI_CHUA_TRARowDeleted(this, new SP_TAP_CHI_CHUA_TRARowChangeEvent(((SP_TAP_CHI_CHUA_TRARow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.SP_TAP_CHI_CHUA_TRARowDeleting != null)) {
-                    this.SP_TAP_CHI_CHUA_TRARowDeleting(this, new SP_TAP_CHI_CHUA_TRARowChangeEvent(((SP_TAP_CHI_CHUA_TRARow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveSP_TAP_CHI_CHUA_TRARow(SP_TAP_CHI_CHUA_TRARow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DS ds = new DS();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SP_TAP_CHI_CHUA_TRADataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -8578,155 +8578,6 @@ namespace QuanLyThuVien {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SP_SACH_CHUA_TRARow : global::System.Data.DataRow {
-            
-            private SP_SACH_CHUA_TRADataTable tableSP_SACH_CHUA_TRA;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_SACH_CHUA_TRARow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableSP_SACH_CHUA_TRA = ((SP_SACH_CHUA_TRADataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int IDSACH {
-                get {
-                    return ((int)(this[this.tableSP_SACH_CHUA_TRA.IDSACHColumn]));
-                }
-                set {
-                    this[this.tableSP_SACH_CHUA_TRA.IDSACHColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TENSACH {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_SACH_CHUA_TRA.TENSACHColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TENSACH\' in table \'SP_SACH_CHUA_TRA\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_SACH_CHUA_TRA.TENSACHColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime NGAYMUON {
-                get {
-                    return ((global::System.DateTime)(this[this.tableSP_SACH_CHUA_TRA.NGAYMUONColumn]));
-                }
-                set {
-                    this[this.tableSP_SACH_CHUA_TRA.NGAYMUONColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int SONGAY {
-                get {
-                    try {
-                        return ((int)(this[this.tableSP_SACH_CHUA_TRA.SONGAYColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SONGAY\' in table \'SP_SACH_CHUA_TRA\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_SACH_CHUA_TRA.SONGAYColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TINHTRANG {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_SACH_CHUA_TRA.TINHTRANGColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TINHTRANG\' in table \'SP_SACH_CHUA_TRA\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_SACH_CHUA_TRA.TINHTRANGColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int STT {
-                get {
-                    try {
-                        return ((int)(this[this.tableSP_SACH_CHUA_TRA.STTColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'STT\' in table \'SP_SACH_CHUA_TRA\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_SACH_CHUA_TRA.STTColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTENSACHNull() {
-                return this.IsNull(this.tableSP_SACH_CHUA_TRA.TENSACHColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTENSACHNull() {
-                this[this.tableSP_SACH_CHUA_TRA.TENSACHColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSONGAYNull() {
-                return this.IsNull(this.tableSP_SACH_CHUA_TRA.SONGAYColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSONGAYNull() {
-                this[this.tableSP_SACH_CHUA_TRA.SONGAYColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTINHTRANGNull() {
-                return this.IsNull(this.tableSP_SACH_CHUA_TRA.TINHTRANGColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTINHTRANGNull() {
-                this[this.tableSP_SACH_CHUA_TRA.TINHTRANGColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSTTNull() {
-                return this.IsNull(this.tableSP_SACH_CHUA_TRA.STTColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSTTNull() {
-                this[this.tableSP_SACH_CHUA_TRA.STTColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class V_DANH_SACH_KY_XB_TAP_CHIRow : global::System.Data.DataRow {
             
             private V_DANH_SACH_KY_XB_TAP_CHIDataTable tableV_DANH_SACH_KY_XB_TAP_CHI;
@@ -8947,6 +8798,248 @@ namespace QuanLyThuVien {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class SP_TAP_CHI_CHUA_TRARow : global::System.Data.DataRow {
+            
+            private SP_TAP_CHI_CHUA_TRADataTable tableSP_TAP_CHI_CHUA_TRA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SP_TAP_CHI_CHUA_TRARow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSP_TAP_CHI_CHUA_TRA = ((SP_TAP_CHI_CHUA_TRADataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TENTAPCHI {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_TAP_CHI_CHUA_TRA.TENTAPCHIColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TENTAPCHI\' in table \'SP_TAP_CHI_CHUA_TRA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_TAP_CHI_CHUA_TRA.TENTAPCHIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int IDKI {
+                get {
+                    return ((int)(this[this.tableSP_TAP_CHI_CHUA_TRA.IDKIColumn]));
+                }
+                set {
+                    this[this.tableSP_TAP_CHI_CHUA_TRA.IDKIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime NGAYMUON {
+                get {
+                    return ((global::System.DateTime)(this[this.tableSP_TAP_CHI_CHUA_TRA.NGAYMUONColumn]));
+                }
+                set {
+                    this[this.tableSP_TAP_CHI_CHUA_TRA.NGAYMUONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int SONGAY {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_TAP_CHI_CHUA_TRA.SONGAYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SONGAY\' in table \'SP_TAP_CHI_CHUA_TRA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_TAP_CHI_CHUA_TRA.SONGAYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTENTAPCHINull() {
+                return this.IsNull(this.tableSP_TAP_CHI_CHUA_TRA.TENTAPCHIColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTENTAPCHINull() {
+                this[this.tableSP_TAP_CHI_CHUA_TRA.TENTAPCHIColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSONGAYNull() {
+                return this.IsNull(this.tableSP_TAP_CHI_CHUA_TRA.SONGAYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSONGAYNull() {
+                this[this.tableSP_TAP_CHI_CHUA_TRA.SONGAYColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class SP_SACH_CHUA_TRARow : global::System.Data.DataRow {
+            
+            private SP_SACH_CHUA_TRADataTable tableSP_SACH_CHUA_TRA;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal SP_SACH_CHUA_TRARow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableSP_SACH_CHUA_TRA = ((SP_SACH_CHUA_TRADataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int IDSACH {
+                get {
+                    return ((int)(this[this.tableSP_SACH_CHUA_TRA.IDSACHColumn]));
+                }
+                set {
+                    this[this.tableSP_SACH_CHUA_TRA.IDSACHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TENSACH {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_SACH_CHUA_TRA.TENSACHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TENSACH\' in table \'SP_SACH_CHUA_TRA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_SACH_CHUA_TRA.TENSACHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime NGAYMUON {
+                get {
+                    return ((global::System.DateTime)(this[this.tableSP_SACH_CHUA_TRA.NGAYMUONColumn]));
+                }
+                set {
+                    this[this.tableSP_SACH_CHUA_TRA.NGAYMUONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int SONGAY {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_SACH_CHUA_TRA.SONGAYColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SONGAY\' in table \'SP_SACH_CHUA_TRA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_SACH_CHUA_TRA.SONGAYColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string TINHTRANG {
+                get {
+                    try {
+                        return ((string)(this[this.tableSP_SACH_CHUA_TRA.TINHTRANGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TINHTRANG\' in table \'SP_SACH_CHUA_TRA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_SACH_CHUA_TRA.TINHTRANGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int STT {
+                get {
+                    try {
+                        return ((int)(this[this.tableSP_SACH_CHUA_TRA.STTColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'STT\' in table \'SP_SACH_CHUA_TRA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSP_SACH_CHUA_TRA.STTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTENSACHNull() {
+                return this.IsNull(this.tableSP_SACH_CHUA_TRA.TENSACHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTENSACHNull() {
+                this[this.tableSP_SACH_CHUA_TRA.TENSACHColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSONGAYNull() {
+                return this.IsNull(this.tableSP_SACH_CHUA_TRA.SONGAYColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSONGAYNull() {
+                this[this.tableSP_SACH_CHUA_TRA.SONGAYColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTINHTRANGNull() {
+                return this.IsNull(this.tableSP_SACH_CHUA_TRA.TINHTRANGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTINHTRANGNull() {
+                this[this.tableSP_SACH_CHUA_TRA.TINHTRANGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSTTNull() {
+                return this.IsNull(this.tableSP_SACH_CHUA_TRA.STTColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSTTNull() {
+                this[this.tableSP_SACH_CHUA_TRA.STTColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class SP_DS_BAO_TAP_CHI_CO_THE_MUONRow : global::System.Data.DataRow {
             
             private SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable tableSP_DS_BAO_TAP_CHI_CO_THE_MUON;
@@ -9053,99 +9146,6 @@ namespace QuanLyThuVien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetDINHKINull() {
                 this[this.tableSP_DS_BAO_TAP_CHI_CO_THE_MUON.DINHKIColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class SP_TAP_CHI_CHUA_TRARow : global::System.Data.DataRow {
-            
-            private SP_TAP_CHI_CHUA_TRADataTable tableSP_TAP_CHI_CHUA_TRA;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal SP_TAP_CHI_CHUA_TRARow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableSP_TAP_CHI_CHUA_TRA = ((SP_TAP_CHI_CHUA_TRADataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TENTAPCHI {
-                get {
-                    try {
-                        return ((string)(this[this.tableSP_TAP_CHI_CHUA_TRA.TENTAPCHIColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TENTAPCHI\' in table \'SP_TAP_CHI_CHUA_TRA\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_TAP_CHI_CHUA_TRA.TENTAPCHIColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int IDKI {
-                get {
-                    return ((int)(this[this.tableSP_TAP_CHI_CHUA_TRA.IDKIColumn]));
-                }
-                set {
-                    this[this.tableSP_TAP_CHI_CHUA_TRA.IDKIColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime NGAYMUON {
-                get {
-                    return ((global::System.DateTime)(this[this.tableSP_TAP_CHI_CHUA_TRA.NGAYMUONColumn]));
-                }
-                set {
-                    this[this.tableSP_TAP_CHI_CHUA_TRA.NGAYMUONColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int SONGAY {
-                get {
-                    try {
-                        return ((int)(this[this.tableSP_TAP_CHI_CHUA_TRA.SONGAYColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SONGAY\' in table \'SP_TAP_CHI_CHUA_TRA\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSP_TAP_CHI_CHUA_TRA.SONGAYColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTENTAPCHINull() {
-                return this.IsNull(this.tableSP_TAP_CHI_CHUA_TRA.TENTAPCHIColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTENTAPCHINull() {
-                this[this.tableSP_TAP_CHI_CHUA_TRA.TENTAPCHIColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsSONGAYNull() {
-                return this.IsNull(this.tableSP_TAP_CHI_CHUA_TRA.SONGAYColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetSONGAYNull() {
-                this[this.tableSP_TAP_CHI_CHUA_TRA.SONGAYColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9629,40 +9629,6 @@ namespace QuanLyThuVien {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class SP_SACH_CHUA_TRARowChangeEvent : global::System.EventArgs {
-            
-            private SP_SACH_CHUA_TRARow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_SACH_CHUA_TRARowChangeEvent(SP_SACH_CHUA_TRARow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_SACH_CHUA_TRARow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class V_DANH_SACH_KY_XB_TAP_CHIRowChangeEvent : global::System.EventArgs {
             
             private V_DANH_SACH_KY_XB_TAP_CHIRow eventRow;
@@ -9731,22 +9697,22 @@ namespace QuanLyThuVien {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class SP_DS_BAO_TAP_CHI_CO_THE_MUONRowChangeEvent : global::System.EventArgs {
+        public class SP_TAP_CHI_CHUA_TRARowChangeEvent : global::System.EventArgs {
             
-            private SP_DS_BAO_TAP_CHI_CO_THE_MUONRow eventRow;
+            private SP_TAP_CHI_CHUA_TRARow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_DS_BAO_TAP_CHI_CO_THE_MUONRowChangeEvent(SP_DS_BAO_TAP_CHI_CO_THE_MUONRow row, global::System.Data.DataRowAction action) {
+            public SP_TAP_CHI_CHUA_TRARowChangeEvent(SP_TAP_CHI_CHUA_TRARow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_DS_BAO_TAP_CHI_CO_THE_MUONRow Row {
+            public SP_TAP_CHI_CHUA_TRARow Row {
                 get {
                     return this.eventRow;
                 }
@@ -9765,22 +9731,56 @@ namespace QuanLyThuVien {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class SP_TAP_CHI_CHUA_TRARowChangeEvent : global::System.EventArgs {
+        public class SP_SACH_CHUA_TRARowChangeEvent : global::System.EventArgs {
             
-            private SP_TAP_CHI_CHUA_TRARow eventRow;
+            private SP_SACH_CHUA_TRARow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_TAP_CHI_CHUA_TRARowChangeEvent(SP_TAP_CHI_CHUA_TRARow row, global::System.Data.DataRowAction action) {
+            public SP_SACH_CHUA_TRARowChangeEvent(SP_SACH_CHUA_TRARow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SP_TAP_CHI_CHUA_TRARow Row {
+            public SP_SACH_CHUA_TRARow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class SP_DS_BAO_TAP_CHI_CO_THE_MUONRowChangeEvent : global::System.EventArgs {
+            
+            private SP_DS_BAO_TAP_CHI_CO_THE_MUONRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_DS_BAO_TAP_CHI_CO_THE_MUONRowChangeEvent(SP_DS_BAO_TAP_CHI_CO_THE_MUONRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public SP_DS_BAO_TAP_CHI_CO_THE_MUONRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -14858,192 +14858,6 @@ SELECT IDXB, LANXB, NAMXB, KHOGIAY, SOTRANG, NHAXB, GIA, DIACD, MASACH FROM XUAT
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SP_SACH_CHUA_TRATableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SP_SACH_CHUA_TRATableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SP_SACH_CHUA_TRA";
-            tableMapping.ColumnMappings.Add("IDSACH", "IDSACH");
-            tableMapping.ColumnMappings.Add("TENSACH", "TENSACH");
-            tableMapping.ColumnMappings.Add("NGAYMUON", "NGAYMUON");
-            tableMapping.ColumnMappings.Add("SONGAY", "SONGAY");
-            tableMapping.ColumnMappings.Add("TINHTRANG", "TINHTRANG");
-            tableMapping.ColumnMappings.Add("STT", "STT");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SP_SACH_CHUA_TRA";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MADOCGIA", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DS.SP_SACH_CHUA_TRADataTable dataTable, string MADOCGIA) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((MADOCGIA == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(MADOCGIA));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DS.SP_SACH_CHUA_TRADataTable GetData(string MADOCGIA) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((MADOCGIA == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(MADOCGIA));
-            }
-            DS.SP_SACH_CHUA_TRADataTable dataTable = new DS.SP_SACH_CHUA_TRADataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class V_DANH_SACH_KY_XB_TAP_CHITableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -15385,190 +15199,6 @@ SELECT IDXB, LANXB, NAMXB, KHOGIAY, SOTRANG, NHAXB, GIA, DIACD, MASACH FROM XUAT
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class SP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public SP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "SP_DS_BAO_TAP_CHI_CO_THE_MUON";
-            tableMapping.ColumnMappings.Add("IDKI", "IDKI");
-            tableMapping.ColumnMappings.Add("TENTAPCHI", "TENTAPCHI");
-            tableMapping.ColumnMappings.Add("NXB", "NXB");
-            tableMapping.ColumnMappings.Add("DINHKI", "DINHKI");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.SP_DS_BAO_TAP_CHI_CO_THE_MUON";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MADOCGIA", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DS.SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable dataTable, string MADOCGIA) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((MADOCGIA == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(MADOCGIA));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DS.SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable GetData(string MADOCGIA) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((MADOCGIA == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(MADOCGIA));
-            }
-            DS.SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable dataTable = new DS.SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class SP_TAP_CHI_CHUA_TRATableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -15739,6 +15369,376 @@ SELECT IDXB, LANXB, NAMXB, KHOGIAY, SOTRANG, NHAXB, GIA, DIACD, MASACH FROM XUAT
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(MADOCGIA));
             }
             DS.SP_TAP_CHI_CHUA_TRADataTable dataTable = new DS.SP_TAP_CHI_CHUA_TRADataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SP_SACH_CHUA_TRATableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public SP_SACH_CHUA_TRATableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SP_SACH_CHUA_TRA";
+            tableMapping.ColumnMappings.Add("IDSACH", "IDSACH");
+            tableMapping.ColumnMappings.Add("TENSACH", "TENSACH");
+            tableMapping.ColumnMappings.Add("NGAYMUON", "NGAYMUON");
+            tableMapping.ColumnMappings.Add("SONGAY", "SONGAY");
+            tableMapping.ColumnMappings.Add("TINHTRANG", "TINHTRANG");
+            tableMapping.ColumnMappings.Add("STT", "STT");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.SP_SACH_CHUA_TRA";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MADOCGIA", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DS.SP_SACH_CHUA_TRADataTable dataTable, string MADOCGIA) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((MADOCGIA == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(MADOCGIA));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DS.SP_SACH_CHUA_TRADataTable GetData(string MADOCGIA) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((MADOCGIA == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(MADOCGIA));
+            }
+            DS.SP_SACH_CHUA_TRADataTable dataTable = new DS.SP_SACH_CHUA_TRADataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class SP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public SP_DS_BAO_TAP_CHI_CO_THE_MUONTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "SP_DS_BAO_TAP_CHI_CO_THE_MUON";
+            tableMapping.ColumnMappings.Add("IDKI", "IDKI");
+            tableMapping.ColumnMappings.Add("TENTAPCHI", "TENTAPCHI");
+            tableMapping.ColumnMappings.Add("NXB", "NXB");
+            tableMapping.ColumnMappings.Add("DINHKI", "DINHKI");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.SP_DS_BAO_TAP_CHI_CO_THE_MUON";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MADOCGIA", global::System.Data.SqlDbType.NChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DS.SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable dataTable, string MADOCGIA) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((MADOCGIA == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(MADOCGIA));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DS.SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable GetData(string MADOCGIA) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((MADOCGIA == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(MADOCGIA));
+            }
+            DS.SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable dataTable = new DS.SP_DS_BAO_TAP_CHI_CO_THE_MUONDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

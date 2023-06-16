@@ -30,6 +30,8 @@ namespace QuanLyThuVien
 
         private void frmSach_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dS.XUATBAN' table. You can move, or remove it, as needed.
+            this.xUATBANTableAdapter.Fill(this.dS.XUATBAN);
             dS.EnforceConstraints = false;
 
             // TODO: This line of code loads data into the 'dS.SACH' table. You can move, or remove it, as needed.
@@ -105,6 +107,8 @@ namespace QuanLyThuVien
                 return;
             }
 
+            
+
             string maSach = txtMaSach.Text.Trim();
             for (int i = 0; i < bdsCTSach.Count; i++)
             {
@@ -144,6 +148,12 @@ namespace QuanLyThuVien
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (bdsXuatBan.Count > 0)
+            {
+                MessageBox.Show("Không thể xóa sách này vì đã xuất bản!");
+                return;
+            }
+
             if (MessageBox.Show("Bạn có chắc muốn xóa sách này?", "Xác nhận",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question,

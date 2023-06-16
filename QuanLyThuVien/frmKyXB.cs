@@ -99,7 +99,7 @@ namespace QuanLyThuVien
                 return;
             }
 
-            if (MessageBox.Show("Bạn có chắc muốn xoá nhà xuất bản này?", "Xác nhận",
+            if (MessageBox.Show("Bạn có chắc muốn xoá kỳ xuất bản này?", "Xác nhận",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
@@ -192,7 +192,7 @@ namespace QuanLyThuVien
                 }
             }
             gcKyXB.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
-            txtLuongTon.Enabled = groupControl1.Enabled = false;
+            txtLuongTon.Enabled = groupControl1.Enabled= btnGhi.Enabled = btnHuy.Enabled = false;
             btnLamMoi.PerformClick();
         }
 
