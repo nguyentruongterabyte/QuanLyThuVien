@@ -33,13 +33,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.chkHienThi = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtPass = new DevExpress.XtraEditors.TextEdit();
+            this.txtLogin = new DevExpress.XtraEditors.TextEdit();
             this.cmbVaiTro = new System.Windows.Forms.ComboBox();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.txtLogin = new DevExpress.XtraEditors.TextEdit();
-            this.txtPass = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDangNhap
@@ -107,10 +107,28 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // txtPass
+            // 
+            this.txtPass.Location = new System.Drawing.Point(177, 176);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Properties.Appearance.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPass.Properties.Appearance.Options.UseForeColor = true;
+            this.txtPass.Size = new System.Drawing.Size(281, 28);
+            this.txtPass.TabIndex = 11;
+            this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPass_KeyPress);
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.Location = new System.Drawing.Point(177, 92);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(281, 28);
+            this.txtLogin.TabIndex = 10;
+            this.txtLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLogin_KeyPress);
+            // 
             // cmbVaiTro
             // 
             this.cmbVaiTro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbVaiTro.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.cmbVaiTro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.cmbVaiTro.FormattingEnabled = true;
             this.cmbVaiTro.Location = new System.Drawing.Point(177, 245);
             this.cmbVaiTro.Name = "cmbVaiTro";
@@ -131,22 +149,6 @@
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // txtLogin
-            // 
-            this.txtLogin.Location = new System.Drawing.Point(177, 92);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(281, 28);
-            this.txtLogin.TabIndex = 10;
-            // 
-            // txtPass
-            // 
-            this.txtPass.Location = new System.Drawing.Point(177, 176);
-            this.txtPass.Name = "txtPass";
-            this.txtPass.Properties.Appearance.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.txtPass.Properties.Appearance.Options.UseForeColor = true;
-            this.txtPass.Size = new System.Drawing.Size(281, 28);
-            this.txtPass.TabIndex = 11;
-            // 
             // frmDangNhap
             // 
             this.Appearance.Options.UseFont = true;
@@ -164,8 +166,8 @@
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLogin.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

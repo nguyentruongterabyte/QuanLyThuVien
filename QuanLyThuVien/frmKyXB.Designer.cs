@@ -332,7 +332,7 @@
             this.gcKyXB.MainView = this.gridView1;
             this.gcKyXB.MenuManager = this.barManager1;
             this.gcKyXB.Name = "gcKyXB";
-            this.gcKyXB.Size = new System.Drawing.Size(763, 715);
+            this.gcKyXB.Size = new System.Drawing.Size(914, 715);
             this.gcKyXB.TabIndex = 5;
             this.gcKyXB.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -357,6 +357,7 @@
             this.colIDKI.Name = "colIDKI";
             this.colIDKI.Visible = true;
             this.colIDKI.VisibleIndex = 0;
+            this.colIDKI.Width = 84;
             // 
             // colLUONGNHAP
             // 
@@ -365,6 +366,7 @@
             this.colLUONGNHAP.Name = "colLUONGNHAP";
             this.colLUONGNHAP.Visible = true;
             this.colLUONGNHAP.VisibleIndex = 1;
+            this.colLUONGNHAP.Width = 92;
             // 
             // colLUONGTON
             // 
@@ -373,6 +375,7 @@
             this.colLUONGTON.Name = "colLUONGTON";
             this.colLUONGTON.Visible = true;
             this.colLUONGTON.VisibleIndex = 2;
+            this.colLUONGTON.Width = 84;
             // 
             // colTENTAPCHI
             // 
@@ -381,6 +384,7 @@
             this.colTENTAPCHI.Name = "colTENTAPCHI";
             this.colTENTAPCHI.Visible = true;
             this.colTENTAPCHI.VisibleIndex = 3;
+            this.colTENTAPCHI.Width = 257;
             // 
             // colNXB
             // 
@@ -389,6 +393,7 @@
             this.colNXB.Name = "colNXB";
             this.colNXB.Visible = true;
             this.colNXB.VisibleIndex = 4;
+            this.colNXB.Width = 246;
             // 
             // colDINHKI
             // 
@@ -402,9 +407,9 @@
             // 
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(763, 39);
+            this.panelControl1.Location = new System.Drawing.Point(914, 39);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(621, 715);
+            this.panelControl1.Size = new System.Drawing.Size(470, 715);
             this.panelControl1.TabIndex = 6;
             // 
             // groupControl1
@@ -420,7 +425,7 @@
             this.groupControl1.Controls.Add(lUONGNHAPLabel);
             this.groupControl1.Controls.Add(this.txtMaTapChi2);
             this.groupControl1.Enabled = false;
-            this.groupControl1.Location = new System.Drawing.Point(127, 58);
+            this.groupControl1.Location = new System.Drawing.Point(22, 21);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(410, 310);
             this.groupControl1.TabIndex = 0;

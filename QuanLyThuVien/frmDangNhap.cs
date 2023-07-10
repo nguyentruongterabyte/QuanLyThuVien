@@ -149,6 +149,20 @@ namespace QLDSV_TC
             Program.frmChinh.Close();
         }
 
-       
+        private void txtLogin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char) Keys.Enter)
+            {
+                btnDangNhap.PerformClick();
+            }
+        }
+
+        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char) Keys.Enter)
+            {
+                btnDangNhap.PerformClick();
+            }
+        }
     }
 }

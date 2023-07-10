@@ -370,7 +370,7 @@ namespace QuanLyThuVien
             this.gcXuatBan.MainView = this.gridView1;
             this.gcXuatBan.MenuManager = this.barManager1;
             this.gcXuatBan.Name = "gcXuatBan";
-            this.gcXuatBan.Size = new System.Drawing.Size(1384, 265);
+            this.gcXuatBan.Size = new System.Drawing.Size(1384, 250);
             this.gcXuatBan.TabIndex = 5;
             this.gcXuatBan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -486,9 +486,9 @@ namespace QuanLyThuVien
             // 
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 304);
+            this.panelControl1.Location = new System.Drawing.Point(0, 289);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1384, 450);
+            this.panelControl1.Size = new System.Drawing.Size(1384, 465);
             this.panelControl1.TabIndex = 6;
             // 
             // groupControl1

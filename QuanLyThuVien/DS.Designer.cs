@@ -2350,7 +2350,7 @@ namespace QuanLyThuVien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DOCGIARow AddDOCGIARow(string MADOCGIA, string TEN, System.DateTime NGAYCAP, string NGHENGHIEP, bool PHAI) {
+            public DOCGIARow AddDOCGIARow(string MADOCGIA, string TEN, System.DateTime NGAYCAP, string NGHENGHIEP, string PHAI) {
                 DOCGIARow rowDOCGIARow = ((DOCGIARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MADOCGIA,
@@ -2405,7 +2405,7 @@ namespace QuanLyThuVien {
                 base.Columns.Add(this.columnNGAYCAP);
                 this.columnNGHENGHIEP = new global::System.Data.DataColumn("NGHENGHIEP", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNGHENGHIEP);
-                this.columnPHAI = new global::System.Data.DataColumn("PHAI", typeof(bool), null, global::System.Data.MappingType.Element);
+                this.columnPHAI = new global::System.Data.DataColumn("PHAI", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPHAI);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMADOCGIA}, true));
@@ -2414,6 +2414,8 @@ namespace QuanLyThuVien {
                 this.columnMADOCGIA.MaxLength = 10;
                 this.columnTEN.MaxLength = 50;
                 this.columnNGHENGHIEP.MaxLength = 50;
+                this.columnPHAI.ReadOnly = true;
+                this.columnPHAI.MaxLength = 3;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7363,10 +7365,10 @@ namespace QuanLyThuVien {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool PHAI {
+            public string PHAI {
                 get {
                     try {
-                        return ((bool)(this[this.tableDOCGIA.PHAIColumn]));
+                        return ((string)(this[this.tableDOCGIA.PHAIColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'PHAI\' in table \'DOCGIA\' is DBNull.", e);
@@ -11429,7 +11431,7 @@ SELECT IDSACH, TINHTRANG, IDXB, STT FROM CUONSACH WHERE (IDSACH = @IDSACH)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DOCGIA] WHERE (([MADOCGIA] = @Original_MADOCGIA) AND ((@IsNull_TEN = 1 AND [TEN] IS NULL) OR ([TEN] = @Original_TEN)) AND ((@IsNull_NGAYCAP = 1 AND [NGAYCAP] IS NULL) OR ([NGAYCAP] = @Original_NGAYCAP)) AND ((@IsNull_NGHENGHIEP = 1 AND [NGHENGHIEP] IS NULL) OR ([NGHENGHIEP] = @Original_NGHENGHIEP)) AND ((@IsNull_PHAI = 1 AND [PHAI] IS NULL) OR ([PHAI] = @Original_PHAI)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DOCGIA] WHERE (([MADOCGIA] = @Original_MADOCGIA) AND ((@IsNull_TEN = 1 AND [TEN] IS NULL) OR ([TEN] = @Original_TEN)) AND ((@IsNull_NGAYCAP = 1 AND [NGAYCAP] IS NULL) OR ([NGAYCAP] = @Original_NGAYCAP)) AND ((@IsNull_NGHENGHIEP = 1 AND [NGHENGHIEP] IS NULL) OR ([NGHENGHIEP] = @Original_NGHENGHIEP)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MADOCGIA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MADOCGIA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TEN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEN", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -11438,29 +11440,24 @@ SELECT IDSACH, TINHTRANG, IDXB, STT FROM CUONSACH WHERE (IDSACH = @IDSACH)";
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NGAYCAP", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NGAYCAP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NGHENGHIEP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NGHENGHIEP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NGHENGHIEP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NGHENGHIEP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PHAI", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PHAI", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PHAI", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PHAI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[DOCGIA] ([MADOCGIA], [TEN], [NGAYCAP], [NGHENGHIEP], [PHAI]) V" +
-                "ALUES (@MADOCGIA, @TEN, @NGAYCAP, @NGHENGHIEP, @PHAI);\r\nSELECT MADOCGIA, TEN, NG" +
-                "AYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @MADOCGIA)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DOCGIA] ([MADOCGIA], [TEN], [NGAYCAP], [NGHENGHIEP]) VALUES (@MADOCGIA, @TEN, @NGAYCAP, @NGHENGHIEP);
+SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, CASE PHAI WHEN 0 THEN N'Nữ' ELSE N'Nam' END AS PHAI FROM DOCGIA WHERE (MADOCGIA = @MADOCGIA)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MADOCGIA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MADOCGIA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TEN", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NGAYCAP", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NGAYCAP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NGHENGHIEP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NGHENGHIEP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PHAI", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PHAI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DOCGIA] SET [MADOCGIA] = @MADOCGIA, [TEN] = @TEN, [NGAYCAP] = @NGAYCAP, [NGHENGHIEP] = @NGHENGHIEP, [PHAI] = @PHAI WHERE (([MADOCGIA] = @Original_MADOCGIA) AND ((@IsNull_TEN = 1 AND [TEN] IS NULL) OR ([TEN] = @Original_TEN)) AND ((@IsNull_NGAYCAP = 1 AND [NGAYCAP] IS NULL) OR ([NGAYCAP] = @Original_NGAYCAP)) AND ((@IsNull_NGHENGHIEP = 1 AND [NGHENGHIEP] IS NULL) OR ([NGHENGHIEP] = @Original_NGHENGHIEP)) AND ((@IsNull_PHAI = 1 AND [PHAI] IS NULL) OR ([PHAI] = @Original_PHAI)));
-SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @MADOCGIA)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DOCGIA] SET [MADOCGIA] = @MADOCGIA, [TEN] = @TEN, [NGAYCAP] = @NGAYCAP, [NGHENGHIEP] = @NGHENGHIEP WHERE (([MADOCGIA] = @Original_MADOCGIA) AND ((@IsNull_TEN = 1 AND [TEN] IS NULL) OR ([TEN] = @Original_TEN)) AND ((@IsNull_NGAYCAP = 1 AND [NGAYCAP] IS NULL) OR ([NGAYCAP] = @Original_NGAYCAP)) AND ((@IsNull_NGHENGHIEP = 1 AND [NGHENGHIEP] IS NULL) OR ([NGHENGHIEP] = @Original_NGHENGHIEP)));
+SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, CASE PHAI WHEN 0 THEN N'Nữ' ELSE N'Nam' END AS PHAI FROM DOCGIA WHERE (MADOCGIA = @MADOCGIA)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MADOCGIA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MADOCGIA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TEN", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEN", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NGAYCAP", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NGAYCAP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NGHENGHIEP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NGHENGHIEP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PHAI", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PHAI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MADOCGIA", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MADOCGIA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TEN", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEN", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TEN", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -11468,15 +11465,13 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NGAYCAP", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NGAYCAP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_NGHENGHIEP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NGHENGHIEP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NGHENGHIEP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NGHENGHIEP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PHAI", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PHAI", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PHAI", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PHAI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString1;
+            this._connection.ConnectionString = global::QuanLyThuVien.Properties.Settings.Default.THUVIENConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11485,7 +11480,8 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM dbo.DOCGIA";
+            this._commandCollection[0].CommandText = "SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, CASE PHAI WHEN 0 THEN N\'Nữ\' ELSE N\'Nam" +
+                "\' END AS PHAI FROM dbo.DOCGIA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -11546,7 +11542,7 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_MADOCGIA, string Original_TEN, global::System.Nullable<global::System.DateTime> Original_NGAYCAP, string Original_NGHENGHIEP, global::System.Nullable<bool> Original_PHAI) {
+        public virtual int Delete(string Original_MADOCGIA, string Original_TEN, global::System.Nullable<global::System.DateTime> Original_NGAYCAP, string Original_NGHENGHIEP) {
             if ((Original_MADOCGIA == null)) {
                 throw new global::System.ArgumentNullException("Original_MADOCGIA");
             }
@@ -11577,14 +11573,6 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_NGHENGHIEP));
             }
-            if ((Original_PHAI.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_PHAI.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11605,7 +11593,7 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string MADOCGIA, string TEN, global::System.Nullable<global::System.DateTime> NGAYCAP, string NGHENGHIEP, global::System.Nullable<bool> PHAI) {
+        public virtual int Insert(string MADOCGIA, string TEN, global::System.Nullable<global::System.DateTime> NGAYCAP, string NGHENGHIEP) {
             if ((MADOCGIA == null)) {
                 throw new global::System.ArgumentNullException("MADOCGIA");
             }
@@ -11630,12 +11618,6 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(NGHENGHIEP));
             }
-            if ((PHAI.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(PHAI.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -11656,7 +11638,7 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string MADOCGIA, string TEN, global::System.Nullable<global::System.DateTime> NGAYCAP, string NGHENGHIEP, global::System.Nullable<bool> PHAI, string Original_MADOCGIA, string Original_TEN, global::System.Nullable<global::System.DateTime> Original_NGAYCAP, string Original_NGHENGHIEP, global::System.Nullable<bool> Original_PHAI) {
+        public virtual int Update(string MADOCGIA, string TEN, global::System.Nullable<global::System.DateTime> NGAYCAP, string NGHENGHIEP, string Original_MADOCGIA, string Original_TEN, global::System.Nullable<global::System.DateTime> Original_NGAYCAP, string Original_NGHENGHIEP) {
             if ((MADOCGIA == null)) {
                 throw new global::System.ArgumentNullException("MADOCGIA");
             }
@@ -11681,49 +11663,35 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(NGHENGHIEP));
             }
-            if ((PHAI.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(PHAI.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
             if ((Original_MADOCGIA == null)) {
                 throw new global::System.ArgumentNullException("Original_MADOCGIA");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_MADOCGIA));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_MADOCGIA));
             }
             if ((Original_TEN == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_TEN));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_TEN));
             }
             if ((Original_NGAYCAP.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_NGAYCAP.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_NGAYCAP.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             if ((Original_NGHENGHIEP == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_NGHENGHIEP));
-            }
-            if ((Original_PHAI.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(Original_PHAI.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_NGHENGHIEP));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -11745,8 +11713,8 @@ SELECT MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI FROM DOCGIA WHERE (MADOCGIA = @M
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string TEN, global::System.Nullable<global::System.DateTime> NGAYCAP, string NGHENGHIEP, global::System.Nullable<bool> PHAI, string Original_MADOCGIA, string Original_TEN, global::System.Nullable<global::System.DateTime> Original_NGAYCAP, string Original_NGHENGHIEP, global::System.Nullable<bool> Original_PHAI) {
-            return this.Update(Original_MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, PHAI, Original_MADOCGIA, Original_TEN, Original_NGAYCAP, Original_NGHENGHIEP, Original_PHAI);
+        public virtual int Update(string TEN, global::System.Nullable<global::System.DateTime> NGAYCAP, string NGHENGHIEP, string Original_MADOCGIA, string Original_TEN, global::System.Nullable<global::System.DateTime> Original_NGAYCAP, string Original_NGHENGHIEP) {
+            return this.Update(Original_MADOCGIA, TEN, NGAYCAP, NGHENGHIEP, Original_MADOCGIA, Original_TEN, Original_NGAYCAP, Original_NGHENGHIEP);
         }
     }
     

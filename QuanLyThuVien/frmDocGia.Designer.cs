@@ -98,7 +98,7 @@
             // mADOCGIALabel
             // 
             mADOCGIALabel.AutoSize = true;
-            mADOCGIALabel.Location = new System.Drawing.Point(146, 48);
+            mADOCGIALabel.Location = new System.Drawing.Point(44, 56);
             mADOCGIALabel.Name = "mADOCGIALabel";
             mADOCGIALabel.Size = new System.Drawing.Size(58, 13);
             mADOCGIALabel.TabIndex = 0;
@@ -107,7 +107,7 @@
             // tENLabel
             // 
             tENLabel.AutoSize = true;
-            tENLabel.Location = new System.Drawing.Point(155, 88);
+            tENLabel.Location = new System.Drawing.Point(53, 96);
             tENLabel.Name = "tENLabel";
             tENLabel.Size = new System.Drawing.Size(39, 13);
             tENLabel.TabIndex = 2;
@@ -116,7 +116,7 @@
             // nGAYCAPLabel
             // 
             nGAYCAPLabel.AutoSize = true;
-            nGAYCAPLabel.Location = new System.Drawing.Point(146, 138);
+            nGAYCAPLabel.Location = new System.Drawing.Point(44, 146);
             nGAYCAPLabel.Name = "nGAYCAPLabel";
             nGAYCAPLabel.Size = new System.Drawing.Size(52, 13);
             nGAYCAPLabel.TabIndex = 4;
@@ -125,7 +125,7 @@
             // nGHENGHIEPLabel
             // 
             nGHENGHIEPLabel.AutoSize = true;
-            nGHENGHIEPLabel.Location = new System.Drawing.Point(127, 199);
+            nGHENGHIEPLabel.Location = new System.Drawing.Point(25, 207);
             nGHENGHIEPLabel.Name = "nGHENGHIEPLabel";
             nGHENGHIEPLabel.Size = new System.Drawing.Size(67, 13);
             nGHENGHIEPLabel.TabIndex = 6;
@@ -134,7 +134,7 @@
             // pHAILabel
             // 
             pHAILabel.AutoSize = true;
-            pHAILabel.Location = new System.Drawing.Point(352, 141);
+            pHAILabel.Location = new System.Drawing.Point(250, 149);
             pHAILabel.Name = "pHAILabel";
             pHAILabel.Size = new System.Drawing.Size(45, 13);
             pHAILabel.TabIndex = 8;
@@ -317,12 +317,12 @@
             // gcDocGia
             // 
             this.gcDocGia.DataSource = this.bdsDocGia;
-            this.gcDocGia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gcDocGia.Dock = System.Windows.Forms.DockStyle.Left;
             this.gcDocGia.Location = new System.Drawing.Point(0, 39);
             this.gcDocGia.MainView = this.gridView1;
             this.gcDocGia.MenuManager = this.barManager1;
             this.gcDocGia.Name = "gcDocGia";
-            this.gcDocGia.Size = new System.Drawing.Size(1384, 715);
+            this.gcDocGia.Size = new System.Drawing.Size(917, 715);
             this.gcDocGia.TabIndex = 5;
             this.gcDocGia.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -383,9 +383,9 @@
             // 
             this.panelControl1.Controls.Add(this.groupControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 754);
+            this.panelControl1.Location = new System.Drawing.Point(917, 39);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1384, 0);
+            this.panelControl1.Size = new System.Drawing.Size(467, 715);
             this.panelControl1.TabIndex = 6;
             // 
             // groupControl1
@@ -401,16 +401,16 @@
             this.groupControl1.Controls.Add(mADOCGIALabel);
             this.groupControl1.Controls.Add(this.txtMaDocGia);
             this.groupControl1.Enabled = false;
-            this.groupControl1.Location = new System.Drawing.Point(428, 56);
+            this.groupControl1.Location = new System.Drawing.Point(25, 23);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(574, 259);
+            this.groupControl1.Size = new System.Drawing.Size(381, 259);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Thông tin độc giả";
             // 
             // chkPhai
             // 
             this.chkPhai.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDocGia, "PHAI", true));
-            this.chkPhai.Location = new System.Drawing.Point(403, 137);
+            this.chkPhai.Location = new System.Drawing.Point(301, 145);
             this.chkPhai.MenuManager = this.barManager1;
             this.chkPhai.Name = "chkPhai";
             this.chkPhai.Properties.Caption = "Nam";
@@ -421,7 +421,7 @@
             // 
             this.txtNgheNghiep.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDocGia, "NGHENGHIEP", true));
             this.txtNgheNghiep.EditValue = "";
-            this.txtNgheNghiep.Location = new System.Drawing.Point(208, 196);
+            this.txtNgheNghiep.Location = new System.Drawing.Point(106, 204);
             this.txtNgheNghiep.MenuManager = this.barManager1;
             this.txtNgheNghiep.Name = "txtNgheNghiep";
             this.txtNgheNghiep.Size = new System.Drawing.Size(247, 28);
@@ -431,7 +431,7 @@
             // 
             this.DateNgayCap.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDocGia, "NGAYCAP", true));
             this.DateNgayCap.EditValue = null;
-            this.DateNgayCap.Location = new System.Drawing.Point(210, 131);
+            this.DateNgayCap.Location = new System.Drawing.Point(108, 139);
             this.DateNgayCap.MenuManager = this.barManager1;
             this.DateNgayCap.Name = "DateNgayCap";
             this.DateNgayCap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -444,7 +444,7 @@
             // txtTen
             // 
             this.txtTen.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDocGia, "TEN", true));
-            this.txtTen.Location = new System.Drawing.Point(210, 81);
+            this.txtTen.Location = new System.Drawing.Point(108, 89);
             this.txtTen.MenuManager = this.barManager1;
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(245, 28);
@@ -453,7 +453,7 @@
             // txtMaDocGia
             // 
             this.txtMaDocGia.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDocGia, "MADOCGIA", true));
-            this.txtMaDocGia.Location = new System.Drawing.Point(210, 41);
+            this.txtMaDocGia.Location = new System.Drawing.Point(108, 49);
             this.txtMaDocGia.MenuManager = this.barManager1;
             this.txtMaDocGia.Name = "txtMaDocGia";
             this.txtMaDocGia.Size = new System.Drawing.Size(245, 28);

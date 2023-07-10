@@ -30,12 +30,15 @@ namespace QuanLyThuVien
 
         private void frmDocGia_Load(object sender, EventArgs e)
         {
-            dS.EnforceConstraints = false;  
+            dS.EnforceConstraints = false;
             // TODO: This line of code loads data into the 'dS.DOCGIA' table. You can move, or remove it, as needed.
+            this.dOCGIATableAdapter.Connection.ConnectionString = Program.connstr;
             this.dOCGIATableAdapter.Fill(this.dS.DOCGIA);
             // TODO: This line of code loads data into the 'dS.CT_MUONSACH' table. You can move, or remove it, as needed.
+            this.cT_MUONSACHTableAdapter.Connection.ConnectionString = Program.connstr;
             this.cT_MUONSACHTableAdapter.Fill(this.dS.CT_MUONSACH);
             // TODO: This line of code loads data into the 'dS.CT_MUONBAO' table. You can move, or remove it, as needed.
+            this.cT_MUONBAOTableAdapter.Connection.ConnectionString = Program.connstr;
             this.cT_MUONBAOTableAdapter.Fill(this.dS.CT_MUONBAO);
 
             if (bdsDocGia.Count == 0)
@@ -50,7 +53,7 @@ namespace QuanLyThuVien
             
             bdsDocGia.AddNew();
             
-            gcDocGia.Visible = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
+            gcDocGia.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
 
             groupControl1.Enabled = btnHuy.Enabled = btnGhi.Enabled = true;
         }
@@ -93,7 +96,7 @@ namespace QuanLyThuVien
                 return;
             }
 
-            gcDocGia.Visible = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
+            gcDocGia.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;
             groupControl1.Enabled = btnHuy.Enabled = btnGhi.Enabled = false;
         }
 
@@ -101,7 +104,7 @@ namespace QuanLyThuVien
         {
             bdsDocGia.CancelEdit();
             bdsDocGia.Position = vitri;
-            gcDocGia.Visible = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;            
+            gcDocGia.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = true;            
             groupControl1.Enabled = btnHuy.Enabled = btnGhi.Enabled = false;
         }
 
@@ -148,7 +151,7 @@ namespace QuanLyThuVien
         {
             vitri = bdsDocGia.Position;
 
-            gcDocGia.Visible = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
+            gcDocGia.Enabled = btnSua.Enabled = btnThem.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;
 
             groupControl1.Enabled = btnHuy.Enabled = btnGhi.Enabled = true;
         }
